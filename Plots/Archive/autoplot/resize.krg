@@ -1,6 +1,0 @@
-# resizing plots - per Mike Perryman email 3/3/17 so plot title is correct
-
-	size = plot.getSize()
-	plot.setSize(size.width-1,size.height-1)
-	plot.setSize(size.width, size.height)
-#

@@ -1,6 +1,0 @@
-#!/bin/csh
-source /netapp/g7cwmspd/.cshrc
-setenv DISPLAY :1
-cd /export/home/g0pdrrjl/g7cwmspd/cronjobs/Bulletins/NWK_Radio
-
-jython3 NWK_Radio.py

@@ -1,9 +1,0 @@
-cd /cwms/g7cwmspd/plotFiles/files
-/usr/sfw/bin/convert -page +0+0 pirice.jpg -page +975+0 lfsdice.jpg \
-        -page +0+735 iwsdice.jpg -page +975+735 fisdice.jpg \
-        -mosaic -resize 1350x900 pirgages.jpg
-# old convert doesn't work with this version of ImageMagick 
-#
-#/usr/local/bin/convert -resize 400x400 -page +0+0 pirice.jpg -page +600+0 -resize 400x400 lfsdice.jpg \
-#        -resize 400x400 -page +0+450 iwsdice.jpg -page +600+450 -resize 400x400 fisdice.jpg \
-#        -mosaic pirgages.jpg

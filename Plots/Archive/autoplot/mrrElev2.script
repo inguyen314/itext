@@ -1,4 +1,0 @@
-#!/bin/csh
-source /usr1/g7cwmspd/.cshrc
-setenv CWMS_HOME /usr1/g7cwmspd/
-$CWMS_EXE/bin/dssVue createPlotsMRRelev2.py

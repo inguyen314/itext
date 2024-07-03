@@ -1,4 +1,0 @@
-cd /wm/nwo/g7cwpa30/cronjobs/Plots/Images/MRBWM
-/bin/convert -page +0+0 pirice.jpg -page +1000+0 lfsdice.jpg \
-        -page +0+800 iwsdice.jpg -page +1000+800 fisdice.jpg \
-        -mosaic -resize 1200x960 pirgages.jpg
