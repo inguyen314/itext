@@ -1,0 +1,225 @@
+'''
+Author: Ryan Larsen
+Last Updated: 02-07-2019
+Description: Properties file for Omaha District's Reservoir Bulletin
+'''
+
+#
+# Date Properties
+#
+UseCurDate = True # Set to True to create bulletin based on current date. Set to False to use HistoricBulletinDate to create bulletin
+HistoricBulletinDate = '02Jun2011 0000' # If UseCurDate is set to False, use this date to specify a historic bulletin
+
+#
+# Font Properties
+#
+Color1  = BaseColor(238, 65, 53) # Red
+Color2  = BaseColor(170, 170, 170) # Gray
+Color3  = BaseColor(0, 0, 0) # Black
+Color4  = BaseColor(255, 255, 255) # White
+Color5  = BaseColor(109, 134, 120) # Dark Teal
+Color6  = BaseColor(194, 205, 196) # Teal
+Color7  = BaseColor(235, 235, 235) # Light Gray
+Color8  = BaseColor(174, 212, 119) # Green: Used for cell background
+Color9  = BaseColor(237, 233, 55) # Yellow: Used for cell background
+Color10 = BaseColor(238, 51, 36) # Red: Used for cell background
+Font1   = Font(FontFamily.TIMES_ROMAN, 11.5, Font.NORMAL, Color3) # Courier 12pt Black Font
+Font2   = Font(FontFamily.TIMES_ROMAN, 11.5, Font.BOLD, Color3) # Courier 12pt Black Bold Font
+Font3   = Font(FontFamily.TIMES_ROMAN, 9.5, Font.BOLD, Color4) # Courier 11pt White Bold Font
+Font4   = Font(FontFamily.TIMES_ROMAN, 8.5, Font.NORMAL, Color3) # Courier 9pt Black Font
+Font5   = Font(FontFamily.TIMES_ROMAN, 8.5, Font.BOLD, Color3) # Courier 9pt Black Bold Font
+
+#
+# Number of Table Columns
+#
+Table1Columns = 13
+FooterColumns = 2
+
+#
+# Bulletin Margins
+#
+TopMargin = 36
+RightMargin = -48
+BottomMargin = 36
+LeftMargin = -48
+
+#
+# Title Block Properties
+#
+# Seal and Logo
+UsaceLogo   = BulletinsDirectory + 'Seals_and_Symbols/USACE_Logo.png'
+Seal        = BulletinsDirectory + 'Seals_and_Symbols/NWO_Seal.png'
+
+# Title Lines
+TitleLine1  = 'Northwestern Division, Omaha District'
+TitleLine2  = 'Mainstem and Tributary Reservoir Bulletin'
+TitleLine3  = 'Project Data Date/Time: %s' # Project date and time will be substituted in the bulletin script
+TitleLine4  = 'Last Updated Date/Time: %s' # Current date and time will be substituted in the bulletin script
+
+#
+# Information Dictionaries
+#
+
+# Table layout information
+TableLayoutDict =   {
+                        # Title and Table column widths
+                        'TitleBlock'    :   {   'Column0'   :   2
+                                                },
+                        'Table1'        :   {   'Column0'               :   {   'Key'           :   'PublicName',
+                                                                                'ColumnWidth'   :   43
+                                                                                },
+                                                'Column1'               :   {   'Key'           :   'TopOfConsZoneElev',
+                                                                                'ColumnWidth'   :   12,
+                                                                                'Format'        :   '%.1f'
+                                                                                },
+                                                'Column2'               :   {   'Key'           :   'TopOfExclZoneElev',
+                                                                                'ColumnWidth'   :   12,
+                                                                                'Format'        :   '%.1f'
+                                                                                },
+                                                'Column3'               :   {   'Key'           :   'TopOfConsZoneStor',
+                                                                                'ColumnWidth'   :   15,
+                                                                                'Format'        :   NumberFormat.getNumberInstance(Locale.US) # Uses Java formatting for 1000s comma separator
+                                                                                },
+                                                'Column4'               :   {   'Key'           :   'TopOfExclZoneStor',
+                                                                                'ColumnWidth'   :   15,
+                                                                                'Format'        :   NumberFormat.getNumberInstance(Locale.US) # Uses Java formatting for 1000s comma separator
+                                                                                },
+                                                'Column5'               :   {   'Key'           :   'Elevation',
+                                                                                'ColumnWidth'   :   13,
+                                                                                'Format'        :   '%.2f'
+                                                                                },
+                                                'Column6'               :   {   'Key'           :   'ElevChange',
+                                                                                'ColumnWidth'   :   17,
+                                                                                'Format'        :   '%.2f'
+                                                                                },
+                                                'Column7'               :   {   'Key'           :   'Storage',
+                                                                                'ColumnWidth'   :   15,
+                                                                                'Format'        :   NumberFormat.getNumberInstance(Locale.US) # Uses Java formatting for 1000s comma separator
+                                                                                },
+                                                'Column8'               :   {   'Key'           :   'FlowIn',
+                                                                                'ColumnWidth'   :   12,
+                                                                                'Format'        :   NumberFormat.getNumberInstance(Locale.US) # Uses Java formatting for 1000s comma separator
+                                                                                },
+                                                'Column9'               :   {   'Key'           :   'FlowTotal',
+                                                                                'ColumnWidth'   :   12,
+                                                                                'Format'        :   NumberFormat.getNumberInstance(Locale.US) # Uses Java formatting for 1000s comma separator
+                                                                                },
+                                                'Column10'              :   {   'Key'           :   'MpStorPercentOccupied',
+                                                                                'ColumnWidth'   :   10,
+                                                                                'Format'        :   '%.1f'
+                                                                                },
+                                                'Column11'              :   {   'Key'           :   'FcStorOccupied',
+                                                                                'ColumnWidth'   :   15,
+                                                                                'Format'        :   NumberFormat.getNumberInstance(Locale.US) # Uses Java formatting for 1000s comma separator
+                                                                                },
+                                                'Column12'              :   {   'Key'           :   'FcStorPercentOccupied',
+                                                                                'ColumnWidth'   :   10,
+                                                                                'Format'        :   '%.1f'
+                                                                                },
+                                                # Cell default properties:
+                                                'TextFont'              :   Font4,
+                                                'RowSpan'               :   1,
+                                                'ColSpan'               :   1,
+                                                'HorizontalAlignment'   :   Element.ALIGN_RIGHT,
+                                                'VerticalAlignment'     :   Element.ALIGN_CENTER,
+                                                'CellPadding'           :   [2, 2, 2, 2], # [Top, Right, Bottom, Left]
+                                                'BorderColors'          :   [Color2, Color2, Color2, Color2], # [Top, Right, Bottom, Left]
+                                                'BorderWidths'          :   [0.25, 0.25, 0.25, 0.25], # [Top, Right, Bottom, Left]
+                                                'VariableBorders'       :   True,
+                                                'BackgroundColor'       :   Color4 # White
+                                                }
+                        }
+
+# Information associated with the various data blocks in the tables of the bulletin
+DataBlockDict = {   
+                    # List of data block headings. Headings are used as keys for project lists
+                    'DataBlockHeadings' :   ['Missouri River Mainstem Projects', 'USBR Section 7 Projects', 'Corps Tributary Projects'],
+                    # Information for the 
+                    'DataBlocks'        :   {   'Table1Data1'   :   {   'Heading'               :   'Missouri River Mainstem Projects',
+                                                                        'ProjectList'           :   ['FTPK', 'GARR', 'OAHE', 'BEND', 'FTRA', 'GAPT', 'SYS'],
+                                                                        'PublicName'            :   None, # Using 'PublicName' triggers the name retrieval in the script
+                                                                        'TopOfConsZoneElev'     :   TopOfConsZone,
+                                                                        'TopOfExclZoneElev'     :   TopOfExclZone,
+                                                                        'RatingCurve'           :   ElevStorLinearStep,
+                                                                        'TopOfConsZoneStor'     :   None, # Storage for TopOfConsZone will be calculated in the script
+                                                                        'TopOfExclZoneStor'     :   None, # Storage for TopOfFloodCtrZone will be calculated in the script
+                                                                        'Elevation'             :   ElevInstHourBestMrbwm,
+                                                                        'ElevChange'            :   None, # Daily elevation change will be calculated in the script
+                                                                        'Storage'               :   StorInstDayBestMrbwm,
+                                                                        'FlowIn'                :   FlowInAveDayBestMrbwm,
+                                                                        'FlowTotal'             :   FlowOutAveDayBestMrbwm,
+                                                                        'MpStorPercentOccupied' :   None, # Percent occupied will be calculated in the script
+                                                                        'FcStorOccupied'        :   None, # Flood control storage will be calculated in the script
+                                                                        'FcStorPercentOccupied' :   None, # Percent occupied flood storage will be calculated in script
+                                                                        'RedStor'               :   75, # Highlight cell red if percentage of occupied flood storage is greater than this
+                                                                        'YellowStor'            :   70, # Highlight cell yellow if percentage of occupied flood storage is greater than this
+                                                                        'GreenStor'             :   0.0, # Highlight cell green if percentage of occupied flood storage is greater than this
+                                                                        },
+                                                'Table1Data2'   :   {   'Heading'               :   'USBR Section 7 Projects',
+                                                                        'ProjectList'           :   ['TIBR', 'CLCA', 'CAFE', 'BOYN', 'BUBI', 'YETL', 'JATO', 
+                                                                                                        'HEBU', 'KEYO', 'PACA', 'SHHI', 'GLEN'],
+                                                                        'PublicName'            :   None, # Using 'PublicName' triggers the name retrieval in the script
+                                                                        'TopOfConsZoneElev'     :   TopOfJointZone,
+                                                                        'TopOfExclZoneElev'     :   TopOfFloodZone,
+                                                                        'RatingCurve'           :   ElevStorLinearStep,
+                                                                        'TopOfConsZoneStor'     :   None, # Storage for TopOfConsZone will be calculated in the script
+                                                                        'TopOfExclZoneStor'     :   None, # Storage for TopOfFloodCtrZone will be calculated in the script
+                                                                        'Elevation'             :   ElevInstHourBestNwo,
+                                                                        'ElevChange'            :   None, # Daily elevation change will be calculated in the script
+                                                                        'Storage'               :   StorInstTildeDayBestNwo,
+                                                                        'FlowIn'                :   FlowInAveDayRawUsbr,
+                                                                        'FlowTotal'             :   FlowOutAveDayRawUsbr,
+                                                                        'MpStorPercentOccupied' :   None, # Percent occupied will be calculated in the script
+                                                                        'FcStorOccupied'        :   None, # Flood control storage will be calculated in the script
+                                                                        'FcStorPercentOccupied' :   None, # Percent occupied flood storage will be calculated in script
+                                                                        'RedStor'               :   25, # Highlight cell red if percentage of occupied flood storage is greater than this
+                                                                        'YellowStor'            :   5, # Highlight cell yellow if percentage of occupied flood storage is greater than this
+                                                                        'GreenStor'             :   0.0, # Highlight cell green if percentage of occupied flood storage is greater than this
+                                                                        },
+                                                'Table1Data3'   :   {   'Heading'               :   'Corps Tributary Projects',
+                                                                        'ProjectList'           :   ['BOHA', 'PIST', 'CHFI', 'CHCR', 'BECR', 'PA11', 'PA16',
+                                                                                                        'PA18', 'PA20', 'COTT', 'COLD', 'LAUD', 'POCA', 'SC02',
+                                                                                                        'SC04', 'SC08', 'SC09', 'SC10', 'SC12', 'SC13', 'SC14', 
+                                                                                                        'SC17', 'SC18'],
+                                                                        'PublicName'            :   None, # Using 'PublicName' triggers the name retrieval in the script
+                                                                        'TopOfConsZoneElev'     :   TopOfJointZone, # Only CHFI uses Joint Use. All other projects use TopOfConsZone #TopOfConsZone,
+                                                                        'TopOfExclZoneElev'     :   TopOfFloodZone,
+                                                                        'RatingCurve'           :   ElevStorLinearStep,
+                                                                        'TopOfConsZoneStor'     :   None, # Storage for TopOfConsZone will be calculated in the script
+                                                                        'TopOfExclZoneStor'     :   None, # Storage for TopOfFloodCtrZone will be calculated in the script
+                                                                        'Elevation'             :   ElevInstHourBestNwo,
+                                                                        'ElevChange'            :   None, # Daily elevation change will be calculated in the script
+                                                                        'Storage'               :   StorInstTildeDayBestNwo,
+                                                                        'FlowIn'                :   FlowInAveTildeDayBestNwo,
+                                                                        'FlowTotal'             :   FlowOutAveTildeDayBestNwo,
+                                                                        'MpStorPercentOccupied' :   None, # Percent occupied will be calculated in the script
+                                                                        'FcStorOccupied'        :   None, # Flood control storage will be calculated in the script
+                                                                        'FcStorPercentOccupied' :   None, # Percent occupied flood storage will be calculated in script
+                                                                        'RedStor'               :   25, # Highlight cell red if percentage of occupied flood storage is greater than this
+                                                                        'YellowStor'            :   5, # Highlight cell yellow if percentage of occupied flood storage is greater than this
+                                                                        'GreenStor'             :   0.0, # Highlight cell green if percentage of occupied flood storage is greater than this
+                                                                        'Pa11SpecialChar'       :   True, # Set to True to display special character for Papio 11. Set to False to display data
+                                                                        'LaudSpecialChar'       :   True, # Set to True to display special character for Lake Audubon. Set to False to display data
+                                                                        'PocaSpecialChar'       :   True, # Set to True to display special character for Lake Pocasse. Set to False to display data
+                                                                        'Sc09SpecialChar'       :   False, # Set to True to display special character for Salt Creek Dam 09. Set to False to display data
+                                                                        'Sc12SpecialChar'       :   True, # Set to True to display special character for Salt Creek Dam 12. Set to False to display data
+                                                                        }
+                                                }
+                        }
+
+#
+# Footer Properties
+#
+FooterImage = BulletinsDirectory + 'Seals_and_Symbols/USACE_Footer.png'
+
+#
+# Special Characters
+#
+Missing = 'M'
+Null    = '--'
+Pa11SpecialChar = 'POOL IS DRAWN DOWN FOR LAKE REHABILITATION'
+LaudSpecialChar = 'INFLOW AND OUTFLOW NOT CALCULATED'
+PocaSpecialChar = 'POOL ELEVATION READ MONTHLY BY PROJECT OFFICE'
+Sc09SpecialChar = 'POOL IS DRAWN DOWN FOR LAKE REHABILITATION'
+Sc12SpecialChar = 'POOL IS DRAWN DOWN FOR LAKE REHABILITATION'
+

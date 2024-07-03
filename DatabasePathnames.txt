@@ -1,0 +1,43 @@
+'''
+Author: Ivan Nguyen
+Last Updated: 01-01-2022
+Description: List of generic time series for all MVS time series. location Id (Base locations) can be substituted to retrieve specify time series data.
+'''
+# -------------------------------------------------------------------
+# MVS Time Series Containers
+# -------------------------------------------------------------------
+# 15-Min Data
+StageInst15minRevLrgs                       = '%s.Stage.Inst.15Minutes.0.lrgsShef-rev'
+StageInst15min29                            = '%s.Stage.Inst.15Minutes.0.29'
+
+# 30-Min Data
+StageInst30minRevLrgs                       = '%s.Stage.Inst.30Minutes.0.lrgsShef-rev'
+StageInst30min29                            = '%s.Stage.Inst.30Minutes.0.29'
+
+# Hourly Data
+#StageInstHourRawLrgs                       = '%s.Stage.Inst.1Hour.0.lrgsShef-raw'
+StageInstHourRevLrgs                       = '%s.Stage.Inst.1Hour.0.lrgsShef-rev'
+
+# 2-Hour LPMS Data
+StageInst2HoursLpmsRaw                       = '%s.Stage.Inst.~2Hours.0.lpmsShef-raw'
+
+# -------------------------------------------------------------------
+# Rating Curves****
+# -------------------------------------------------------------------
+ElevStorLinearStep                          = '%s.Elev;Stor.Linear.Step'
+ElevAreaLinearStep                          = '%s.Elev;Area.Linear.Step'
+ElevStorStorageCurvesProduction             = '%s.Elev;Stor.Storage_Curves.Production'
+ElevEstStorUsgsExsaProduction               = '%s.Elev-Estimated;Stor.USGS-EXSA.Production'
+ElevEstAreaUsgsExsaProduction               = '%s.Elev-Estimated;Area.USGS-EXSA.Production'
+StageFlowLinearLinear                       = '%s.Stage;Flow.Linear.Linear'
+StageFlowLinearStep                         = '%s.Stage;Flow.Linear.Step'
+StageFlowUsgsExsaProduction                 = '%s.Rating.Stage;Flow.USGS-EXSA.Production'
+
+# -------------------------------------------------------------------
+# Location Levels. Only elevation data is included. Storage values are rated from elevation****
+# -------------------------------------------------------------------
+# Stream Gage Levels
+StageNwsInstFlood                           = '%s.Stage.Inst.0.Flood'
+RecordStage                                 = '%s.Stage.Inst.0.Record Stage'
+GageZero29                                  = '%s.Height.Inst.0.NGVD29'
+

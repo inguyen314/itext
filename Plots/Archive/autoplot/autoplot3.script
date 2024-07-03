@@ -1,0 +1,9 @@
+#!/bin/csh
+source /usr1/g7cwmspd/.cshrc
+setenv DISPLAY :1    
+cd /usr1/g7cwmspd/plotFiles/
+autoplot.script
+#
+autoplot2.script
+autoplot4.script
+echo Done

@@ -1,0 +1,86 @@
+#!/bin/csh
+source /netapp/g7cwmspd/.cshrc
+setenv DISPLAY :1
+cd /netapp/g7cwmspd/cronjobs/Plots/Images
+rm *jpg
+cd /netapp/g7cwmspd/cronjobs/Plots
+
+# Run each script below to generate plots
+jython3 Reservoir_NwdmElev_Plots.py
+jython3 Reservoir_MrbwmElevInflowOutflow_Plots.py
+jython3 Reservoir_MrbwmElevInflowOutflowZones_Plots.py
+jython3 Reservoir_MrbwmElevInflowOutflowZones_Plots.py
+jython3 Reservoir_MrbwmMinElevInflowOutflowPrecipStor_Plots.py
+jython3 Reservoir_NwoElevInflowOutflowPrecipStorZones_Plots.py
+jython3 Reservoir_NwoPrecip_Plots.py
+jython3 Reservoir_NwoRawRevElev_Plots.py
+jython3 Reservoir_NwoElevInflowOutflow6Hr_Plots.py
+jython3 Reservoir_NwkElevInflowOutflowPrecipStorZones_Plots.py
+jython3 Reservoir_NwkKanProjFlow_Plots.py
+jython3 River_NwdmStage_Plots.py
+jython3 River_NwdmStageFlow_Plots.py
+jython3 River_NwdmMoRivKanFlow_Plots.py
+jython3 River_MrbwmPirGagesStage_Plots.py
+
+#
+# autoplot.script: Delete once scripts have been updated
+#
+cd /netapp/g7cwmspd/plotFiles/files
+rm *.jpg
+#jython /netapp/g7cwmspd/plotFiles/createPlotsMRRelev2.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsKanProj.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsNWKres.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsMRRpierre.py
+jython /netapp/g7cwmspd/plotFiles/createPlotsNWOhbia.py
+jython /netapp/g7cwmspd/plotFiles/createPlotsGRFTfcstq.py
+#jython /netapp/g7cwmspd/plotFiles/NWO_Res_Elev_RawRev_Plots.py
+
+#
+# autoplot2.script: Delete once scripts have been updated
+#
+jython /netapp/g7cwmspd/plotFiles/createPlotsMRRWaterTemp1.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsMRRelev1.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsMRRstage.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsMRRresMin.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsMORiv2.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsMORiv1.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsMORiv.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsKanRiv.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsMRRfui-qgh.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsMRRmainstem-qgh.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsMRRnonfui-qgh.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsMRRmainstem-res2.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsMRRmainstem-res.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsNWKriver2-qgh.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsNWOriver2-qgh.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsNWOriver1-qgh.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsNWKriver1-qgh.py
+jython /netapp/g7cwmspd/plotFiles/CroncompareFlows.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsNWOres.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsNWOusbr.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsNWOstage.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsNWOprecip.py
+#jython /netapp/g7cwmspd/plotFiles/createPlotsNWKstage.py
+
+#
+# autoplot4.script: Delete once scripts have been updated
+#
+#jython /netapp/g7cwmspd/plotFiles/NWO_Res_Inflow_Elev_6Hour.py
+
+# Mosaic scripts
+# Can delete the cd line once all old scripts have been deleted
+cd /netapp/g7cwmspd/cronjobs/Plots
+PirGagesMosaic.script
+BisGagesMosaic.script
+
+#
+# Move files to web and to local zone MRADS cwmspixel directory for displaying by viewpix
+#
+echo 'Moving files to web server staging area and to local zone.'
+# New location of images
+cd /netapp/g7cwmspd/cronjobs/Plots/Images
+/bin/scp *.jpg g7cwmspd@nwo-wmlocal2.nwo.usace.army.mil:/mrads/cwmspixel
+# Old location of images. Can delete once all plotting scripts have been updated
+cd /netapp/g7cwmspd/plotFiles/files
+/bin/scp *.jpg g7cwmspd@nwo-wmlocal2.nwo.usace.army.mil:/mrads/cwmspixel
+echo Done

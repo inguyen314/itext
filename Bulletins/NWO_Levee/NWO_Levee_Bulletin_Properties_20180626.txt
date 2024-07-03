@@ -1,0 +1,367 @@
+'''
+Author: Ryan Larsen
+Last Updated: 11-18-2017
+Description: Properties file for Omaha District's Levee Bulletin
+'''
+
+#
+# Date Properties
+#
+UseCurDate = True # Set to True to create bulletin based on current date. Set to False to use HistoricBulletinDate to create bulletin
+HistoricBulletinDate = '28Jun2018 0900' # If UseCurDate is set to False, use this date to specify a historic bulletin
+
+#
+# Font Properties
+#
+Color1  = BaseColor(238, 65, 53) # Red
+Color2  = BaseColor(170, 170, 170) # Gray
+Color3  = BaseColor(0, 0, 0) # Black
+Color4  = BaseColor(255, 255, 255) # White
+Color5  = BaseColor(109, 134, 120) # Dark Teal
+Color6  = BaseColor(194, 205, 196) # Teal
+Color7  = BaseColor(235, 235, 235) # Light Gray
+Color8  = BaseColor(0, 255, 0) # Green: Used for cell background
+Color9  = BaseColor(255, 255, 114) # Yellow: Used for cell background, NWS Action Stage
+Color10 = BaseColor(255, 114, 114) # Red: Used for cell background, NWS Moderate Stage
+Color11 = BaseColor(255, 198, 114) # Orange: Used for cell background, NWS Minor Stage
+Color12 = BaseColor(226, 142, 255) # Purple: Used for cell background, NWS Major Stage
+Color13 = BaseColor(255, 140, 102) # Light Pink: Used for cell background, > 5 ft freeboard
+Color14 = BaseColor(255, 83, 26) # Light Pink: Used for cell background, 2-5 ft freeboard
+Color15 = BaseColor(204, 51, 0) # Pink: Used for cell background, < 2 ft freeboard
+Color16 = BaseColor(230, 0, 0) # Dark Pink: Used for cell background, overtopping
+Color17 = BaseColor(149, 11, 46) # Dark Red: Used for cell background, breached
+Font1   = Font(FontFamily.TIMES_ROMAN, 11.5, Font.NORMAL, Color3) # Courier 12pt Black Font
+Font2   = Font(FontFamily.TIMES_ROMAN, 11.5, Font.BOLD, Color3) # Courier 12pt Black Bold Font
+Font3   = Font(FontFamily.TIMES_ROMAN, 9.5, Font.BOLD, Color4) # Courier 11pt White Bold Font
+Font4   = Font(FontFamily.TIMES_ROMAN, 8.5, Font.NORMAL, Color3) # Courier 9pt Black Font
+Font5   = Font(FontFamily.TIMES_ROMAN, 8.5, Font.BOLD, Color3) # Courier 9pt Black Bold Font
+Font6   = Font(FontFamily.TIMES_ROMAN, 8.5, Font.NORMAL, Color4) # Courier 9pt White Font
+
+#
+# Number of Table Columns
+#
+Table1Columns = 11
+Table2Columns = 4
+FooterColumns = 2
+
+#
+# Bulletin Margins
+#
+TopMargin = 36
+RightMargin = -48
+BottomMargin = 36
+LeftMargin = -48
+
+#
+# Title Block Properties
+#
+# Seal and Logo
+UsaceLogo   = HomeDirectory + 'Seals_and_Symbols/USACE_Logo.png'
+Seal        = HomeDirectory + 'Seals_and_Symbols/NWO_Seal.png'
+
+# Title Lines
+TitleLine1  = 'Northwestern Division, Omaha District'
+TitleLine2  = 'Missouri River Federal Levee Bulletin'
+TitleLine3  = 'Project Data Date/Time: %s' # Project date and time will be substituted in the bulletin script
+TitleLine4  = 'Last Updated Date/Time: %s' # Current date and time will be substituted in the bulletin script
+
+#
+# Information Dictionaries
+#
+# Information associated with locations used in the bulletin. Information, such as Public Name, is added to the dictionary within the bulletin script.
+LocationDict =  {   
+                    'WSN'  	:   {   'DbLocation'    :   'WSN-Williston-Missouri',
+                    				'River Mile'	:	'1553',
+                                    },
+                    'DENE'  :   {   'DbLocation'    :   'DENE-Decatur-Missouri',
+                                    },
+                    'BLNE'  :   {   'DbLocation'    :   'BLNE-Blair-Missouri',
+                                    },
+                    'OMA'  	:   {   'DbLocation'    :   'OMA-Omaha-Missouri',
+                    				'River Mile'	:	'616',
+                                    },
+                    'PTNE'  :   {   'DbLocation'    :   'PTNE-Plattsmouth-Missouri',
+                                    },
+                    'NCNE'  :   {   'DbLocation'    :   'NCNE-Nebraska_City-Missouri',
+                    				'River Mile'	:	'563',
+                                    },
+                    'BVNE'  :   {   'DbLocation'    :   'BVNE-Brownville-Missouri',
+                    				'River Mile'	:	'535',
+                                    },
+                    'RUNE'  :   {   'DbLocation'    :   'RUNE-Rulo-Missouri',
+                    				'River Mile'	:	'498',
+                                    },
+                    'STJ'  	:   {   'DbLocation'    :   'STJ-St_Joseph-Missouri',
+                                    },
+                    'LEVK'  :   {   'DbLocation'    :   'LEVK-Leavenworth-Missouri',
+                                    },
+                    }
+
+# Information associated with levees used in the bulletin.
+LeveeDict =	{   
+	            'WSN'  						:   {   'LeveeList'			:   ['Williston Levee'],
+	                            					},
+	            'Williston Levee'  			:   {   'TopOfLeveeStage'	:   32.,
+	            									'ToeOfLeveeStage'	:   None,
+	            									'Breached'			:	False,
+	                            					},
+	            'OMA'  						:   {   'LeveeList'			:   ['Omaha Levee D/S 275', 'Omaha Flood Wall', 'Council Bluffs Ind Levee', 'Council Bluffs Fed Levee', 'L627', 'L624', 'L611-614', 'R616', 'R613'],
+	                            					},
+	            'Omaha Levee D/S 275'  		:   {   'TopOfLeveeStage'	:   38.,
+	            									'ToeOfLeveeStage'	:   None,
+	            									'Breached'			:	False,
+	                            					},
+	            'Omaha Flood Wall'  		:   {   'TopOfLeveeStage'	:   41.,
+	            									'ToeOfLeveeStage'	:   None,
+	            									'Breached'			:	False,
+	                            					},
+	            'Council Bluffs Ind Levee'	:   {   'TopOfLeveeStage'	:   36.8,
+	            									'ToeOfLeveeStage'	:   None,
+	            									'Breached'			:	False,
+	                            					},
+	            'Council Bluffs Fed Levee'	:   {   'TopOfLeveeStage'	:   40.2,
+	            									'ToeOfLeveeStage'	:   None,
+	            									'Breached'			:	False,
+	                            					},
+	            'L627'  					:   {   'TopOfLeveeStage'	:   38.,
+	            									'ToeOfLeveeStage'	:   28.82,
+	            									'Breached'			:	False,
+	                            					},
+	            'L624'  					:   {   'TopOfLeveeStage'	:   38.,
+	            									'ToeOfLeveeStage'	:   None,
+	            									'Breached'			:	False,
+	                            					},
+	            'L611-614'  				:   {   'TopOfLeveeStage'	:   38.,
+	            									'ToeOfLeveeStage'	:   None,
+	            									'Breached'			:	False,
+	                            					},
+	            'R616'  					:   {   'TopOfLeveeStage'	:   36.6,
+	            									'ToeOfLeveeStage'	:   None,
+	            									'Breached'			:	False,
+	                            					},
+	            'R613'  					:   {   'TopOfLeveeStage'	:   36.8,
+	            									'ToeOfLeveeStage'	:   None,
+	            									'Breached'			:	False,
+	                            					},
+	            'NCNE'  					:   {   'LeveeList'			:   ['L601', 'L594', 'L575', 'R573', 'R562'],
+	                            					},
+	            'L601'  					:   {   'TopOfLeveeStage'	:   29.,
+	            									'ToeOfLeveeStage'	:   None,
+	            									'Breached'			:	False,
+	                            					},
+	            'L594'  					:   {   'TopOfLeveeStage'	:   30.,
+	            									'ToeOfLeveeStage'	:   None,
+	            									'Breached'			:	False,
+	                            					},
+	            'L575'  					:   {   'TopOfLeveeStage'	:   27.,
+	            									'ToeOfLeveeStage'	:   None,
+	            									'Breached'			:	False,
+	                            					},
+	            'R573'  					:   {   'TopOfLeveeStage'	:   28.2,
+	            									'ToeOfLeveeStage'	:   None,
+	            									'Breached'			:	False,
+	                            					},
+	            'R562'  					:   {   'TopOfLeveeStage'	:   28.7,
+	            									'ToeOfLeveeStage'	:   None,
+	            									'Breached'			:	False,
+	                            					},
+	            'BVNE'  					:   {   'LeveeList'			:   ['R548', 'L550', 'L536'],
+	                            					},
+	            'R548'  					:   {   'TopOfLeveeStage'	:   43.9,
+	            									'ToeOfLeveeStage'	:   None,
+	            									'Breached'			:	False,
+	                            					},
+	            'L550'  					:   {   'TopOfLeveeStage'	:   43.7,
+	            									'ToeOfLeveeStage'	:   None,
+	            									'Breached'			:	False,
+	                            					},
+	            'L536'  					:   {   'TopOfLeveeStage'	:   43.9,
+	            									'ToeOfLeveeStage'	:   None,
+	            									'Breached'			:	False,
+	                            					},
+	            'RUNE'  					:   {   'LeveeList'			:   ['R520'],
+	                            					},
+	            'R520'  					:   {   'TopOfLeveeStage'	:   30.,
+	            									'ToeOfLeveeStage'	:   None,
+	            									'Breached'			:	False,
+	                            					},
+	            }
+
+# Table layout information
+TableLayoutDict =   {
+                        # Title and Table column widths
+                        'TitleBlock'    :   {   'Column0'   :   2
+                                                },
+                        'Table1'        :   {   'Column0'               :   {   'Key'           :   'PublicName',
+                                                                                'ColumnWidth'   :   25
+                                                                                },
+                                                'Column1'               :   {   'Key'           :   'River Mile',
+                                                                                'ColumnWidth'   :   10,
+                                                                                'Format'        :   '%.0f'
+                                                                                },
+                                                'Column2'               :   {   'Key'           :   'Stage',
+                                                                                'ColumnWidth'   :   10,
+                                                                                'Format'        :   '%.1f'
+                                                                                },
+                                                'Column3'               :   {   'Key'           :   '24-Hr Change',
+                                                                                'ColumnWidth'   :   10,
+                                                                                'Format'        :   '%.1f'
+                                                                                },
+                                                'Column4'               :   {   'Key'           :   'FcstStage',
+                                                                                'ColumnWidth'   :   12,
+                                                                                'Format'        :   '%.1f'
+                                                                                },
+                                                'Column5'               :   {   'Key'           :   'PeakStageDate',
+                                                                                'ColumnWidth'   :   15,
+                                                                                'Format'        :   '%s'
+                                                                                },
+                                                'Column6'               :   {   'Key'           :   'Levee Name',
+                                                                                'ColumnWidth'   :   28,
+                                                                                'Format'        :   '%s'
+                                                                                },
+                                                'Column7'               :   {   'Key'           :   'Freeboard',
+                                                                                'ColumnWidth'   :   12,
+                                                                                'Format'        :   '%.1f'
+                                                                                },
+                                                'Column8'               :   {   'Key'           :   'PercentLoading',
+                                                                                'ColumnWidth'   :   10,
+                                                                                'Format'        :   '%.1f'
+                                                                                },
+                                                'Column9'               :   {   'Key'           :   'FcstFreeboard',
+                                                                                'ColumnWidth'   :   12,
+                                                                                'Format'        :   '%.1f'
+                                                                                },
+                                                'Column10'              :   {   'Key'           :   'FcstPercentLoading',
+                                                                                'ColumnWidth'   :   10,
+                                                                                'Format'        :   '%.1f'
+                                                                                },
+                                                # Cell default properties
+                                                'TextFont'              :   Font4,
+                                                'RowSpan'               :   1,
+                                                'ColSpan'               :   1,
+                                                'HorizontalAlignment'   :   Element.ALIGN_RIGHT,
+                                                'VerticalAlignment'     :   Element.ALIGN_MIDDLE,
+                                                'CellPadding'           :   [2, 2, 2, 2], # [Top, Right, Bottom, Left]
+                                                'BorderColors'          :   [Color2, Color2, Color2, Color2], # [Top, Right, Bottom, Left]
+                                                'BorderWidths'          :   [0.25, 0.25, 0.25, 0.25], # [Top, Right, Bottom, Left]
+                                                'VariableBorders'       :   True,
+                                                'BackgroundColor'       :   Color4 # White
+                                                }
+                        }
+
+# Information associated with the various data blocks in the tables of the bulletin
+DataBlockDict = {   
+                    # Information for the 
+                    'DataBlocks'        :   {   'Table1Data1'   :   {   'Heading'               :   'Missouri River Levees near Williston, ND',
+                                                                        'ProjectList'           :   ['WSN'],
+                                                                        'PublicName'            :   None, # Using 'PublicName' triggers the name retrieval in the script
+                                                                        'River Mile'     		:   None,
+                                                                        'Stage'     			:   TribStageInstHr,
+                                                                        '24-Hr Change'  		:   None,
+                                                                        'FcstStage'     		:   TribMbrfc24QpfStageInstHr,
+                                                                        'PeakStageDate'     	:   None,
+                                                                        'Levee Name'           	:   None,
+                                                                        'Freeboard'  			:   None, 
+                                                                        'PercentLoading'     	:   None, 
+                                                                        'FcstFreeboard'  		:   None, 
+                                                                        'FcstPercentLoading'    :   None, 
+                                                                        'Freeboard1'			:	0, # Freeboard highlighting breakpoint
+                                                                        'Freeboard2'			:	2, # Freeboard highlighting breakpoint
+                                                                        'Freeboard3'			:	5, # Freeboard highlighting breakpoint
+                                                                        'Loading1'				:	100, # Percent loading highlighting breakpoint
+                                                                        'Loading2'				:	75, # Percent loading highlighting breakpoint
+                                                                        'Loading3'				:	25, # Percent loading highlighting breakpoint
+                                                                        },
+                                                'Table1Data2'   :   {   'Heading'               :   'Missouri River Levees near Omaha, NE',
+                                                                        'ProjectList'           :   ['OMA'],
+                                                                        'PublicName'            :   None, # Using 'PublicName' triggers the name retrieval in the script
+                                                                        'River Mile'     		:   None,
+                                                                        'Stage'     			:   TribStageInstHr,
+                                                                        '24-Hr Change'  		:   None,
+                                                                        'FcstStage'     		:   TribMbrfc24QpfStageInstHr,
+                                                                        'PeakStageDate'     	:   None,
+                                                                        'Levee Name'           	:   None,
+                                                                        'Freeboard'  			:   None, 
+                                                                        'PercentLoading'     	:   None, 
+                                                                        'FcstFreeboard'  		:   None, 
+                                                                        'FcstPercentLoading'    :   None, 
+                                                                        'Freeboard1'			:	0, # Freeboard highlighting breakpoint
+                                                                        'Freeboard2'			:	2, # Freeboard highlighting breakpoint
+                                                                        'Freeboard3'			:	5, # Freeboard highlighting breakpoint
+                                                                        'Loading1'				:	100, # Percent loading highlighting breakpoint
+                                                                        'Loading2'				:	75, # Percent loading highlighting breakpoint
+                                                                        'Loading3'				:	25, # Percent loading highlighting breakpoint
+                                                                        },
+                                                'Table1Data3'   :   {   'Heading'               :   'Missouri River Levees near Nebraska City, NE',
+                                                                        'ProjectList'           :   ['NCNE'],
+                                                                        'PublicName'            :   None, # Using 'PublicName' triggers the name retrieval in the script
+                                                                        'River Mile'     		:   None,
+                                                                        'Stage'     			:   TribStageInstHr,
+                                                                        '24-Hr Change'  		:   None,
+                                                                        'FcstStage'     		:   TribMbrfc24QpfStageInstHr,
+                                                                        'PeakStageDate'     	:   None,
+                                                                        'Levee Name'           	:   None,
+                                                                        'Freeboard'  			:   None, 
+                                                                        'PercentLoading'     	:   None, 
+                                                                        'FcstFreeboard'  		:   None, 
+                                                                        'FcstPercentLoading'    :   None, 
+                                                                        'Freeboard1'			:	0, # Freeboard highlighting breakpoint
+                                                                        'Freeboard2'			:	2, # Freeboard highlighting breakpoint
+                                                                        'Freeboard3'			:	5, # Freeboard highlighting breakpoint
+                                                                        'Loading1'				:	100, # Percent loading highlighting breakpoint
+                                                                        'Loading2'				:	75, # Percent loading highlighting breakpoint
+                                                                        'Loading3'				:	25, # Percent loading highlighting breakpoint
+                                                                        },
+                                                'Table1Data4'   :   {   'Heading'               :   'Missouri River Levees near Brownville, NE',
+                                                                        'ProjectList'           :   ['BVNE'],
+                                                                        'PublicName'            :   None, # Using 'PublicName' triggers the name retrieval in the script
+                                                                        'River Mile'     		:   None,
+                                                                        'Stage'     			:   TribStageInstHr,
+                                                                        '24-Hr Change'  		:   None,
+                                                                        'FcstStage'     		:   TribMbrfc24QpfStageInstHr,
+                                                                        'PeakStageDate'     	:   None,
+                                                                        'Levee Name'           	:   None,
+                                                                        'Freeboard'  			:   None, 
+                                                                        'PercentLoading'     	:   None, 
+                                                                        'FcstFreeboard'  		:   None, 
+                                                                        'FcstPercentLoading'    :   None, 
+                                                                        'Freeboard1'			:	0, # Freeboard highlighting breakpoint
+                                                                        'Freeboard2'			:	2, # Freeboard highlighting breakpoint
+                                                                        'Freeboard3'			:	5, # Freeboard highlighting breakpoint
+                                                                        'Loading1'				:	100, # Percent loading highlighting breakpoint
+                                                                        'Loading2'				:	75, # Percent loading highlighting breakpoint
+                                                                        'Loading3'				:	25, # Percent loading highlighting breakpoint
+                                                                        },
+                                                'Table1Data5'   :   {   'Heading'               :   'Missouri River Levees near Rulo, NE',
+                                                                        'ProjectList'           :   ['RUNE'],
+                                                                        'PublicName'            :   None, # Using 'PublicName' triggers the name retrieval in the script
+                                                                        'River Mile'     		:   None,
+                                                                        'Stage'     			:   TribStageInstHr,
+                                                                        '24-Hr Change'  		:   None,
+                                                                        'FcstStage'     		:   TribMbrfc24QpfStageInstHr,
+                                                                        'PeakStageDate'     	:   None,
+                                                                        'Levee Name'           	:   None,
+                                                                        'Freeboard'  			:   None, 
+                                                                        'PercentLoading'     	:   None, 
+                                                                        'FcstFreeboard'  		:   None, 
+                                                                        'FcstPercentLoading'    :   None, 
+                                                                        'Freeboard1'			:	0, # Freeboard highlighting breakpoint
+                                                                        'Freeboard2'			:	2, # Freeboard highlighting breakpoint
+                                                                        'Freeboard3'			:	5, # Freeboard highlighting breakpoint
+                                                                        'Loading1'				:	100, # Percent loading highlighting breakpoint
+                                                                        'Loading2'				:	75, # Percent loading highlighting breakpoint
+                                                                        'Loading3'				:	25, # Percent loading highlighting breakpoint
+                                                                        },
+                                                }
+                        }
+
+#
+# Footer Properties
+#
+FooterImage = HomeDirectory + 'Seals_and_Symbols/USACE_Footer.png'
+
+#
+# Special Characters
+#
+Missing = 'M'
+Null    = '--'

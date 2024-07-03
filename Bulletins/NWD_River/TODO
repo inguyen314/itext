@@ -1,0 +1,21 @@
+. Use Query to get the list of gage for each Basin
+
+. Color Coded (cell background color) if stage is more than flood stage
+
+. How to add a link
+
+. How to add a legend
+
+* change to 6am reading. ///what about current reading
+
+
+
+
+
+select group_id as basin, location_id from CWMS_V_LOC_GRP_ASSGN 
+where category_id = 'RDL_Basins' and location_id in (select location_id from CWMS_V_LOC_GRP_ASSGN where category_id = 'RDL_River_Reservoir' and group_id = 'ALL') 
+order by basin asc, location_id
+
+
+
+

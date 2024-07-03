@@ -1,0 +1,69 @@
+Northwestern Division Omaha District,
+Upper South Platte Watershed Bulletin,
+Project Data Date/Time: 12-14-2020 00:00,
+Last Updated Date/Time: 12-14-2020 14:10,
+Project,Project Information,Current Data,Occupied Storage,
+ ,Elevations (ft),Cumulative Stor (ac-ft),Elev
+(ft),Daily Elev Change (ft),Storage
+(ac-ft),Inflow
+(cfs),Release
+(cfs),MP
+(%),FC
+(ac-ft),FC
+(%),
+MP,FC,MP,FC,
+Bear Creek Dam,5558.0,5635.5,1758,30354,5552.70,0.03,1249,2,0,71.0,0,0.0,
+Chatfield Dam,5444.0,5500.0,47658,233061,5429.51,0.00,23707,27,27,49.7,0,0.0,
+Cherry Creek Dam,5550.0,5598.0,12558,91852,5548.48,0.03,11320,21,10,90.1,0,0.0,
+Streamgage,Current Data,NWS Flood Stages,Name,Map 
+Label,Map 
+Location,Stage* 
+(ft),Daily Stage 
+Change (ft),Flow 
+(cfs),Action 
+(ft),Minor 
+(ft),Moderate 
+(ft),Major 
+(ft),Bear Creek at Evergreen CO,ERCO,US BECR,4.36,-0.01,18,3.0,5.3,7.0,12.0,
+Bear Creek at Morrison CO,MOCL,US BECR,5.48,-0.01,9,8.0,9.0,10.0,10.5,
+Bear Creek at Sheridan CO,SRCL,DS BECR,2.26,0.01,5,7.0,8.0,10.0,10.5,
+South Platte R at South Platte CO,SPCL,US CHFI,2.47,-0.06,242,6.0,7.0,8.5,9.5,
+South Platte R at Waterton CO,WTCO,US CHFI,0.64,0.02,30,4.5,9.0,--,--,
+Plum Cr near Louviers CO,PCCO,US CHFI,10.42,-0.01,6,--,--,--,--,
+Cherry Creek nr Franktown CO,FRCL,US CHCR,2.46,0.00,2,8.5,9.5,11.0,13.0,
+Cherry Creek near Parker CO,PACO,US CHCR,5.49,-0.05,5,7.5,8.5,10.0,12.0,
+Cherry Creek at Denver CO,CDCO,DS CHCR,3.35,0.01,15,6.0,9.5,12.0,13.0,
+South Platte River at Denver CO,DEN,DS ALL,2.80,0.01,101,9.5,11.0,13.0,15.0,
+Clear Creek at Derby CO,DECL,DS ALL,3.12,0.01,21,9.0,10.5,11.5,12.5,
+South Platte R at Henderson CO,HNCL,DS ALL,3.76,0.01,285,10.0,11.0,13.0,15.0,
+South Platte R at Kersey CO,KECL,DS ALL,3.42,-0.01,737,8.0,10.0,11.5,13.5,
+Bear Creek Dam
+Daily Maximums of Record, ,Inflow,Date,Highest,DEF,ABC,
+2nd,DEF,ABC,
+3rd,DEF,ABC,
+ ,Outflow,Date,Highest,DEF,ABC,
+2nd,DEF,ABC,
+3rd,DEF,ABC,
+ ,Elevation,Date,Highest,DEF,ABC,
+2nd,DEF,ABC,
+3rd,DEF,ABC,
+Chatfield Dam
+Daily Maximums of Record, ,Inflow,Date,Highest,DEF,ABC,
+2nd,DEF,ABC,
+3rd,DEF,ABC,
+ ,Outflow,Date,Highest,DEF,ABC,
+2nd,DEF,ABC,
+3rd,DEF,ABC,
+ ,Elevation,Date,Highest,DEF,ABC,
+2nd,DEF,ABC,
+3rd,DEF,ABC,
+Cherry Creek Dam
+Daily Maximums of Record, ,Inflow,Date,Highest,DEF,ABC,
+2nd,DEF,ABC,
+3rd,DEF,ABC,
+ ,Outflow,Date,Highest,DEF,ABC,
+2nd,DEF,ABC,
+3rd,DEF,ABC,
+ ,Elevation,Date,Highest,DEF,ABC,
+2nd,DEF,ABC,
+3rd,DEF,ABC,

@@ -1,0 +1,82 @@
+BASIC    : ExportSHEF version 2.01 01Nov2019
+BASIC    : Started at Fri Feb 21 08:30:37 2020
+BASIC    : Started by g7cwmspd@155.77.185.102
+BASIC    : Command line = /usr1/wmsoft/cwms/v3.1.162/cwms/da/exportSHEF.py IN=MRBWM_Mainstem.in OUT=MRBWM_Mainstem.shef LOG=MRBWM_Mainstem.log
+
+BASIC    : Processing input file /netapp/g7cwmspd/cronjobs/Mainstem2SHEF/MRBWM_Mainstem.in
+
+NONE     : Log level set to 2 (Detailed)
+
+DETAILED : Preferred regular time-series message type set to .E
+
+DETAILED : Time window set to "18FEB2020 0830", "21FEB2020 0830" US/Central
+
+DETAILED : Data will be exported in ENGLISH units
+
+DETAILED : Data will be exported time-stamped as Z (UTC).
+
+DETAILED : Connected to "Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+DETAILED : With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2" for office "NWDM".
+
+DETAILED : Missing value format set to "-9999"
+
+DETAILED : CWMS version "Best-MRBWM" mapped to SHEF TS code "RG".
+
+DETAILED : CWMS param "Temp-Air" with type "Inst" mapped to SHEF PE code "TA".
+
+DETAILED : Set output data format for "TA" to "4.1"
+
+DETAILED : CWMS param "Temp-Water" with type "Inst" mapped to SHEF PE code "TW".
+
+DETAILED : Set output data format for "TW" to "4.1"
+
+DETAILED : CWMS param "Elev" with type "Inst" mapped to SHEF PE code "HT".
+
+DETAILED : Set output data format for "HT" to "6.2"
+
+DETAILED : CWMS location "FTPK-Tailwater" mapped to SHEF location "FTPK".
+
+DETAILED : CWMS location "GARR-Tailwater" mapped to SHEF location "GARR".
+
+DETAILED : CWMS location "OAHE-Tailwater" mapped to SHEF location "OAHE".
+
+DETAILED : CWMS location "BEND-Tailwater" mapped to SHEF location "BEND".
+
+DETAILED : CWMS location "FTRA-Tailwater" mapped to SHEF location "FTRA".
+
+DETAILED : CWMS location "GAPT-Tailwater" mapped to SHEF location "GAPT".
+
+DETAILED : CWMS param "Flow-Out" with type "Inst" mapped to SHEF PE code "QT".
+
+DETAILED : Set output data format for "QT" to "5"
+
+DETAILED : CWMS param "Flow" with type "Inst" mapped to SHEF PE code "QG".
+
+DETAILED : Set output data format for "QG" to "4"
+
+DETAILED : CWMS location "FTPK-Powerhouse" mapped to SHEF location "FTPK".
+
+DETAILED : CWMS location "GARR-Powerhouse" mapped to SHEF location "GARR".
+
+DETAILED : CWMS location "OAHE-Powerhouse" mapped to SHEF location "OAHE".
+
+DETAILED : CWMS location "BEND-Powerhouse" mapped to SHEF location "BEND".
+
+DETAILED : CWMS location "FTRA-Powerhouse" mapped to SHEF location "FTRA".
+
+DETAILED : CWMS location "GAPT-Powerhouse" mapped to SHEF location "GAPT".
+
+DETAILED : CWMS param "Flow-Spill" with type "Inst" mapped to SHEF PE code "QS".
+
+DETAILED : Set output data format for "QS" to "4"
+
+DETAILED : CWMS param "Elev" with type "Inst" previously mapped to SHEF PE code "HT", changed to "HP".
+
+DETAILED : Set output data format for "HP" to "6.2"
+
+DETAILED : Finished processing input file /netapp/g7cwmspd/cronjobs/Mainstem2SHEF/MRBWM_Mainstem.in
+
+BASIC    : ExportSHEF version 2.01 01Nov2019
+BASIC    : Ended at Fri Feb 21 08:30:49 2020
+BASIC    : Elapsed Time = 00:00:11
+

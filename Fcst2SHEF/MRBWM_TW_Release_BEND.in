@@ -1,0 +1,16 @@
+# Missouri River Basin Water Management Three Week Forecast
+# Extract CWMS into SHEF for MVS and MBRFC and post to LDM
+# 
+debug 1
+type .A
+ti t t+24d
+system eng
+tz z
+DB LOCAL
+
+PE Flow-Out.*=QT
+FORMAT QT(5.1)
+ts Fcst-MRBWM-ThreeWeek=FX
+
+loc BEND=BENF
+BEND.Flow-Out.Ave.~1Day.1Day.Fcst-MRBWM-ThreeWeek

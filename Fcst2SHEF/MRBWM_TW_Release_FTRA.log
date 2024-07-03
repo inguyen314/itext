@@ -1,0 +1,13 @@
+BASIC    : ExportSHEF version 1.31 24Oct2012
+BASIC    : Started at Thu Jan 24 07:33:51 2019
+BASIC    : Started by g7cwmspd@155.77.185.102
+BASIC    : Command line = /usr1/wmsoft/cwms/v3.1.150/cwms/da/exportSHEF.py IN=MRBWM_TW_Release_FTRA.in OUT=MRBWM_TW_Release_FTRA.shef LOG=MRBWM_TW_Release_FTRA.log
+
+BASIC    : Procesing input file /netapp/g7cwmspd/cronjobs/Fcst2SHEF/MRBWM_TW_Release_FTRA.in
+
+NONE     : Log level set to 1 (Basic)
+
+BASIC    : ExportSHEF version 1.31 24Oct2012
+BASIC    : Ended at Thu Jan 24 07:34:11 2019
+BASIC    : Elapsed Time = 00:00:19
+

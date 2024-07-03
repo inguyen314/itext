@@ -1,0 +1,3296 @@
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 25920 minutes (432.000000 hours, or 18.000000 days)
+Time window = 04Dec2018 1310 --> 22Dec2018 1310
+Opening DBI foo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:10:39 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:10:40 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:10:40 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataMRRelev2.ini
+Elev 		= KANS-Kanopolis_Lake-Smoky_Hill.Elev.Inst.1Hour.0.Combined-rev
+Title 		= Kanopolis Lake on the Smoky Hill R, KS
+Filename		= /cwms/g7cwmspd/plotFiles/files/kans
+Dec 20, 2018 7:11:12 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+saved jpg!!!
+Elev 		= CLIN-Clinton_Lake-Wakarusa.Elev.Inst.1Hour.0.Combined-rev
+Title 		= Clinton Dam on the Wakarusa River, KS
+Filename		= /cwms/g7cwmspd/plotFiles/files/clin
+saved jpg!!!
+Elev 		= KIRN-Kirwin_Res-NF_Solomon.Elev.Inst.1Hour.0.Combined-rev
+Title 		= Kirwin Dam on the NF Solomon R, KS
+Filename		= /cwms/g7cwmspd/plotFiles/files/kirn
+saved jpg!!!
+Elev 		= LGVM-Longview_Lake-Little_Blue.Elev.Inst.1Hour.0.Combined-rev
+Title 		= Longview Dam on the Little Blue R, MO
+Filename		= /cwms/g7cwmspd/plotFiles/files/lgvm
+saved jpg!!!
+Elev 		= LNGB-Long_Branch_Lake-Chariton.Elev.Inst.1Hour.0.Combined-rev
+Title 		= Long Branch Dam on the Chariton R, MO
+Filename		= /cwms/g7cwmspd/plotFiles/files/lngb
+saved jpg!!!
+Elev 		= LRMT-Lima_Dam-Red_Rock.Elev.Inst.1Hour.0.Combined-rev
+Title 		= Lima Dam on Red Rock River, MT
+Filename		= /cwms/g7cwmspd/plotFiles/files/lrmt
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMRRelev2.py", line 164, in <module>
+    plotData(dbi, iniElev, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMRRelev2.py", line 40, in plotData
+    elevData = dbi.get(Elev)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2439, in get_1
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2079, in getTimeSeriesContainer
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 1913, in _getTimeSeries_
+ORA-06512: at "CWMS_20.CWMS_ERR", line 59
+ORA-06512: at "CWMS_20.CWMS_TS", line 2259
+ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "CWMS_20.CWMS_TS", line 3037
+ORA-06512: at "CWMS_20.CWMS_TS", line 3262
+ORA-06512: at line 2
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:494)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:446)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1054)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:623)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:252)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:612)
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:223)
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:56)
+	at oracle.jdbc.driver.T4CCallableStatement.executeForRows(T4CCallableStatement.java:907)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1119)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3780)
+	at oracle.jdbc.driver.T4CCallableStatement.executeInternal(T4CCallableStatement.java:1300)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3887)
+	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:4230)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1079)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at oracle.ucp.jdbc.proxy.StatementProxyFactory.invoke(StatementProxyFactory.java:367)
+	at com.sun.proxy.$Proxy8.execute(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+
+java.sql.SQLException: java.sql.SQLException: ORA-20001: TS_ID_NOT_FOUND: The timeseries identifier "LRMT-Lima_Dam-Red_Rock.Elev.Inst.1Hour.0.Combined-rev" was not found for office "NWDM"
+ORA-06512: at "CWMS_20.CWMS_ERR", line 59
+ORA-06512: at "CWMS_20.CWMS_TS", line 2259
+ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "CWMS_20.CWMS_TS", line 3037
+ORA-06512: at "CWMS_20.CWMS_TS", line 3262
+ORA-06512: at line 2
+
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 17280 minutes (288.000000 hours, or 12.000000 days)
+Time window = 10Dec2018 1312 --> 22Dec2018 1312
+Opening DBI foo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:12:08 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:12:08 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:12:09 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataKanProj.ini
+Qout1		= CLIN-Clinton_Lake-Wakarusa.Flow-Total.Ave.1Day.1Day.Combined-rev
+Qout2		= MILD-Milford_Lake-Republican.Flow-Total.Ave.1Day.1Day.Combined-rev
+Qout3		= PERY-Perry_Lake-Delaware.Flow-Total.Ave.1Day.1Day.Combined-rev
+Qout4		= TUCR-Tuttle_Creek_Lake-Big_Blue.Flow-Total.Ave.1Day.1Day.Combined-rev
+Title 		= Kansas River Project Discharges
+Filename		= /cwms/g7cwmspd/plotFiles/files/kanproj
+Dec 20, 2018 7:12:21 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+Qout1		= end
+Qout2		= 
+Qout3		= 
+Qout4		= 
+Title 		= 
+Filename		= 
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsKanProj.py", line 198, in <module>
+    plotData(dbi, iniQout1, iniQout2, iniQout3, iniQout4, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsKanProj.py", line 42, in plotData
+    qout1Data 	= dbi.get(qout1)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2449, in get_1
+ValueError: "end" is not a time-series id or rating id.
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 25920 minutes (432.000000 hours, or 18.000000 days)
+Time window = 04Dec2018 1312 --> 22Dec2018 1312
+Opening DBI fooo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:12:48 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:12:49 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:12:49 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataNWKres.ini
+Elev 		= BAGL-Bagnell_Dam-Osage.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= BAGL-Bagnell_Dam-Osage.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= BAGL-Bagnell_Dam-Osage.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= BAGL-Bagnell_Dam-Osage.Stor.Inst.1Day.0.Combined-rev
+Precip 		= BAGL-Bagnell_Dam-Osage.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 660.
+Title 		= Bagnell Dam on the Osage River, MO
+Filename		= /cwms/g7cwmspd/plotFiles/files/bagl2
+Dec 20, 2018 7:13:01 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+Elev 		= BONY-Bonny_Res-Republican.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= BONY-Bonny_Res-Republican.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= BONY-Bonny_Res-Republican.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= BONY-Bonny_Res-Republican.Stor.Inst.1Day.0.Combined-rev
+Precip 		= BONY-Bonny_Res-Republican.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 3672.
+Title 		= Bonny Dam on S.F. Republican R, CO
+Filename		= /cwms/g7cwmspd/plotFiles/files/bony2
+Elev 		= BSPM-Blue_Springs_Lake-Little_Blue.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= BSPM-Blue_Springs_Lake-Little_Blue.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= BSPM-Blue_Springs_Lake-Little_Blue.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= BSPM-Blue_Springs_Lake-Little_Blue.Stor.Inst.1Day.0.Combined-rev
+Precip 		= BSPM-Blue_Springs_Lake-Little_Blue.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 802.0
+Title 		= Blue Springs Dam on E.F L Blue R, MO
+Filename		= /cwms/g7cwmspd/plotFiles/files/bspm2
+Elev 		= CEBL-Cedar_Bluff_Res-Smoky_Hill.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= CEBL-Cedar_Bluff_Res-Smoky_Hill.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= CEBL-Cedar_Bluff_Res-Smoky_Hill.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= CEBL-Cedar_Bluff_Res-Smoky_Hill.Stor.Inst.1Day.0.Combined-rev
+Precip 		= CEBL-Cedar_Bluff_Res-Smoky_Hill.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 2144.
+Title 		= Cedar Bluff Dam on Smoky Hill R, KS
+Filename		= /cwms/g7cwmspd/plotFiles/files/cebl2
+Elev 		= CLIN-Clinton_Lake-Wakarusa.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= CLIN-Clinton_Lake-Wakarusa.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= CLIN-Clinton_Lake-Wakarusa.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= CLIN-Clinton_Lake-Wakarusa.Stor.Inst.1Day.0.Combined-rev
+Precip 		= CLIN-Clinton_Lake-Wakarusa.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 875.5
+Title 		= Clinton Dam on the Wakarusa R, KS
+Filename		= /cwms/g7cwmspd/plotFiles/files/clin2
+Elev 		= ENDS-Enders_Res-Frenchman.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= ENDS-Enders_Res-Frenchman.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= ENDS-Enders_Res-Frenchman.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= ENDS-Enders_Res-Frenchman.Stor.Inst.1Day.0.Combined-rev
+Precip 		= ENDS-Enders_Res-Frenchman.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 3112.3
+Title 		= Enders Dam on Frenchman Cr, NE
+Filename		= /cwms/g7cwmspd/plotFiles/files/ends2
+Elev 		= GLEL-Waconda_Lake-Solomon.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= GLEL-Waconda_Lake-Solomon.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= GLEL-Waconda_Lake-Solomon.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= GLEL-Waconda_Lake-Solomon.Stor.Inst.1Day.0.Combined-rev
+Precip 		= GLEL-Waconda_Lake-Solomon.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 1455.6
+Title 		= Glen Elder Dam / Waconda Dam, KS
+Filename		= /cwms/g7cwmspd/plotFiles/files/glel2
+Elev 		= HACO-Harlan_Co_Lake-Republican.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= HACO-Harlan_Co_Lake-Republican.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= HACO-Harlan_Co_Lake-Republican.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= HACO-Harlan_Co_Lake-Republican.Stor.Inst.1Day.0.Combined-rev
+Precip 		= HACO-Harlan_Co_Lake-Republican.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 1945.73
+Title 		= Harlan Co Dam on the Republican R, NE
+Filename		= /cwms/g7cwmspd/plotFiles/files/haco2
+Elev 		= HAST-Truman_Lake-Marais_Des_Cygnes.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= HAST-Truman_Lake-Marais_Des_Cygnes.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= HAST-Truman_Lake-Marais_Des_Cygnes.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= HAST-Truman_Lake-Marais_Des_Cygnes.Stor.Inst.1Day.0.Combined-rev
+Precip 		= HAST-Truman_Lake-Marais_Des_Cygnes.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 706.0
+Title 		= Harry S Truman Dam on the Osage R, MO
+Filename		= /cwms/g7cwmspd/plotFiles/files/hast2
+Elev 		= HILS-Hillsdale_Lake-Big_Bull.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= HILS-Hillsdale_Lake-Big_Bull.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= HILS-Hillsdale_Lake-Big_Bull.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= HILS-Hillsdale_Lake-Big_Bull.Stor.Inst.1Day.0.Combined-rev
+Precip 		= HILS-Hillsdale_Lake-Big_Bull.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 917.0
+Title 		= Hillsdale Dam on Big Bull Cr, KS
+Filename		= /cwms/g7cwmspd/plotFiles/files/hils2
+Elev 		= KANS-Kanopolis_Lake-Smoky_Hill.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= KANS-Kanopolis_Lake-Smoky_Hill.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= KANS-Kanopolis_Lake-Smoky_Hill.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= KANS-Kanopolis_Lake-Smoky_Hill.Stor.Inst.1Day.0.Combined-rev
+Precip 		= KANS-Kanopolis_Lake-Smoky_Hill.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 1463.0
+Title 		= Kanopolis Dam on the Smoky Hill R, KS
+Filename		= /cwms/g7cwmspd/plotFiles/files/kans2
+Elev 		= LGVM-Longview_Lake-Little_Blue.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= LGVM-Longview_Lake-Little_Blue.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= LGVM-Longview_Lake-Little_Blue.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= LGVM-Longview_Lake-Little_Blue.Stor.Inst.1Day.0.Combined-rev
+Precip 		= LGVM-Longview_Lake-Little_Blue.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 891.0
+Title 		= Longview Dam on the L Blue R, MO
+Filename		= /cwms/g7cwmspd/plotFiles/files/lgvm2
+Elev 		= LNGB-Long_Branch_Lake-Chariton.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= LNGB-Long_Branch_Lake-Chariton.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= LNGB-Long_Branch_Lake-Chariton.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= LNGB-Long_Branch_Lake-Chariton.Stor.Inst.1Day.0.Combined-rev
+Precip 		= LNGB-Long_Branch_Lake-Chariton.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 791.0
+Title 		= Long Branch Dam on E.F. L Chariton R, MO
+Filename		= /cwms/g7cwmspd/plotFiles/files/lngb2
+Elev 		= LOVL-Lovewell_Res-White_Rock.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= LOVL-Lovewell_Res-White_Rock.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= LOVL-Lovewell_Res-White_Rock.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= LOVL-Lovewell_Res-White_Rock.Stor.Inst.1Day.0.Combined-rev
+Precip 		= LOVL-Lovewell_Res-White_Rock.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 1582.6
+Title 		= Lovewell Dam on White Rock Cr, KS
+Filename		= /cwms/g7cwmspd/plotFiles/files/lovl2
+Elev 		= MECR-Harry_Strunk_Res-Medicine.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= MECR-Harry_Strunk_Res-Medicine.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= MECR-Harry_Strunk_Res-Medicine.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= MECR-Harry_Strunk_Res-Medicine.Stor.Inst.1Day.0.Combined-rev
+Precip 		= MECR-Harry_Strunk_Res-Medicine.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 2366.1
+Title 		= Medicine Creek Dam / Harry Strunk Lake, NE
+Filename		= /cwms/g7cwmspd/plotFiles/files/mecr2
+Elev 		= MELN-Melvern_Lake-Marais_Des_Cygnes.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= MELN-Melvern_Lake-Marais_Des_Cygnes.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= MELN-Melvern_Lake-Marais_Des_Cygnes.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= MELN-Melvern_Lake-Marais_Des_Cygnes.Stor.Inst.1Day.0.Combined-rev
+Precip 		= MELN-Melvern_Lake-Marais_Des_Cygnes.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 1036.0
+Title 		= Melvern Dam on the Marais Des Cygnes R, KS
+Filename		= /cwms/g7cwmspd/plotFiles/files/meln2
+Elev 		= MILD-Milford_Lake-Republican.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= MILD-Milford_Lake-Republican.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= MILD-Milford_Lake-Republican.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= MILD-Milford_Lake-Republican.Stor.Inst.1Day.0.Combined-rev
+Precip 		= MILD-Milford_Lake-Republican.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 1144.4
+Title 		= Milford Dam on the Republican R, KS
+Filename		= /cwms/g7cwmspd/plotFiles/files/mild2
+Elev 		= NORN-Norton_Res-Prairie_Dog.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= NORN-Norton_Res-Prairie_Dog.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= NORN-Norton_Res-Prairie_Dog.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= NORN-Norton_Res-Prairie_Dog.Stor.Inst.1Day.0.Combined-rev
+Precip 		= NORN-Norton_Res-Prairie_Dog.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 2304.3
+Title 		= Norton Dam / Keith Sebelius Res, KS
+Filename		= /cwms/g7cwmspd/plotFiles/files/norn2
+Elev 		= PERY-Perry_Lake-Delaware.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= PERY-Perry_Lake-Delaware.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= PERY-Perry_Lake-Delaware.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= PERY-Perry_Lake-Delaware.Stor.Inst.1Day.0.Combined-rev
+Precip 		= PERY-Perry_Lake-Delaware.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 891.5
+Title 		= Perry Dam on the Delaware R, KS
+Filename		= /cwms/g7cwmspd/plotFiles/files/pery2
+Elev 		= PODT-Pomme_De_Terre_Lake-Pomme_De_Ter.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= PODT-Pomme_De_Terre_Lake-Pomme_De_Ter.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= PODT-Pomme_De_Terre_Lake-Pomme_De_Ter.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= PODT-Pomme_De_Terre_Lake-Pomme_De_Ter.Stor.Inst.1Day.0.Combined-rev
+Precip 		= PODT-Pomme_De_Terre_Lake-Pomme_De_Ter.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 839.0
+Title 		= Pomme De Terre Dam on the Pomme De Terre River, MO
+Filename		= /cwms/g7cwmspd/plotFiles/files/podt2
+Elev 		= POMA-Pomona_Lake-110-Quenemo.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= POMA-Pomona_Lake-110-Quenemo.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= POMA-Pomona_Lake-110-Quenemo.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= POMA-Pomona_Lake-110-Quenemo.Stor.Inst.1Day.0.Combined-rev
+Precip 		= POMA-Pomona_Lake-110-Quenemo.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 974.0
+Title 		= Pomona Dam on 110_Mile Cr, KS
+Filename		= /cwms/g7cwmspd/plotFiles/files/poma2
+Elev 		= RATN-Rathbun_Lake-Chariton.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= RATN-Rathbun_Lake-Chariton.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= RATN-Rathbun_Lake-Chariton.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= RATN-Rathbun_Lake-Chariton.Stor.Inst.1Day.0.Combined-rev
+Precip 		= RATN-Rathbun_Lake-Chariton.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 904.0
+Title 		= Rathbun Dam on the Chariton River, IA
+Filename		= /cwms/g7cwmspd/plotFiles/files/ratn2
+Elev 		= REWI-Hugh_Butler_Res-Red_Willow.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= REWI-Hugh_Butler_Res-Red_Willow.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= REWI-Hugh_Butler_Res-Red_Willow.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= REWI-Hugh_Butler_Res-Red_Willow.Stor.Inst.1Day.0.Combined-rev
+Precip 		= REWI-Hugh_Butler_Res-Red_Willow.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 2581.8
+Title 		= Red Willow Cr Dam / Hugh Butler Lake, NE
+Filename		= /cwms/g7cwmspd/plotFiles/files/rewi2
+Elev 		= SMIE-Smithville_Lake-Little_Platte.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= SMIE-Smithville_Lake-Little_Platte.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= SMIE-Smithville_Lake-Little_Platte.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= SMIE-Smithville_Lake-Little_Platte.Stor.Inst.1Day.0.Combined-rev
+Precip 		= SMIE-Smithville_Lake-Little_Platte.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 864.2
+Title 		= Smithville Dam on the L Platte R, MO
+Filename		= /cwms/g7cwmspd/plotFiles/files/smie2
+Elev 		= STON-Stockton_Lake-Sac.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= STON-Stockton_Lake-Sac.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= STON-Stockton_Lake-Sac.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= STON-Stockton_Lake-Sac.Stor.Inst.1Day.0.Combined-rev
+Precip 		= STON-Stockton_Lake-Sac.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 864.2
+Title 		= Stockton Dam on the Sac River, MO
+Filename		= /cwms/g7cwmspd/plotFiles/files/ston2
+Elev 		= TREN-Swanson_Res-Republican.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= TREN-Swanson_Res-Republican.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= TREN-Swanson_Res-Republican.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= TREN-Swanson_Res-Republican.Stor.Inst.1Day.0.Combined-rev
+Precip 		= TREN-Swanson_Res-Republican.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 2752.0
+Title 		= Trenton Dam / Swanson Lake, NE
+Filename		= /cwms/g7cwmspd/plotFiles/files/tren2
+Elev 		= TUCR-Tuttle_Creek_Lake-Big_Blue.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= TUCR-Tuttle_Creek_Lake-Big_Blue.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= TUCR-Tuttle_Creek_Lake-Big_Blue.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= TUCR-Tuttle_Creek_Lake-Big_Blue.Stor.Inst.1Day.0.Combined-rev
+Precip 		= TUCR-Tuttle_Creek_Lake-Big_Blue.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 1075.0
+Title 		= Tuttle Creek Dam on the Big Blue R, KS
+Filename		= /cwms/g7cwmspd/plotFiles/files/tucr2
+Elev 		= WEBR-Webster_Res-SF_Solomon.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= WEBR-Webster_Res-SF_Solomon.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= WEBR-Webster_Res-SF_Solomon.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= WEBR-Webster_Res-SF_Solomon.Stor.Inst.1Day.0.Combined-rev
+Precip 		= WEBR-Webster_Res-SF_Solomon.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 1892.45
+Title 		= Webster Dam on the S.F. Solomon R, KS
+Filename		= /cwms/g7cwmspd/plotFiles/files/webr2
+Elev 		= WILN-Wilson_Lake-Saline.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= WILN-Wilson_Lake-Saline.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= WILN-Wilson_Lake-Saline.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= WILN-Wilson_Lake-Saline.Stor.Inst.1Day.0.Combined-rev
+Precip 		= WILN-Wilson_Lake-Saline.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 1516.0
+Title 		= Wilson Dam on Saline R, KS
+Filename		= /cwms/g7cwmspd/plotFiles/files/wiln2
+Elev 		= KIRN-Kirwin_Res-NF_Solomon.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= KIRN-Kirwin_Res-NF_Solomon.Flow-In.Ave.1Day.1Day.Combined-rev
+Release		= KIRN-Kirwin_Res-NF_Solomon.Flow-Total.Ave.1Day.1Day.Combined-rev
+Storage		= KIRN-Kirwin_Res-NF_Solomon.Stor.Inst.1Day.0.Combined-rev
+Precip 		= KIRN-Kirwin_Res-NF_Solomon.Precip.Total.1Day.1Day.Combined-rev
+Base FC Pool	= 1729.25
+Title 		= Kirwin Dam on the N.F. Solomon R, KS
+Filename		= /cwms/g7cwmspd/plotFiles/files/kirn2
+Elev 		= end
+Inflow		= 
+Release		= 
+Storage		= 
+Precip 		= 
+Base FC Pool	= 
+Title 		= 
+Filename		= 
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsNWKres.py", line 274, in <module>
+    plotData(dbi, iniElev, iniInflow, iniRelease, iniStor, iniPrec, iniBaseFC, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsNWKres.py", line 44, in plotData
+    elevData 	= dbi.get(elev)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2449, in get_1
+ValueError: "end" is not a time-series id or rating id.
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:14:21 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:14:21 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:14:21 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Dec 20, 2018 7:14:36 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+Debug Line 319   |	Database connection closed
+Closing Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Debug Line 326   |	Plot closed
+Shut Down: Closing all database connections before exiting.
+IOError: [Errno 2] File not found - /netapp/g7cwmspd/plotFiles/createPlotsNWOhbia.py (No such file or directory)
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 27360 minutes (456.000000 hours, or 19.000000 days)
+Time window = 15Dec2018 1315 --> 03Jan2019 1315
+Opening DBI foo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:15:34 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:15:34 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:15:35 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataGRFTfcstq.ini
+Observed Flow	= GAPT.Flow-Out.Inst.1Hour.0.Best-MRBWM
+GRFT Forecast	= GAPT-Gavins_Point_Dam-Missouri.Flow.Inst.6Hours.0.GRFT-Fcst
+Title 		= Missouri River at Gavins Point Dam
+Filename		= /cwms/g7cwmspd/plotFiles/files/gaptfcx
+Dec 20, 2018 7:16:06 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+units= cfs
+units= cfs
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+Observed Flow	= AKIA-Akron-Big_Sioux.Flow.Inst.1Hour.0.Combined-rev
+GRFT Forecast	= AKIA-Akron-Big_Sioux.Flow.Inst.6Hours.0.GRFT-Fcst
+Title 		= Big Sioux River at Akron, IA
+Filename		= /cwms/g7cwmspd/plotFiles/files/akiafcx
+units= cfs
+units= cfs
+Observed Flow	= SUX-Sioux_City-Missouri.Flow.Inst.1Hour.0.Combined-rev
+GRFT Forecast	= SUX-Sioux_City-Missouri.Flow.Inst.6Hours.0.GRFT-Fcst
+Title 		= Missouri River at Sioux City, IA
+Filename		= /cwms/g7cwmspd/plotFiles/files/suxfcx
+units= cfs
+units= cfs
+Observed Flow	= DENE-Decatur-Missouri.Flow.Inst.1Hour.0.Combined-rev
+GRFT Forecast	= DENE-Decatur-Missouri.Flow.Inst.6Hours.0.GRFT-Fcst
+Title 		= Missouri River at Decatur, NE
+Filename		= /cwms/g7cwmspd/plotFiles/files/denefcx
+units= cfs
+units= cfs
+Observed Flow	= TUIA-Turin-Little_Sioux.Flow.Inst.1Hour.0.Combined-rev
+GRFT Forecast	= TUIA-Turin-Little_Sioux.Flow.Inst.6Hours.0.GRFT-Fcst
+Title 		= Little Sioux River at Turin, IA
+Filename		= /cwms/g7cwmspd/plotFiles/files/tuiafcx
+units= cfs
+units= cfs
+Observed Flow	= OMA-Omaha-Missouri.Flow.Inst.1Hour.0.Combined-rev
+GRFT Forecast	= OMA-Omaha-Missouri.Flow.Inst.6Hours.0.GRFT-Fcst
+Title 		= Missouri River at Omaha, NE
+Filename		= /cwms/g7cwmspd/plotFiles/files/omafcx
+units= cfs
+units= cfs
+Observed Flow	= GRNE-Grand_Island-Platte.Flow.Inst.1Hour.0.Combined-rev
+GRFT Forecast	= GRNE-Grand_Island-Platte.Flow.Inst.6Hours.0.GRFT-Fcst
+Title 		= Platte River at Grand Island, NE
+Filename		= /cwms/g7cwmspd/plotFiles/files/grnefcx
+units= cfs
+units= cfs
+Observed Flow	= WTNE-Waterloo-Elkhorn.Flow.Inst.1Hour.0.Combined-rev
+GRFT Forecast	= WTNE-Waterloo-Elkhorn.Flow.Inst.6Hours.0.GRFT-Fcst
+Title 		= Elkhorn River at Waterloo, NE
+Filename		= /cwms/g7cwmspd/plotFiles/files/wtnefcx
+units= cfs
+units= cfs
+Observed Flow	= LUNE-Louisville-Platte.Flow.Inst.1Hour.0.Combined-rev
+GRFT Forecast	= LUNE-Louisville-Platte.Flow.Inst.6Hours.0.GRFT-Fcst
+Title 		= Platte River at Louisville, NE
+Filename		= /cwms/g7cwmspd/plotFiles/files/lunefcx
+units= cfs
+units= cfs
+Observed Flow	= NCNE-Nebraska_City-Missouri.Flow.Inst.1Hour.0.Combined-rev
+GRFT Forecast	= NCNE-Nebraska_City-Missouri.Flow.Inst.6Hours.0.GRFT-Fcst
+Title 		= Missouri River at Nebraska City, NE
+Filename		= /cwms/g7cwmspd/plotFiles/files/ncnefcx
+units= cfs
+units= cfs
+Observed Flow	= HAIA-Hamburg-Nishnabotna.Flow.Inst.1Hour.0.Combined-rev
+GRFT Forecast	= HAIA-Hamburg-Nishnabotna.Flow.Inst.6Hours.0.GRFT-Fcst
+Title 		= Nishnabotna River at Hamburg, IA
+Filename		= /cwms/g7cwmspd/plotFiles/files/haiafcx
+units= cfs
+units= cfs
+Observed Flow	= RUNE-Rulo-Missouri.Flow.Inst.1Hour.0.Combined-rev
+GRFT Forecast	= RUNE-Rulo-Missouri.Flow.Inst.6Hours.0.GRFT-Fcst
+Title 		= Missouri River at Rulo, NE
+Filename		= /cwms/g7cwmspd/plotFiles/files/runefcx
+units= cfs
+units= cfs
+Observed Flow	= STJ-St_Joseph-Missouri.Flow.Inst.1Hour.0.Combined-rev
+GRFT Forecast	= STJ-St_Joseph-Missouri.Flow.Inst.6Hours.0.GRFT-Fcst
+Title 		= Missouri River at St Joseph, MO
+Filename		= /cwms/g7cwmspd/plotFiles/files/stjfcx
+units= cfs
+units= cfs
+Observed Flow	= SSMO-Sharps_Station-Platte.Flow.Inst.1Hour.0.Combined-rev
+GRFT Forecast	= SSMO-Sharps_Station-Platte.Flow.Inst.6Hours.0.GRFT-Fcst
+Title 		= Platte River at Sharp's Station, MO
+Filename		= /cwms/g7cwmspd/plotFiles/files/ssmofcx
+units= cfs
+units= cfs
+Observed Flow	= MKC-Kansas_City-Missouri.Flow.Inst.1Hour.0.Combined-rev
+GRFT Forecast	= MKC-Kansas_City-Missouri.Flow.Inst.6Hours.0.GRFT-Fcst
+Title 		= Missouri River at Kansas City, MO
+Filename		= /cwms/g7cwmspd/plotFiles/files/mkcfcx
+units= cfs
+units= cfs
+Observed Flow	= WVMO-Waverly-Missouri.Flow.Inst.1Hour.0.Combined-rev
+GRFT Forecast	= WVMO-Waverly-Missouri.Flow.Inst.6Hours.0.GRFT-Fcst
+Title 		= Missouri River at Waverly, MO
+Filename		= /cwms/g7cwmspd/plotFiles/files/wvmofcx
+units= cfs
+units= cfs
+Observed Flow	= SMNM-Sumner-Grand.Flow.Inst.1Hour.0.Combined-rev
+GRFT Forecast	= SMNM-Sumner-Grand.Flow.Inst.6Hours.0.GRFT-Fcst
+Title 		= Grand River at Sumner, MO
+Filename		= /cwms/g7cwmspd/plotFiles/files/smnmfcx
+units= cfs
+units= cfs
+Observed Flow	= BNMO-Boonville-Missouri.Flow.Inst.1Hour.0.Combined-rev
+GRFT Forecast	= BNMO-Boonville-Missouri.Flow.Inst.6Hours.0.GRFT-Fcst
+Title 		= Missouri River at Boonville, MO
+Filename		= /cwms/g7cwmspd/plotFiles/files/bnmofcx
+units= cfs
+units= cfs
+Observed Flow	= HEMO-Hermann-Missouri.Flow.Inst.1Hour.0.Combined-rev
+GRFT Forecast	= HEMO-Hermann-Missouri.Flow.Inst.6Hours.0.GRFT-Fcst
+Title 		= Missouri River at Hermann, MO
+Filename		= /cwms/g7cwmspd/plotFiles/files/hemofcx
+units= cfs
+units= cfs
+Observed Flow	= end
+GRFT Forecast	= 
+Title 		= 
+Filename		= 
+Closing Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsGRFTfcstq.py", line 182, in <module>
+    plotData(dbi, iniObsFlow, iniFuiFlow, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsGRFTfcstq.py", line 41, in plotData
+    obsFlowData 	= dbi.get(obsFlow)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2449, in get_1
+ValueError: "end" is not a time-series id or rating id.
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:17:21 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:17:21 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:17:21 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Debug Line 364   |	Creating plot for BECR
+Debug Line 374   |	Could not create BECR plot
+Debug Line 379   |	BECR Plot closed
+Debug Line 364   |	Creating plot for CHFI
+Debug Line 374   |	Could not create CHFI plot
+Debug Line 379   |	CHFI Plot closed
+Debug Line 364   |	Creating plot for COLD
+Debug Line 374   |	Could not create COLD plot
+Debug Line 379   |	COLD Plot closed
+Debug Line 364   |	Creating plot for PA11
+Debug Line 374   |	Could not create PA11 plot
+Debug Line 379   |	PA11 Plot closed
+Debug Line 364   |	Creating plot for PA16
+Debug Line 374   |	Could not create PA16 plot
+Debug Line 379   |	PA16 Plot closed
+Debug Line 364   |	Creating plot for PA18
+Debug Line 374   |	Could not create PA18 plot
+Debug Line 379   |	PA18 Plot closed
+Debug Line 364   |	Creating plot for PA20
+Debug Line 374   |	Could not create PA20 plot
+Debug Line 379   |	PA20 Plot closed
+Debug Line 364   |	Creating plot for SC02
+Debug Line 374   |	Could not create SC02 plot
+Debug Line 379   |	SC02 Plot closed
+Debug Line 364   |	Creating plot for SC04
+Debug Line 374   |	Could not create SC04 plot
+Debug Line 379   |	SC04 Plot closed
+Debug Line 364   |	Creating plot for SC08
+Debug Line 374   |	Could not create SC08 plot
+Debug Line 379   |	SC08 Plot closed
+Debug Line 364   |	Creating plot for SC09
+Debug Line 374   |	Could not create SC09 plot
+Debug Line 379   |	SC09 Plot closed
+Debug Line 364   |	Creating plot for SC10
+Debug Line 374   |	Could not create SC10 plot
+Debug Line 379   |	SC10 Plot closed
+Debug Line 364   |	Creating plot for SC12
+Debug Line 374   |	Could not create SC12 plot
+Debug Line 379   |	SC12 Plot closed
+Debug Line 364   |	Creating plot for SC13
+Debug Line 374   |	Could not create SC13 plot
+Debug Line 379   |	SC13 Plot closed
+Debug Line 364   |	Creating plot for SC14
+Debug Line 374   |	Could not create SC14 plot
+Debug Line 379   |	SC14 Plot closed
+Debug Line 364   |	Creating plot for SC17
+Debug Line 374   |	Could not create SC17 plot
+Debug Line 379   |	SC17 Plot closed
+Debug Line 364   |	Creating plot for SC18
+Debug Line 374   |	Could not create SC18 plot
+Debug Line 379   |	SC18 Plot closed
+Debug Line 364   |	Creating plot for BOHA
+Debug Line 374   |	Could not create BOHA plot
+Debug Line 379   |	BOHA Plot closed
+Debug Line 364   |	Creating plot for CHCR
+Debug Line 374   |	Could not create CHCR plot
+Debug Line 379   |	CHCR Plot closed
+Debug Line 364   |	Creating plot for COTT
+Debug Line 374   |	Could not create COTT plot
+Debug Line 379   |	COTT Plot closed
+Debug Line 364   |	Creating plot for PIST
+Debug Line 374   |	Could not create PIST plot
+Debug Line 379   |	PIST Plot closed
+Debug Line 364   |	Creating plot for BOYN
+Debug Line 374   |	Could not create BOYN plot
+Debug Line 379   |	BOYN Plot closed
+Debug Line 364   |	Creating plot for CAFE
+Debug Line 374   |	Could not create CAFE plot
+Debug Line 379   |	CAFE Plot closed
+Debug Line 364   |	Creating plot for GLEN
+Debug Line 374   |	Could not create GLEN plot
+Debug Line 379   |	GLEN Plot closed
+Debug Line 364   |	Creating plot for JATO
+Debug Line 374   |	Could not create JATO plot
+Debug Line 379   |	JATO Plot closed
+Debug Line 364   |	Creating plot for PACA
+Debug Line 374   |	Could not create PACA plot
+Debug Line 379   |	PACA Plot closed
+Debug Line 364   |	Creating plot for SHHI
+Debug Line 374   |	Could not create SHHI plot
+Debug Line 379   |	SHHI Plot closed
+Debug Line 364   |	Creating plot for YETL
+Debug Line 374   |	Could not create YETL plot
+Debug Line 379   |	YETL Plot closed
+Debug Line 364   |	Creating plot for CLCA
+Debug Line 374   |	Could not create CLCA plot
+Debug Line 379   |	CLCA Plot closed
+Debug Line 364   |	Creating plot for HEBU
+Debug Line 374   |	Could not create HEBU plot
+Debug Line 379   |	HEBU Plot closed
+Debug Line 364   |	Creating plot for KEYO
+Debug Line 374   |	Could not create KEYO plot
+Debug Line 379   |	KEYO Plot closed
+Debug Line 364   |	Creating plot for TIBR
+Debug Line 374   |	Could not create TIBR plot
+Debug Line 379   |	TIBR Plot closed
+Debug Line 387   |	Database connection closed
+Closing Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Shut Down: Closing all database connections before exiting.
+Moving files to web server staging area and to local zone.
+You are accessing a U.S. Government (USG) Information System (IS) that
+is provided for USG-authorized use only. By using this IS (which
+includes any device attached to this IS), you consent to the following
+conditions:
+-The USG routinely intercepts and monitors communications on this IS
+for purposes including, but not limited to, penetration testing, COMSEC
+monitoring, network operations and defense, personnel misconduct (PM),
+law enforcement (LE), and counterintelligence (CI) investigations.
+-At any time, the USG may inspect and seize data stored on this IS.
+-Communications using, or data stored on, this IS are not private, are
+subject to routine monitoring, interception, and search, and may be
+disclosed or used for any USG-authorized purpose.
+-This IS includes security measures (e.g., authentication and access
+controls) to protect USG interests--not for your personal benefit or
+privacy.
+-Notwithstanding the above, using this IS does not constitute consent
+to PM, LE or CI investigative searching or monitoring of the content of
+privileged communications, or work product, related to personal
+representation or services by attorneys, psychotherapists, or clergy,
+and their assistants. Such communications and work product are private
+and confidential. See User Agreement for details.
+Done
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 25920 minutes (432.000000 hours, or 18.000000 days)
+Time window = 04Dec2018 1318 --> 22Dec2018 1318
+Opening DBI foo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:18:31 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:18:32 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:18:32 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataMRRWaterTemp1.ini
+Water Temp 	= YKN-Yankton-Missouri.Temp-Water.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River Water Temperature at Yankton, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/ykn1
+Dec 20, 2018 7:18:46 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+Water Temp 	= end
+Title 		= 
+Filename		= 
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMRRWaterTemp1.py", line 165, in <module>
+    plotData(dbi, iniWatertemp, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMRRWaterTemp1.py", line 39, in plotData
+    wtempData = dbi.get(wtemp)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2449, in get_1
+ValueError: "end" is not a time-series id or rating id.
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 25920 minutes (432.000000 hours, or 18.000000 days)
+Time window = 04Dec2018 1319 --> 22Dec2018 1319
+Opening DBI foo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:19:12 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:19:13 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:19:13 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataMRRelev1.ini
+Elev 		= FTPK.Elev.Inst.1Hour.0.Best-MRBWM
+Title 		= Fort Peck Dam / Fort Peck Lake, MT
+Filename		= /cwms/g7cwmspd/plotFiles/files/ftpk
+Dec 20, 2018 7:19:24 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+Elev 		= GARR.Elev.Inst.1Hour.0.Best-MRBWM
+Title 		= Garrison Dam / Lake Sakakawea, ND
+Filename		= /cwms/g7cwmspd/plotFiles/files/garr
+Elev 		= OAHE.Elev.Inst.1Hour.0.Best-MRBWM
+Title 		= Oahe Dam / Lake Oahe, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/oahe
+Elev 		= BEND.Elev.Inst.1Hour.0.Best-MRBWM
+Title 		= Big Bend Dam / Lake Sharpe, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/bend
+Elev 		= FTRA.Elev.Inst.1Hour.0.Best-MRBWM
+Title 		= Fort Randall Dam / Lake Francis Case, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/ftra
+Elev 		= GAPT.Elev.Inst.1Hour.0.Best-MRBWM
+Title 		= Gavins Point Dam / Lewis and Clark Lake, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/gapt
+Elev 		= ALCR-Alcova_Dam-North_Platte.Elev.Inst.1Hour.0.usbr-rev
+Title 		= Alcova Dam on North Platte R, WY
+Filename		= /cwms/g7cwmspd/plotFiles/files/alcr
+Elev 		= GRAR-Gray_Reef_Dam-North_Platte.Elev.Inst.1Day.0.usbr-rev
+Title 		= Gray Reef Dam on North Platte R, WY
+Filename		= /cwms/g7cwmspd/plotFiles/files/grar
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMRRelev1.py", line 163, in <module>
+    plotData(dbi, iniElev, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMRRelev1.py", line 41, in plotData
+    elevData = dbi.get(Elev)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2439, in get_1
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2079, in getTimeSeriesContainer
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 1913, in _getTimeSeries_
+ORA-06512: at "CWMS_20.CWMS_ERR", line 59
+ORA-06512: at "CWMS_20.CWMS_TS", line 2259
+ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "CWMS_20.CWMS_TS", line 3037
+ORA-06512: at "CWMS_20.CWMS_TS", line 3262
+ORA-06512: at line 2
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:494)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:446)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1054)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:623)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:252)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:612)
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:223)
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:56)
+	at oracle.jdbc.driver.T4CCallableStatement.executeForRows(T4CCallableStatement.java:907)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1119)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3780)
+	at oracle.jdbc.driver.T4CCallableStatement.executeInternal(T4CCallableStatement.java:1300)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3887)
+	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:4230)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1079)
+	at sun.reflect.GeneratedMethodAccessor32.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at oracle.ucp.jdbc.proxy.StatementProxyFactory.invoke(StatementProxyFactory.java:367)
+	at com.sun.proxy.$Proxy8.execute(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+
+java.sql.SQLException: java.sql.SQLException: ORA-20001: TS_ID_NOT_FOUND: The timeseries identifier "GRAR-Gray_Reef_Dam-North_Platte.Elev.Inst.1Day.0.usbr-rev" was not found for office "NWDM"
+ORA-06512: at "CWMS_20.CWMS_ERR", line 59
+ORA-06512: at "CWMS_20.CWMS_TS", line 2259
+ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "CWMS_20.CWMS_TS", line 3037
+ORA-06512: at "CWMS_20.CWMS_TS", line 3262
+ORA-06512: at line 2
+
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 25920 minutes (432.000000 hours, or 18.000000 days)
+Time window = 04Dec2018 1319 --> 22Dec2018 1319
+Opening DBI foo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:19:54 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:19:55 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:19:55 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataMRRstage.ini
+Stage 		= WSND-Washburn-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Washburn, ND
+Filename		= /cwms/g7cwmspd/plotFiles/files/wsnd
+Dec 20, 2018 7:20:06 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+Stage 		= PTNE-Plattsmouth-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Plattsmouth, NE
+Filename		= /cwms/g7cwmspd/plotFiles/files/ptne
+Stage 		= BLNE-Blair-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Blair, NE; FS = 26.5'
+Filename		= /cwms/g7cwmspd/plotFiles/files/blne
+Stage 		= FISD-Pierre-Missouri-Farm_Island.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River bl Oahe at Farm Island, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/fisd
+Stage 		= SJNE-St_James-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River near St James, NE (formerly GASD)
+Filename		= /cwms/g7cwmspd/plotFiles/files/sjne
+Stage 		= GLMO-Glasgow-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Glasgow, MO
+Filename		= /cwms/g7cwmspd/plotFiles/files/glmo
+Stage 		= IWSD-Pierre-Missouri-Isaac_Walton.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River bl Oahe at Isaac Walton, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/iwsd
+Stage 		= GRWY-Glenrock-North_Platte.Stage.Inst.1Hour.0.Combined-rev
+Title 		= North Platte River at Glenrock, WY; FS = 3.5'
+Filename		= /cwms/g7cwmspd/plotFiles/files/grwy
+Stage 		= GWSD-Greenwood-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Greenwood, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/gwsd
+Stage 		= JEFM-Jefferson_City-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Jefferson City, MO
+Filename		= /cwms/g7cwmspd/plotFiles/files/jefm
+Stage 		= LFSD-Pierre-Missouri-LaFrambois_Isl.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River bl Oahe at LaFrambois Isl, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/lfsd
+Stage 		= MANE-Maskell-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Maskell, NE
+Filename		= /cwms/g7cwmspd/plotFiles/files/mane
+Stage 		= NINE-Niobrara-Niobrara.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Niobrara River at Niobrara, NE
+Filename		= /cwms/g7cwmspd/plotFiles/files/nine
+Stage 		= NMNE-Niobrara-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Niobrara, NE
+Filename		= /cwms/g7cwmspd/plotFiles/files/nmne
+Stage 		= PIR-Pierre-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River bl Oahe at Pierre, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/pir
+Stage 		= PONE-Ponca-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Ponca, NE
+Filename		= /cwms/g7cwmspd/plotFiles/files/pone
+Stage 		= PRND-Price-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Price, ND
+Filename		= /cwms/g7cwmspd/plotFiles/files/prnd
+Stage 		= SHND-Schmidt-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Schmidt, ND
+Filename		= /cwms/g7cwmspd/plotFiles/files/shnd
+Stage 		= SPSD-Springfield-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Springfield, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/spsd
+Stage 		= VENE-Verdel-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Verdel, NE
+Filename		= /cwms/g7cwmspd/plotFiles/files/vene
+Stage 		= STCH-St_Charles-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at St. Charles, MO; FS = 25'
+Filename		= /cwms/g7cwmspd/plotFiles/files/stch
+Stage 		= STND-Stanton-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Stanton, ND
+Filename		= /cwms/g7cwmspd/plotFiles/files/stnd
+Stage 		= NAPM-Napoleon-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Missouri R at Napoleon, KS; FS=17.0
+Filename		= /cwms/g7cwmspd/plotFiles/files/napm
+Stage 		= FCNE-Omaha-Fort_Crook-Papillion.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Papio Creek at Fort Crook, NE; FS = 29'
+Filename		= /cwms/g7cwmspd/plotFiles/files/fcne
+Stage 		= AWND-Arrowwood_Res-James.Elev.Inst.1Hour.0.Combined-rev
+Title 		= Arrowwood Res on the James River, ND
+Filename		= /cwms/g7cwmspd/plotFiles/files/awnd
+Stage 		= KEND-Kensal-James.Stage.Inst.1Hour.0.Combined-rev
+Title 		= James River at Kensal, ND
+Filename		= /cwms/g7cwmspd/plotFiles/files/kend
+Stage 		= IRNE-Irvington-Little_Papillion.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Little Papillion Creek at Irvington, NE; FS = 17'
+Filename		= /cwms/g7cwmspd/plotFiles/files/irne
+Stage 		= WPNE-Omaha-110th_Giles-W_Papillion.Stage.Inst.1Hour.0.Combined-rev
+Title 		= W. Br. Papillion Creek, NE; FS = 28'
+Filename		= /cwms/g7cwmspd/plotFiles/files/wpne
+Stage 		= LUND-Ludden-James_River.Stage.Inst.1Hour.0.Combined-rev
+Title 		= James River at Ludden Dam, ND; FS = 12'
+Filename		= /cwms/g7cwmspd/plotFiles/files/lund
+Stage 		= end
+Title 		= 
+Filename		= 
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMRRstage.py", line 157, in <module>
+    plotData(dbi, iniStage, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMRRstage.py", line 38, in plotData
+    stageData = dbi.get(stage)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2449, in get_1
+ValueError: "end" is not a time-series id or rating id.
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 25920 minutes (432.000000 hours, or 18.000000 days)
+Time window = 04Dec2018 1320 --> 22Dec2018 1320
+Opening DBI foooo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:20:48 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:20:49 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:20:49 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataMRRresMin.ini
+Elev 		= FTPK.Elev.Inst.1Hour.0.Best-MRBWM
+Inflow		= FTPK.Flow-In.Ave.~1Day.1Day.Best-MRBWM
+Release		= FTPK.Flow-Out.Ave.~1Day.1Day.Best-MRBWM
+Storage		= FTPK.Stor.Inst.~1Day.0.Best-MRBWM
+Precip 		= FTPK.Precip.Total.~1Day.1Day.Best-MRBWM
+Minimum Pool	= 2195.7
+Title 		= Fort Peck Dam, Missouri River, near Glasgow, MT
+Filename		= /cwms/g7cwmspd/plotFiles/files/ftpkmin
+Dec 20, 2018 7:21:02 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+Elev 		= GARR.Elev.Inst.1Hour.0.Best-MRBWM
+Inflow		= GARR.Flow-In.Ave.~1Day.1Day.Best-MRBWM
+Release		= GARR.Flow-Out.Ave.~1Day.1Day.Best-MRBWM
+Storage		= GARR.Stor.Inst.~1Day.0.Best-MRBWM
+Precip 		= GARR.Precip.Total.~1Day.1Day.Best-MRBWM
+Minimum Pool	= 1805.8
+Title 		= Garrison Dam, Missouri River, near Garrison, ND
+Filename		= /cwms/g7cwmspd/plotFiles/files/garrmin
+Elev 		= OAHE.Elev.Inst.1Hour.0.Best-MRBWM
+Inflow		= OAHE.Flow-In.Ave.~1Day.1Day.Best-MRBWM
+Release		= OAHE.Flow-Out.Ave.~1Day.1Day.Best-MRBWM
+Storage		= OAHE.Stor.Inst.~1Day.0.Best-MRBWM
+Precip 		= OAHE.Precip.Total.~1Day.1Day.Best-MRBWM
+Minimum Pool	= 1572.0
+Title 		= Oahe Dam, Missouri River, near Pierre, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/oahemin
+Elev 		= end
+Inflow		= 
+Release		= 
+Storage		= 
+Precip 		= 
+Minimum Pool	= 
+Title 		= 
+Filename		= 
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMRRresMin.py", line 264, in <module>
+    plotData(dbi, iniElev, iniInflow, iniRelease, iniStor, iniPrec, iniMinPool, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMRRresMin.py", line 43, in plotData
+    elevData 	= dbi.get(elev)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2449, in get_1
+ValueError: "end" is not a time-series id or rating id.
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 17280 minutes (288.000000 hours, or 12.000000 days)
+Time window = 10Dec2018 1321 --> 22Dec2018 1321
+Opening DBI fooooo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:21:28 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:21:29 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:21:29 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataMORiv2.ini
+Flow1 		= RUNE-Rulo-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Flow2 		= STJ-St_Joseph-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Flow3 		= MKC-Kansas_City-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Flow4 		= WVMO-Waverly-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Flow5 		= BNMO-Boonville-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Flow6 		= HEMO-Hermann-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River Discharges
+Filename		= /cwms/g7cwmspd/plotFiles/files/moriv2
+Dec 20, 2018 7:21:46 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+Flow1 		= end
+Flow2 		= 
+Flow3 		= 
+Flow4 		= 
+Flow5 		= 
+Flow6 		= 
+Title 		= 
+Filename		= 
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMORiv2.py", line 222, in <module>
+    plotData(dbi, iniFlow1, iniFlow2, iniFlow3, iniFlow4, iniFlow5, iniFlow6, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMORiv2.py", line 44, in plotData
+    flow1Data 	= dbi.get(flow1)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2449, in get_1
+ValueError: "end" is not a time-series id or rating id.
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 17280 minutes (288.000000 hours, or 12.000000 days)
+Time window = 10Dec2018 1322 --> 22Dec2018 1322
+Opening DBI fo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:22:09 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:22:09 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:22:09 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataMORiv1.ini
+Flow1 		= SUX-Sioux_City-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Flow2 		= DENE-Decatur-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Flow3 		= OMA-Omaha-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Flow4 		= NCNE-Nebraska_City-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Flow5 		= RUNE-Rulo-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Flow6 		= STJ-St_Joseph-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River Discharges
+Filename		= /cwms/g7cwmspd/plotFiles/files/moriv1
+Dec 20, 2018 7:22:18 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+Flow1 		= end
+Flow2 		= 
+Flow3 		= 
+Flow4 		= 
+Flow5 		= 
+Flow6 		= 
+Title 		= 
+Filename		= 
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMORiv1.py", line 222, in <module>
+    plotData(dbi, iniFlow1, iniFlow2, iniFlow3, iniFlow4, iniFlow5, iniFlow6, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMORiv1.py", line 44, in plotData
+    flow1Data 	= dbi.get(flow1)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2449, in get_1
+ValueError: "end" is not a time-series id or rating id.
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 17280 minutes (288.000000 hours, or 12.000000 days)
+Time window = 10Dec2018 1322 --> 22Dec2018 1322
+Opening DBI foo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:22:39 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:22:39 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:22:39 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataMORiv.ini
+Flow1 		= GAPT.Flow-Out.Ave.~1Day.1Day.Best-MRBWM
+Flow2 		= SUX-Sioux_City-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Flow3 		= OMA-Omaha-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Flow4 		= NCNE-Nebraska_City-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Flow5 		= STJ-St_Joseph-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Flow6 		= MKC-Kansas_City-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River Discharges
+Filename		= /cwms/g7cwmspd/plotFiles/files/moriv
+Dec 20, 2018 7:22:48 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+Flow1 		= end
+Flow2 		= 
+Flow3 		= 
+Flow4 		= 
+Flow5 		= 
+Flow6 		= 
+Title 		= 
+Filename		= 
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMORiv.py", line 222, in <module>
+    plotData(dbi, iniFlow1, iniFlow2, iniFlow3, iniFlow4, iniFlow5, iniFlow6, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMORiv.py", line 44, in plotData
+    flow1Data 	= dbi.get(flow1)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2449, in get_1
+ValueError: "end" is not a time-series id or rating id.
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 17280 minutes (288.000000 hours, or 12.000000 days)
+Time window = 10Dec2018 1323 --> 22Dec2018 1323
+Opening DBI foo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:23:08 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:23:08 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:23:08 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataKanRiv.ini
+Flow1 		= FRI-Fort_Riley-Kansas.Flow.Inst.1Hour.0.Combined-rev
+Flow2 		= WGKS-Wamego-Kansas.Flow.Inst.1Hour.0.Combined-rev
+Flow3 		= TPAK-Topeka-Kansas.Flow.Inst.1Hour.0.Combined-rev
+Flow4 		= LEKS-Lecompton-Kansas.Flow.Inst.1Hour.0.Combined-rev
+Flow5 		= DESO-DeSoto-Kansas.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Kansas River Discharges
+Filename		= /cwms/g7cwmspd/plotFiles/files/kanriv
+Dec 20, 2018 7:23:17 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+Flow1 		= end
+Flow2 		= 
+Flow3 		= 
+Flow4 		= 
+Flow5 		= 
+Title 		= 
+Filename		= 
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsKanRiv.py", line 210, in <module>
+    plotData(dbi, iniFlow1, iniFlow2, iniFlow3, iniFlow4, iniFlow5, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsKanRiv.py", line 43, in plotData
+    flow1Data 	= dbi.get(flow1)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2449, in get_1
+ValueError: "end" is not a time-series id or rating id.
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 25920 minutes (432.000000 hours, or 18.000000 days)
+Time window = 04Dec2018 1323 --> 22Dec2018 1323
+Opening DBI fooo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:23:44 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:23:45 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:23:45 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataMRRfui-qgh.ini
+Stage 		= NCSD-Sioux_Falls-Big_Sioux-N_Cliff_Av.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= NCSD-Sioux_Falls-Big_Sioux-N_Cliff_Av.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Big Sioux River at North Cliff at Sioux Falls, SD; FS = 16'
+Filename		= /cwms/g7cwmspd/plotFiles/files/ncsd
+Dec 20, 2018 7:23:57 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+Stage 		= RVIA-Rock_Valley-Rock.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= RVIA-Rock_Valley-Rock.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Rock River at Rock Valley, IA; FS = 11'
+Filename		= /cwms/g7cwmspd/plotFiles/files/rvia
+Stage 		= AKIA-Akron-Big_Sioux.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= AKIA-Akron-Big_Sioux.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Big Sioux River at Akron, IA; FS = 16'
+Filename		= /cwms/g7cwmspd/plotFiles/files/akia
+Stage 		= ANIA-Alton-Floyd.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= ANIA-Alton-Floyd.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Floyd River at Alton, IA; FS = 12'
+Filename		= /cwms/g7cwmspd/plotFiles/files/ania
+Stage 		= SCSD-Scotland-James.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= SCSD-Scotland-James.Flow.Inst.1Hour.0.Combined-rev
+Title 		= James River at Scotland, SD; FS = 13'
+Filename		= /cwms/g7cwmspd/plotFiles/files/scsd
+Stage 		= VRSD-Vermillion-Vermillion.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= VRSD-Vermillion-Vermillion.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Vermillion River at Vermillion, SD; FS = 21'
+Filename		= /cwms/g7cwmspd/plotFiles/files/vrsd
+Stage 		= PSIA-Pisgah-Soldier.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= PSIA-Pisgah-Soldier.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Soldier River at Pisgah, IA; FS = 28'
+Filename		= /cwms/g7cwmspd/plotFiles/files/psia
+Stage 		= LGIA-Logan-Boyer.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= LGIA-Logan-Boyer.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Boyer River at Logan, IA; FS = 19'
+Filename		= /cwms/g7cwmspd/plotFiles/files/lgia
+Stage 		= CEIA-Correctionville-Little_Sioux.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= CEIA-Correctionville-Little_Sioux.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Little Sioux River at Correctionville, IA; FS = 19'
+Filename		= /cwms/g7cwmspd/plotFiles/files/ceia
+Stage 		= LVIA-Linn_Grove-Little_Sioux.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= LVIA-Linn_Grove-Little_Sioux.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Little Sioux River at Linn Grove, IA; FS = 18'
+Filename		= /cwms/g7cwmspd/plotFiles/files/lvia
+Stage 		= MHIA-Turin-Monona_Harrison_Ditch.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= MHIA-Turin-Monona_Harrison_Ditch.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Little Sioux River - M&H Ditch, IA; FS = 25'
+Filename		= /cwms/g7cwmspd/plotFiles/files/mhia
+Stage 		= TUIA-Turin-Little_Sioux.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= TUIA-Turin-Little_Sioux.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Little Sioux River at Turin, IA; FS = 25'
+Filename		= /cwms/g7cwmspd/plotFiles/files/tuia
+Stage 		= MPIA-Mapleton-Maple.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= MPIA-Mapleton-Maple.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Maple River at Mapleton, IA; FS = 18'
+Filename		= /cwms/g7cwmspd/plotFiles/files/mpia
+Stage 		= JMIA-James-Floyd.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= JMIA-James-Floyd.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Floyd River at James, IA; FS = 26'
+Filename		= /cwms/g7cwmspd/plotFiles/files/jmia
+Stage 		= KENE-Kearney-Platte.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= KENE-Kearney-Platte.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Platte River at Kearney, NE; FS = 4.5'
+Filename		= /cwms/g7cwmspd/plotFiles/files/kene
+Stage 		= GRNE-Grand_Island-Platte.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= GRNE-Grand_Island-Platte.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Platte River at Grand Island, NE; FS = 4'
+Filename		= /cwms/g7cwmspd/plotFiles/files/grne
+Stage 		= NBNE-North_Bend-Platte.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= NBNE-North_Bend-Platte.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Platte River at North Bend, NE; FS = 8'
+Filename		= /cwms/g7cwmspd/plotFiles/files/nbne
+Stage 		= LUNE-Louisville-Platte.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= LUNE-Louisville-Platte.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Platte River at Louisville, NE; FS = 9'
+Filename		= /cwms/g7cwmspd/plotFiles/files/lune
+Stage 		= OFK-Norfolk-Elkhorn.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= OFK-Norfolk-Elkhorn.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Elkhorn River at Norfolk, NE; FS = 8.5'
+Filename		= /cwms/g7cwmspd/plotFiles/files/ofk
+Stage 		= WSNE-West_Point-Elkhorn.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WSNE-West_Point-Elkhorn.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Elkhorn River at West Point, NE; FS = 12'
+Filename		= /cwms/g7cwmspd/plotFiles/files/wsne
+Stage 		= WTNE-Waterloo-Elkhorn.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WTNE-Waterloo-Elkhorn.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Elkhorn River at Waterloo, NE; FS = 15'
+Filename		= /cwms/g7cwmspd/plotFiles/files/wtne
+Stage 		= MLNE-St_Paul-Middle_Loup.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= MLNE-St_Paul-Middle_Loup.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Middle Loup River at St. Paul, NE; FS = 8'
+Filename		= /cwms/g7cwmspd/plotFiles/files/mlne
+Stage 		= NLNE-St_Paul-North_Loup.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= NLNE-St_Paul-North_Loup.Flow.Inst.1Hour.0.Combined-rev
+Title 		= North Loup River at St. Paul, NE; FS = 5.5'
+Filename		= /cwms/g7cwmspd/plotFiles/files/nlne
+Stage 		= ITNE-Ithaca-Wahoo.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= ITNE-Ithaca-Wahoo.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Wahoo Creek at Ithaca, NE; FS = 19'
+Filename		= /cwms/g7cwmspd/plotFiles/files/itne
+Stage 		= LCNE-Lincoln-Salt.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= LCNE-Lincoln-Salt.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Salt Creek at Lincoln, NE; FS = 20.5'
+Filename		= /cwms/g7cwmspd/plotFiles/files/lcne
+Stage 		= GWNE-Greenwood-Salt.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= GWNE-Greenwood-Salt.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Salt Creek at Greenwood, NE; FS = 20'
+Filename		= /cwms/g7cwmspd/plotFiles/files/gwne
+Stage 		= HCIA-Hancock-West_Nishnabotna.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= HCIA-Hancock-West_Nishnabotna.Flow.Inst.1Hour.0.Combined-rev
+Title 		= West Nishnabotna River at Hancock, IA; FS = 13.5'
+Filename		= /cwms/g7cwmspd/plotFiles/files/hcia
+Stage 		= ACIA-Atlantic-East_Nishnabotna.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= ACIA-Atlantic-East_Nishnabotna.Flow.Inst.1Hour.0.Combined-rev
+Title 		= East Nishnabotna River Atlantic, IA; FS = 19'
+Filename		= /cwms/g7cwmspd/plotFiles/files/acia
+Stage 		= UENE-Uehling-Logan.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= UENE-Uehling-Logan.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Logan Creek at Uehling, NE; FS = 18'
+Filename		= /cwms/g7cwmspd/plotFiles/files/uene
+Stage 		= ROIA-Red_Oak-East_Nishnabotna.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= ROIA-Red_Oak-East_Nishnabotna.Flow.Inst.1Hour.0.Combined-rev
+Title 		= East Nishnabotna River at Red Oak, IA; FS = 18'
+Filename		= /cwms/g7cwmspd/plotFiles/files/roia
+Stage 		= RNIA-Randolph-West_Nishnabotna.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= RNIA-Randolph-West_Nishnabotna.Flow.Inst.1Hour.0.Combined-rev
+Title 		= West Nishnabotna River at Randolph, IA; FS = 19'
+Filename		= /cwms/g7cwmspd/plotFiles/files/rnia
+Stage 		= HAIA-Hamburg-Nishnabotna.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= HAIA-Hamburg-Nishnabotna.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Nishnabotna River at Hamburg, IA; FS = 16'
+Filename		= /cwms/g7cwmspd/plotFiles/files/haia
+Stage 		= AUNE-Auburn-Little_Nemaha.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= AUNE-Auburn-Little_Nemaha.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Little Nemaha River at Auburn, NE; FS = 22'
+Filename		= /cwms/g7cwmspd/plotFiles/files/aune
+Stage 		= UNNE-Union-Weeping_Water.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= UNNE-Union-Weeping_Water.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Weeping Water Creek at Union, NE; FS = 25'
+Filename		= /cwms/g7cwmspd/plotFiles/files/unne
+Stage 		= FLNE-Falls_City-Big_Nemaha.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= FLNE-Falls_City-Big_Nemaha.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Big Nemaha River at Falls City, NE; FS = 20'
+Filename		= /cwms/g7cwmspd/plotFiles/files/flne
+Stage 		= GRAM-Graham-Nodaway.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= GRAM-Graham-Nodaway.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Nodaway River at Graham, MO; FS = 20'
+Filename		= /cwms/g7cwmspd/plotFiles/files/gram
+Stage 		= DESO-DeSoto-Kansas.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= DESO-DeSoto-Kansas.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Kansas River at DeSoto, KS; FS = 26'
+Filename		= /cwms/g7cwmspd/plotFiles/files/deso
+Stage 		= AGYM-Agency-Platte.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= AGYM-Agency-Platte.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Platte River at Agency, MO; FS = 20'
+Filename		= /cwms/g7cwmspd/plotFiles/files/agym
+Stage 		= SSMO-Sharps_Station-Platte.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= SSMO-Sharps_Station-Platte.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Platte River at Sharps Station, MO; FS = 26'
+Filename		= /cwms/g7cwmspd/plotFiles/files/ssmo
+Stage 		= LCTM-Lake_City-Little_Blue.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= LCTM-Lake_City-Little_Blue.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Little Blue River at Lake City, MO; FS = 18'
+Filename		= /cwms/g7cwmspd/plotFiles/files/lctm
+Stage 		= TTNM-Trenton-Thompson.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= TTNM-Trenton-Thompson.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Thompson River at Trenton, MO; FS = 20'
+Filename		= /cwms/g7cwmspd/plotFiles/files/ttnm
+Stage 		= GLLM-Gallatin-Grand.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= GLLM-Gallatin-Grand.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Grand River at Gallatin, MO; FS = 26'
+Filename		= /cwms/g7cwmspd/plotFiles/files/gllm
+Stage 		= CHMO-Chillicothe-Grand.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= CHMO-Chillicothe-Grand.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Grand River at Chillicothe, MO; FS = 24'
+Filename		= /cwms/g7cwmspd/plotFiles/files/chmo
+Stage 		= SMNM-Sumner-Grand.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= SMNM-Sumner-Grand.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Grand River at Sumner, MO; FS = 26'
+Filename		= /cwms/g7cwmspd/plotFiles/files/smnm
+Stage 		= PRIM-Prairie_Hill-Chariton.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= PRIM-Prairie_Hill-Chariton.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Chariton River at Prairie Hill, MO; FS = 15'
+Filename		= /cwms/g7cwmspd/plotFiles/files/prim
+Stage 		= BLCM-Blue_Lick-Blackwater.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= BLCM-Blue_Lick-Blackwater.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Blackwater River at Blue Lick, MO; FS = 24'
+Filename		= /cwms/g7cwmspd/plotFiles/files/blcm
+Stage 		= RIFM-Rich_Fountain-Gasconade.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= RIFM-Rich_Fountain-Gasconade.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Gasconade River at Rich Fountain, MO; FS = 20'
+Filename		= /cwms/g7cwmspd/plotFiles/files/rifm
+Stage 		= VRNE-Verdel-Niobrara.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= VRNE-Verdel-Niobrara.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Niobrara River at Verdel, NE; FS = 12'
+Filename		= /cwms/g7cwmspd/plotFiles/files/vrne
+Stage 		= end
+Flow 		= 
+Title 		= 
+Filename		= 
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMRRfui-qgh.py", line 179, in <module>
+    plotData(dbi, iniStage, iniFlow, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMRRfui-qgh.py", line 40, in plotData
+    stageData = dbi.get(stage)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2449, in get_1
+ValueError: "end" is not a time-series id or rating id.
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 25920 minutes (432.000000 hours, or 18.000000 days)
+Time window = 04Dec2018 1324 --> 22Dec2018 1324
+Opening DBI foo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:24:51 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:24:51 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:24:51 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataMRRmainstem-qgh.ini
+Stage 		= SUX-Sioux_City-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= SUX-Sioux_City-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Sioux City, IA; FS = 30'
+Filename		= /cwms/g7cwmspd/plotFiles/files/sux
+Dec 20, 2018 7:25:02 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+saved FILE
+Stage 		= MKC-Kansas_City-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= MKC-Kansas_City-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Kansas City, MO; FS = 32'
+Filename		= /cwms/g7cwmspd/plotFiles/files/mkc
+saved FILE
+Stage 		= DENE-Decatur-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= DENE-Decatur-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Decatur, NE; FS = 35'
+Filename		= /cwms/g7cwmspd/plotFiles/files/dene
+saved FILE
+Stage 		= OMA-Omaha-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= OMA-Omaha-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Omaha, NE; FS = 29'
+Filename		= /cwms/g7cwmspd/plotFiles/files/oma
+saved FILE
+Stage 		= NCNE-Nebraska_City-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= NCNE-Nebraska_City-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Nebraska City, NE; FS = 18'
+Filename		= /cwms/g7cwmspd/plotFiles/files/ncne
+saved FILE
+Stage 		= BVNE-Brownville-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= BVNE-Brownville-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Brownville, NE; FS = 33'
+Filename		= /cwms/g7cwmspd/plotFiles/files/bvne
+saved FILE
+Stage 		= RUNE-Rulo-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= RUNE-Rulo-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Rulo, NE; FS = 17'
+Filename		= /cwms/g7cwmspd/plotFiles/files/rune
+saved FILE
+Stage 		= STJ-St_Joseph-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= STJ-St_Joseph-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at St. Joseph, MO; FS = 17'
+Filename		= /cwms/g7cwmspd/plotFiles/files/stj
+saved FILE
+Stage 		= BNMO-Boonville-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= BNMO-Boonville-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Boonville, MO; FS = 21'
+Filename		= /cwms/g7cwmspd/plotFiles/files/bnmo
+saved FILE
+Stage 		= WVMO-Waverly-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WVMO-Waverly-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Waverly, MO; FS = 20'
+Filename		= /cwms/g7cwmspd/plotFiles/files/wvmo
+saved FILE
+Stage 		= HEMO-Hermann-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= HEMO-Hermann-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Hermann, MO; FS = 21'
+Filename		= /cwms/g7cwmspd/plotFiles/files/hemo
+saved FILE
+Stage 		= YKN-Yankton-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= YKN-Yankton-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Yankton, SD; FS = 20'
+Filename		= /cwms/g7cwmspd/plotFiles/files/ykn
+saved FILE
+Stage 		= STL-St_Louis-Mississippi.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= STL-St_Louis-Mississippi.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Mississippi River at St. Louis, MO
+Filename		= /cwms/g7cwmspd/plotFiles/files/stl
+saved FILE
+Stage 		= end
+Flow 		= 
+Title 		= 
+Filename		= 
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMRRmainstem-qgh.py", line 190, in <module>
+    plotData(dbi, iniStage, iniFlow, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMRRmainstem-qgh.py", line 41, in plotData
+    stageData = dbi.get(stage)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2449, in get_1
+ValueError: "end" is not a time-series id or rating id.
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 25920 minutes (432.000000 hours, or 18.000000 days)
+Time window = 04Dec2018 1325 --> 22Dec2018 1325
+Opening DBI foo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:25:39 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:25:39 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:25:39 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataMRRnonfui-qgh.ini
+Stage 		= BIL-Billings-Yellowstone.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= BIL-Billings-Yellowstone.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Yellowstone River at Billings, MT; FS = 13'
+Filename		= /cwms/g7cwmspd/plotFiles/files/bil
+Dec 20, 2018 7:25:53 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+Stage 		= BIS-Bismarck-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= BIS-Bismarck-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Bismarck, ND; FS = 14.5'
+Filename		= /cwms/g7cwmspd/plotFiles/files/bis
+Stage 		= CCSD-Howes-Cheyenne.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= CCSD-Howes-Cheyenne.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Cheyenne River at Howes, SD; FS = 14'
+Filename		= /cwms/g7cwmspd/plotFiles/files/ccsd
+Stage 		= CLMT-Culbertson-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= CLMT-Culbertson-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Culbertson, MT; FS = 19'
+Filename		= /cwms/g7cwmspd/plotFiles/files/clmt
+Stage 		= CSMT-Corwin_Springs-Yellowstone.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= CSMT-Corwin_Springs-Yellowstone.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Yellowstone River at Corwin Springs, MT; FS = 11'
+Filename		= /cwms/g7cwmspd/plotFiles/files/csmt
+Stage 		= DRSD-Dell_Rapids-Big_Sioux.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= DRSD-Dell_Rapids-Big_Sioux.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Big Sioux River at Dell Rapids, SD; FS = 12'
+Filename		= /cwms/g7cwmspd/plotFiles/files/drsd
+Stage 		= FPSD-Fort_Pierre-Bad.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= FPSD-Fort_Pierre-Bad.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Bad River at Fort Pierre, SD; FS = 21'
+Filename		= /cwms/g7cwmspd/plotFiles/files/fpsd
+Stage 		= HAND-Hazen-Knife.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= HAND-Hazen-Knife.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Knife River at Hazen, ND; FS = 21'
+Filename		= /cwms/g7cwmspd/plotFiles/files/hand
+Stage 		= LESD-Little_Eagle-Grand.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= LESD-Little_Eagle-Grand.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Grand River at Little Eagle, SD; FS = 15'
+Filename		= /cwms/g7cwmspd/plotFiles/files/lesd
+Stage 		= LOMT-Locate-Powder.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= LOMT-Locate-Powder.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Powder River at Locate, MT; FS = 13.1'
+Filename		= /cwms/g7cwmspd/plotFiles/files/lomt
+Stage 		= MAND-Mandan-Heart.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= MAND-Mandan-Heart.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Heart River at Mandan, ND; FS = 17'
+Filename		= /cwms/g7cwmspd/plotFiles/files/mand
+Stage 		= MLS-Miles_City-Yellowstone.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= MLS-Miles_City-Yellowstone.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Yellowstone River at Miles City, MT; FS = 13'
+Filename		= /cwms/g7cwmspd/plotFiles/files/mls
+Stage 		= NAMT-Nashua-Milk.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= NAMT-Nashua-Milk.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Milk River at Nashua, MT; FS = 20'
+Filename		= /cwms/g7cwmspd/plotFiles/files/namt
+Stage 		= NRNE-Niobrara-Bazile_Creek.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= NRNE-Niobrara-Bazile_Creek.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Bazile Creek at Niobrara, NE; FS = 9'
+Filename		= /cwms/g7cwmspd/plotFiles/files/nrne
+Stage 		= OCSD-Oacoma-White.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= OCSD-Oacoma-White.Flow.Inst.1Hour.0.Combined-rev
+Title 		= White River at Oacoma, SD; FS = 13'
+Filename		= /cwms/g7cwmspd/plotFiles/files/ocsd
+Stage 		= RBMT-Landusky-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= RBMT-Landusky-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Landusky, MT; FS = 25'
+Filename		= /cwms/g7cwmspd/plotFiles/files/rbmt
+Stage 		= SACO-Saco-Milk.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= SACO-Saco-Milk.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Milk River at Saco, MT; FS = 20'
+Filename		= /cwms/g7cwmspd/plotFiles/files/saco
+Stage 		= WPMT-Wolf_Point-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WPMT-Wolf_Point-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Wolf Point, MT; FS = 23.0'
+Filename		= /cwms/g7cwmspd/plotFiles/files/wpmt
+Stage 		= WHSD-Whitehorse-Moreau.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WHSD-Whitehorse-Moreau.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Moreau River at Whitehorse, SD; FS = 21'
+Filename		= /cwms/g7cwmspd/plotFiles/files/whsd
+Stage 		= WCND-Watford_City-Little_Missouri.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WCND-Watford_City-Little_Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Little Missouri River at Watford City, ND; FS = 20'
+Filename		= /cwms/g7cwmspd/plotFiles/files/wcnd
+Stage 		= VIMT-Virgelle-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= VIMT-Virgelle-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Virgelle, MT; FS = 17'
+Filename		= /cwms/g7cwmspd/plotFiles/files/vimt
+Stage 		= VDNE-Verdel-Ponca.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= VDNE-Verdel-Ponca.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Ponca Creek at Verdel, NE; FS = 10'
+Filename		= /cwms/g7cwmspd/plotFiles/files/vdne
+Stage 		= SIMT-Sidney-Yellowstone.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= SIMT-Sidney-Yellowstone.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Yellowstone River at Sidney, MT; FS = 19'
+Filename		= /cwms/g7cwmspd/plotFiles/files/simt
+Stage 		= BRND-Breien-Cannonball.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= BRND-Breien-Cannonball.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Cannonball River at Breien, ND; FS = 10'
+Filename		= /cwms/g7cwmspd/plotFiles/files/brnd
+Stage 		= MIMT-Miles_City-Tongue.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= MIMT-Miles_City-Tongue.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Tongue River at Miles City, MT; FS = 5.8'
+Filename		= /cwms/g7cwmspd/plotFiles/files/mimt
+Stage 		= ASNE-Ashland-Platte.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= ASNE-Ashland-Platte.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Platte River at Ashland, NE; FS = 20'
+Filename		= /cwms/g7cwmspd/plotFiles/files/asne
+Stage 		= BHMT-Bighorn-Bighorn.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= BHMT-Bighorn-Bighorn.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Bighorn River at Bighorn, MT; FS = 9'
+Filename		= /cwms/g7cwmspd/plotFiles/files/bhmt
+Stage 		= WSSD-Wasta-Cheyenne.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WSSD-Wasta-Cheyenne.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Cheyenne River near Wasta, SD; FS=16'
+Filename		= /cwms/g7cwmspd/plotFiles/files/wssd
+Stage 		= VRNE-Verdel-Niobrara.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= VRNE-Verdel-Niobrara.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Niobrara River near Verdel, NE; FS=12'
+Filename		= /cwms/g7cwmspd/plotFiles/files/vrne
+Stage 		= LVMT-Livingston-Yellowstone.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= LVMT-Livingston-Yellowstone.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Yellowstone River at Livingston, MT; FS = 8'
+Filename		= /cwms/g7cwmspd/plotFiles/files/lvmt
+Stage 		= TOMT-Toston-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= TOMT-Toston-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Toston, MT; FS = 10'
+Filename		= /cwms/g7cwmspd/plotFiles/files/tomt
+Stage 		= TFMT-Three_Forks-Jefferson.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= TFMT-Three_Forks-Jefferson.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Jefferson River at Three Forks, MT; FS = 7.5'
+Filename		= /cwms/g7cwmspd/plotFiles/files/tfmt
+Stage 		= HUSD-Huron-James.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= HUSD-Huron-James.Flow.Inst.1Hour.0.Combined-rev
+Title 		= James River at Huron, SD; FS = 12'
+Filename		= /cwms/g7cwmspd/plotFiles/files/husd
+Stage 		= RUMT-Roundup-Musselshell.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= RUMT-Roundup-Musselshell.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Musselshell River at Roundup, MT; FS = 5.1'
+Filename		= /cwms/g7cwmspd/plotFiles/files/rumt
+Stage 		= VGNE-Verdigre-Verdigre_Creek.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= VGNE-Verdigre-Verdigre_Creek.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Verdigre Creek at Verdigre, NE
+Filename		= /cwms/g7cwmspd/plotFiles/files/vgne
+Stage 		= WLSD-Wewela-Keya_Paha.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WLSD-Wewela-Keya_Paha.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Keya Paha River at Wewela, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/wlsd
+Stage 		= end
+Flow 		= 
+Title 		= 
+Filename		= 
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMRRnonfui-qgh.py", line 191, in <module>
+    plotData(dbi, iniStage, iniFlow, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMRRnonfui-qgh.py", line 39, in plotData
+    stageData = dbi.get(stage)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2449, in get_1
+ValueError: "end" is not a time-series id or rating id.
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 17280 minutes (288.000000 hours, or 12.000000 days)
+Time window = 10Dec2018 1326 --> 22Dec2018 1326
+Opening DBI foo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:26:45 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:26:46 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:26:46 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataMRRmainstem-res2.ini
+Elevation	= FTPK.Elev.Inst.1Hour.0.Best-MRBWM
+Inflow 		= FTPK.Flow-In.Ave.~1Day.1Day.Best-MRBWM
+Total Release	= FTPK.Flow-Out.Ave.~1Day.1Day.Best-MRBWM
+Base FC Pool	= 2234.
+Base Norm Op Pl	= 2246.
+Base Max Op Pl	= 2250.
+Title 		= Fort Peck Dam, Missouri River, near Glasgow, MT
+Filename		= /cwms/g7cwmspd/plotFiles/files/ftpk2
+Dec 20, 2018 7:26:56 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+saved FILE
+Elevation	= GARR.Elev.Inst.1Hour.0.Best-MRBWM
+Inflow 		= GARR.Flow-In.Ave.~1Day.1Day.Best-MRBWM
+Total Release	= GARR.Flow-Out.Ave.~1Day.1Day.Best-MRBWM
+Base FC Pool	= 1837.5
+Base Norm Op Pl	= 1850.
+Base Max Op Pl	= 1854.
+Title 		= Garrison Dam, Missouri River, near Garrison, ND
+Filename		= /cwms/g7cwmspd/plotFiles/files/garr2
+saved FILE
+Elevation	= OAHE.Elev.Inst.1Hour.0.Best-MRBWM
+Inflow 		= OAHE.Flow-In.Ave.~1Day.1Day.Best-MRBWM
+Total Release	= OAHE.Flow-Out.Ave.~1Day.1Day.Best-MRBWM
+Base FC Pool	= 1607.5
+Base Norm Op Pl	= 1617.
+Base Max Op Pl	= 1620.
+Title 		= Oahe Dam, Missouri River, near Pierre, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/oahe2
+saved FILE
+Elevation	= BEND.Elev.Inst.1Hour.0.Best-MRBWM
+Inflow 		= BEND.Flow-In.Ave.~1Day.1Day.Best-MRBWM
+Total Release	= BEND.Flow-Out.Ave.~1Day.1Day.Best-MRBWM
+Base FC Pool	= 1420.
+Base Norm Op Pl	= 1422.
+Base Max Op Pl	= 1423.
+Title 		= Big Bend Dam, Missouri River, near Chamberlain, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/bend2
+saved FILE
+Elevation	= FTRA.Elev.Inst.1Hour.0.Best-MRBWM
+Inflow 		= FTRA.Flow-In.Ave.~1Day.1Day.Best-MRBWM
+Total Release	= FTRA.Flow-Out.Ave.~1Day.1Day.Best-MRBWM
+Base FC Pool	= 1350.
+Base Norm Op Pl	= 1365.
+Base Max Op Pl	= 1375.
+Title 		= Fort Randall Dam, Missouri River, near Lake Andes, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/ftra2
+saved FILE
+Elevation	= GAPT.Elev.Inst.1Hour.0.Best-MRBWM
+Inflow 		= GAPT.Flow-In.Ave.~1Day.1Day.Best-MRBWM
+Total Release	= GAPT.Flow-Out.Ave.~1Day.1Day.Best-MRBWM
+Base FC Pool	= 1204.5
+Base Norm Op Pl	= 1208.
+Base Max Op Pl	= 1210.
+Title 		= Gavins Point Dam, Missouri River, near Yankton, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/gapt2
+saved FILE
+Elevation	= end
+Inflow 		= 
+Total Release	= 
+Base FC Pool	= 
+Base Norm Op Pl	= 
+Base Max Op Pl	= 
+Title 		= 
+Filename		= 
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMRRmainstem-res2.py", line 229, in <module>
+    plotData(dbi, iniElevation, iniInflow, iniRelease, iniBaseFC, iniBaseNorm, iniBaseMax, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMRRmainstem-res2.py", line 45, in plotData
+    elevationData = dbi.get(elevation)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2449, in get_1
+ValueError: "end" is not a time-series id or rating id.
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 17280 minutes (288.000000 hours, or 12.000000 days)
+Time window = 10Dec2018 1327 --> 22Dec2018 1327
+Opening DBI foo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:27:29 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:27:29 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:27:30 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataMRRmainstem-res.ini
+Elevation	= FTPK.Elev.Inst.1Hour.0.Best-MRBWM
+Inflow 		= FTPK.Flow-In.Ave.~1Day.1Day.Best-MRBWM
+Total Release	= FTPK.Flow-Out.Ave.~1Day.1Day.Best-MRBWM
+Title 		= Fort Peck Dam, Missouri River, near Glasgow, MT
+Filename		= /cwms/g7cwmspd/plotFiles/files/ftpk3
+Dec 20, 2018 7:27:39 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+saved FILE
+Elevation	= GARR.Elev.Inst.1Hour.0.Best-MRBWM
+Inflow 		= GARR.Flow-In.Ave.~1Day.1Day.Best-MRBWM
+Total Release	= GARR.Flow-Out.Ave.~1Day.1Day.Best-MRBWM
+Title 		= Garrison Dam, Missouri River, near Garrison, ND
+Filename		= /cwms/g7cwmspd/plotFiles/files/garr3
+saved FILE
+Elevation	= OAHE.Elev.Inst.1Hour.0.Best-MRBWM
+Inflow 		= OAHE.Flow-In.Ave.~1Day.1Day.Best-MRBWM
+Total Release	= OAHE.Flow-Out.Ave.~1Day.1Day.Best-MRBWM
+Title 		= Oahe Dam, Missouri River, near Pierre, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/oahe3
+saved FILE
+Elevation	= BEND.Elev.Inst.1Hour.0.Best-MRBWM
+Inflow 		= BEND.Flow-In.Ave.~1Day.1Day.Best-MRBWM
+Total Release	= BEND.Flow-Out.Ave.~1Day.1Day.Best-MRBWM
+Title 		= Big Bend Dam, Missouri River, near Chamberlain, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/bend3
+saved FILE
+Elevation	= FTRA.Elev.Inst.1Hour.0.Best-MRBWM
+Inflow 		= FTRA.Flow-In.Ave.~1Day.1Day.Best-MRBWM
+Total Release	= FTRA.Flow-Out.Ave.~1Day.1Day.Best-MRBWM
+Title 		= Fort Randall Dam, Missouri River, near Lake Andes, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/ftra3
+saved FILE
+Elevation	= GAPT.Elev.Inst.1Hour.0.Best-MRBWM
+Inflow 		= GAPT.Flow-In.Ave.~1Day.1Day.Best-MRBWM
+Total Release	= GAPT.Flow-Out.Ave.~1Day.1Day.Best-MRBWM
+Title 		= Gavins Point Dam, Missouri River, near Yankton, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/gapt3
+saved FILE
+Elevation	= end
+Inflow 		= 
+Total Release	= 
+Title 		= 
+Filename		= 
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMRRmainstem-res.py", line 190, in <module>
+    plotData(dbi, iniElevation, iniInflow, iniRelease, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsMRRmainstem-res.py", line 42, in plotData
+    elevationData = dbi.get(elevation)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2449, in get_1
+ValueError: "end" is not a time-series id or rating id.
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 25920 minutes (432.000000 hours, or 18.000000 days)
+Time window = 04Dec2018 1328 --> 22Dec2018 1328
+Opening DBI foo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:28:05 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:28:05 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:28:05 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataNWKriver2-qgh.ini
+Stage 		= LIVM-Livonia-Chariton.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= LIVM-Livonia-Chariton.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Chariton River near Livonia, MO; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/livm
+Dec 20, 2018 7:28:14 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+Stage 		= LOVK-bl_Lovewell_Res-White_Rock.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= LOVK-bl_Lovewell_Res-White_Rock.Flow.Inst.1Hour.0.Combined-rev
+Title 		= White Rock Cr bl Lovewell Dam, KS; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/lovk
+Stage 		= LWRK-Lawrence-Wakarusa.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= LWRK-Lawrence-Wakarusa.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Wakarusa River nr Lawrence, KS; FS = 23'
+Filename		= /cwms/g7cwmspd/plotFiles/files/lwrk
+Stage 		= MAMO-Macon-Chariton.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= MAMO-Macon-Chariton.Flow.Inst.1Hour.0.Combined-rev
+Title 		= EF Little Chariton nr Macon, MO; FS = 17'
+Filename		= /cwms/g7cwmspd/plotFiles/files/mamo
+Stage 		= MARK-Marmaton-Marmaton.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= MARK-Marmaton-Marmaton.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Marmaton River at Marmaton, KS; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/mark
+Stage 		= MEKS-Mentor-Smoky_Hill.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= MEKS-Mentor-Smoky_Hill.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Smoky Hill River nr Mentor, KS; FS = 16'
+Filename		= /cwms/g7cwmspd/plotFiles/files/meks
+Stage 		= MILB-bl_Milford_Lake-Republican.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= MILB-bl_Milford_Lake-Republican.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Republican R bl Milford Dam, KS; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/milb
+Stage 		= MKSL-State_Line-Marais_Des_Cygnes.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= MKSL-State_Line-Marais_Des_Cygnes.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Marais D C R nr KS-MO State Line; FS = 25'
+Filename		= /cwms/g7cwmspd/plotFiles/files/mksl
+Stage 		= MLTI-Moulton-Chariton.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= MLTI-Moulton-Chariton.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Chariton River near Moulton, IA; FS = 35'
+Filename		= /cwms/g7cwmspd/plotFiles/files/mlti
+Stage 		= MRRM-Morrisville-Little_Sac.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= MRRM-Morrisville-Little_Sac.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Little Sac River nr Morrisville, MO; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/mrrm
+Stage 		= MRYK-Marysville-Big_Blue.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= MRYK-Marysville-Big_Blue.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Big Blue River at Marysville, KS; FS = 35'
+Filename		= /cwms/g7cwmspd/plotFiles/files/mryk
+Stage 		= MSCK-Muscotah-Delaware.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= MSCK-Muscotah-Delaware.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Delaware River nr Muscotah, KS; FS = 27'
+Filename		= /cwms/g7cwmspd/plotFiles/files/msck
+Stage 		= MUNK-Hays-Big.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= MUNK-Hays-Big.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Big Creek near Hays, KS; FS = 18'
+Filename		= /cwms/g7cwmspd/plotFiles/files/munk
+Stage 		= NEVM-Nevada-Marmaton.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= NEVM-Nevada-Marmaton.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Marmaton River at Nevada, MO; FS = 44'
+Filename		= /cwms/g7cwmspd/plotFiles/files/nevm
+Stage 		= NLSK-Niles-Solomon.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= NLSK-Niles-Solomon.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Solomon River at Niles, KS; FS = 24'
+Filename		= /cwms/g7cwmspd/plotFiles/files/nlsk
+Stage 		= NOVM-Novinger-Chariton.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= NOVM-Novinger-Chariton.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Chariton River at Novinger, MO; FS = 20'
+Filename		= /cwms/g7cwmspd/plotFiles/files/novm
+Stage 		= NWCK-New_Cambria-Smoky_Hill.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= NWCK-New_Cambria-Smoky_Hill.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Smoky Hill River at New Cambria, KS; FS = 25'
+Filename		= /cwms/g7cwmspd/plotFiles/files/nwck
+Stage 		= ORNN-Orleans-Republican.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= ORNN-Orleans-Republican.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Republican River at Orleans, NE; FS = 9'
+Filename		= /cwms/g7cwmspd/plotFiles/files/ornn
+Stage 		= OSBK-Osborne-SF_Solomon.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= OSBK-Osborne-SF_Solomon.Flow.Inst.1Hour.0.Combined-rev
+Title 		= SF Solomon River at Osborne, KS; FS = 14'
+Filename		= /cwms/g7cwmspd/plotFiles/files/osbk
+Stage 		= OTTK-Ottawa-Marais_Des_Cygnes.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= OTTK-Ottawa-Marais_Des_Cygnes.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Marais D C River nr Ottawa, KS; FS = 31'
+Filename		= /cwms/g7cwmspd/plotFiles/files/ottk
+Stage 		= OTVM-Otterville-Lamine.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= OTVM-Otterville-Lamine.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Lamine River near Otterville, MO; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/otvm
+Stage 		= PALN-Palisade-Frenchman.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= PALN-Palisade-Frenchman.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Frenchman Cr at Palisade, NE; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/paln
+Stage 		= PDTM-Hermitage-Pomme_De_Terre.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= PDTM-Hermitage-Pomme_De_Terre.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Pomme D T R bl PODT nr Hermitage, MO; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/pdtm
+Stage 		= PLKM-Polk-Lindley.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= PLKM-Polk-Lindley.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Lindley Creek near Polk, MO; FS = 17'
+Filename		= /cwms/g7cwmspd/plotFiles/files/plkm
+Stage 		= PLVM-Pleasant_View-Cedar.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= PLVM-Pleasant_View-Cedar.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Cedar Cr nr Pleasant View, MO; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/plvm
+Stage 		= PMNK-Pomona-Marais_Des_Cygnes.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= PMNK-Pomona-Marais_Des_Cygnes.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Marais des Cygnes R nr Pomona, KS; FS = 20'
+Filename		= /cwms/g7cwmspd/plotFiles/files/pmnk
+Stage 		= POKM-Polk-Pomme_De_Terre.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= POKM-Polk-Pomme_De_Terre.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Pomme De Terre R at Polk, MO; FS = 15'
+Filename		= /cwms/g7cwmspd/plotFiles/files/pokm
+Stage 		= POMK-Quenemo-110.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= POMK-Quenemo-110.Flow.Inst.1Hour.0.Combined-rev
+Title 		= 110-Mile Creek nr Quenemo, KS; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/pomk
+Stage 		= PRMI-Promise_City-South_Fork_Chariton.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= PRMI-Promise_City-South_Fork_Chariton.Flow.Inst.1Hour.0.Combined-rev
+Title 		= SF Chariton River at Promise City, IA; FS = 18'
+Filename		= /cwms/g7cwmspd/plotFiles/files/prmi
+Stage 		= PTSK-Portis-NF_Solomon.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= PTSK-Portis-NF_Solomon.Flow.Inst.1Hour.0.Combined-rev
+Title 		= NF Solomon River at Portis, KS; FS = 15'
+Filename		= /cwms/g7cwmspd/plotFiles/files/ptsk
+Stage 		= PXCK-Paxico-Mill.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= PXCK-Paxico-Mill.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Mill Creek near Paxico, KS; FS = 19'
+Filename		= /cwms/g7cwmspd/plotFiles/files/pxck
+Stage 		= QUKS-Quenemo-Marais_Des_Cygnes.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= QUKS-Quenemo-Marais_Des_Cygnes.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Marais Des Cygnes R nr Quenemo, KS; FS = 17'
+Filename		= /cwms/g7cwmspd/plotFiles/files/quks
+Stage 		= RDGK-Reading-Marais_Des_Cygnes.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= RDGK-Reading-Marais_Des_Cygnes.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Marais Des Cygnes R nr Reading, KS; FS = 19'
+Filename		= /cwms/g7cwmspd/plotFiles/files/rdgk
+Stage 		= RUSK-Russell-Saline.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= RUSK-Russell-Saline.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Saline River nr Russell, KS; FS = 18'
+Filename		= /cwms/g7cwmspd/plotFiles/files/rusk
+Stage 		= SCMO-Schell_City-Osage.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= SCMO-Schell_City-Osage.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Osage River above Schell City, MO; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/scmo
+Stage 		= SCSK-Schoenchen-Smoky_Hill.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= SCSK-Schoenchen-Smoky_Hill.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Smoky Hill R nr Schoenchen, KS; FS = 11'
+Filename		= /cwms/g7cwmspd/plotFiles/files/scsk
+Stage 		= SHJM-Stockton-Sac.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= SHJM-Stockton-Sac.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Sac R at Hwy J bl Stockton Dam, MO; FS = 18'
+Filename		= /cwms/g7cwmspd/plotFiles/files/shjm
+Stage 		= SIMK-Simpson-Solomon.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= SIMK-Simpson-Solomon.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Solomon River near Simpson, KS; FS = 20'
+Filename		= /cwms/g7cwmspd/plotFiles/files/simk
+Stage 		= SKTK-Stockton-Bow.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= SKTK-Stockton-Bow.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Bow Creek near Stockton, KS; FS = 9'
+Filename		= /cwms/g7cwmspd/plotFiles/files/sktk
+Stage 		= SMHM-Smithville-Little_Platte.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= SMHM-Smithville-Little_Platte.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Little Platte R nr Smithville, KS; FS = 24'
+Filename		= /cwms/g7cwmspd/plotFiles/files/smhm
+Stage 		= STMN-Stamford-Sappa.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= STMN-Stamford-Sappa.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Sappa Cr nr Stamford, NE; FS = 14'
+Filename		= /cwms/g7cwmspd/plotFiles/files/stmn
+Stage 		= STOM-bl_Stockton_Lake-Sac.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= STOM-bl_Stockton_Lake-Sac.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Sac River bl Stockton Dam, MO; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/stom
+Stage 		= STTM-St_Thomas-Osage.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= STTM-St_Thomas-Osage.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Osage River bl St. Thomas, MO; FS = 23'
+Filename		= /cwms/g7cwmspd/plotFiles/files/sttm
+Stage 		= STTN-Stratton-Republican.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= STTN-Stratton-Republican.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Republican R at Stratton, NE; FS = 11'
+Filename		= /cwms/g7cwmspd/plotFiles/files/sttn
+Stage 		= TNGK-Tonganoxie-Stranger.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= TNGK-Tonganoxie-Stranger.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Stranger Cr nr Tonganoxie, KS; FS = 23'
+Filename		= /cwms/g7cwmspd/plotFiles/files/tngk
+Stage 		= TOPK-Topeka-Soldier.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= TOPK-Topeka-Soldier.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Soldier Cr nr Topeka, KS; FS = 12'
+Filename		= /cwms/g7cwmspd/plotFiles/files/topk
+Stage 		= TPAK-Topeka-Kansas.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= TPAK-Topeka-Kansas.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Kansas River at Topeka, KS; FS = 26'
+Filename		= /cwms/g7cwmspd/plotFiles/files/tpak
+Stage 		= TSTK-Tescott-Saline.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= TSTK-Tescott-Saline.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Saline River at Tescott, KS; FS = 25'
+Filename		= /cwms/g7cwmspd/plotFiles/files/tstk
+Stage 		= WAAK-WaKeeney-Saline.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WAAK-WaKeeney-Saline.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Saline River at WaKeeney, KS; FS = 13'
+Filename		= /cwms/g7cwmspd/plotFiles/files/waak
+Stage 		= WGKS-Wamego-Kansas.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WGKS-Wamego-Kansas.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Kansas River at Wamego, KS; FS = 19'
+Filename		= /cwms/g7cwmspd/plotFiles/files/wgks
+Stage 		= WILK-bl_Wilson_Lake-Saline.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WILK-bl_Wilson_Lake-Saline.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Saline R bl Wilson Dam, KS; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/wilk
+Stage 		= WODK-Woodston-SF_Solomon.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WODK-Woodston-SF_Solomon.Flow.Inst.1Hour.0.Combined-rev
+Title 		= SF Solomon R at Woodston, KS; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/wodk
+Stage 		= WOFK-Woodruff-Prairie_Dog.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WOFK-Woodruff-Prairie_Dog.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Prairie Dog Cr nr Woodruff, KS; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/wofk
+Stage 		= WSHK-Washington-Mill.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WSHK-Washington-Mill.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Mill Creek at Washington, KS; FS = 18'
+Filename		= /cwms/g7cwmspd/plotFiles/files/wshk
+Stage 		= end
+Flow 		= 
+Title 		= 
+Filename		= 
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsNWKriver2-qgh.py", line 176, in <module>
+    plotData(dbi, iniStage, iniFlow, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsNWKriver2-qgh.py", line 38, in plotData
+    stageData = dbi.get(stage)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2449, in get_1
+ValueError: "end" is not a time-series id or rating id.
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 25920 minutes (432.000000 hours, or 18.000000 days)
+Time window = 04Dec2018 1329 --> 22Dec2018 1329
+Opening DBI foo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:29:22 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:29:22 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:29:23 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataNWOriver2-qgh.ini
+Stage 		= LACL-LaSalle-Big_Thompson.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= LACL-LaSalle-Big_Thompson.Flow.Inst.1Hour.0.codwr-rev
+Title 		= Big Thompson R at LaSalle, CO; FS = 9.2'
+Filename		= /cwms/g7cwmspd/plotFiles/files/lacl
+Dec 20, 2018 7:29:32 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+Stage 		= LAND-Lamoure-James.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= LAND-Lamoure-James.Flow.Inst.1Hour.0.Combined-rev
+Title 		= James River at Lamoure, ND; FS = 14'
+Filename		= /cwms/g7cwmspd/plotFiles/files/land
+Stage 		= LGMT-Logan-Gallatin.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= LGMT-Logan-Gallatin.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Gallatin River at Logan, MT; FS = 7.5'
+Filename		= /cwms/g7cwmspd/plotFiles/files/lgmt
+Stage 		= MARM-Shelby-Marias.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= MARM-Shelby-Marias.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Marias River nr Shelby, MT; FS = 9'
+Filename		= /cwms/g7cwmspd/plotFiles/files/marm
+Stage 		= MCMT-McAllister-Madison.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= MCMT-McAllister-Madison.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Madison River nr McAllister, MT; FS = 4.4'
+Filename		= /cwms/g7cwmspd/plotFiles/files/mcmt
+Stage 		= MELM-Melrose-Big_Hole.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= MELM-Melrose-Big_Hole.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Big Hole River at Melrose, MT; FS = 6.5'
+Filename		= /cwms/g7cwmspd/plotFiles/files/melm
+Stage 		= MOCL-Morrison-Bear.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= MOCL-Morrison-Bear.Flow.Inst.1Hour.0.codwr-rev
+Title 		= Bear Cr at Morrison, CO; FS = 7.5'
+Filename		= /cwms/g7cwmspd/plotFiles/files/mocl
+Stage 		= PACO-Parker-Cherry.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= PACO-Parker-Cherry.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Cherry Creek at Parker, CO, FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/paco
+Stage 		= PIND-Pingree-Pipestem.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= PIND-Pingree-Pipestem.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Pingree Creek at Pipestem, ND; FS = 9'
+Filename		= /cwms/g7cwmspd/plotFiles/files/pind
+Stage 		= PTCL-Platteville-St_Vrain.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= PTCL-Platteville-St_Vrain.Flow.Inst.15Minutes.0.codwr-rev
+Title 		= St Vrain Creek at Platteville, CO; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/ptcl
+Stage 		= RCSD-Rapid_City-Rapid.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= RCSD-Rapid_City-Rapid.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Rapid Creek at Rapid City, SD; FS = 7'
+Filename		= /cwms/g7cwmspd/plotFiles/files/rcsd
+Stage 		= RESD-Redfield-James.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= RESD-Redfield-James.Flow.Inst.1Hour.0.Combined-rev
+Title 		= James River at Redfield, SD; FS = 14'
+Filename		= /cwms/g7cwmspd/plotFiles/files/resd
+Stage 		= RILW-Riverton-Little_Wind.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= RILW-Riverton-Little_Wind.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Little Wind River nr Riverton, WY; FS = 10'
+Filename		= /cwms/g7cwmspd/plotFiles/files/rilw
+Stage 		= RONE-Roca-Salt.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= RONE-Roca-Salt.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Salt Creek at Roca, NE; FS = 19'
+Filename		= /cwms/g7cwmspd/plotFiles/files/rone
+Stage 		= RTCL-Roberts_Tunnel-South_Platte.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= RTCL-Roberts_Tunnel-South_Platte.Flow.Inst.1Hour.0.codwr-rev
+Title 		= Roberts Tunnel into NF South Platte above Grant, CO; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/rtcl
+Stage 		= SBND-Starck_Bridge-Heart.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= SBND-Starck_Bridge-Heart.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Heart River at Starck Bridge, ND; FS = none
+Filename		= /cwms/g7cwmspd/plotFiles/files/sbnd
+Stage 		= SECO-Sedalia-Plum.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= SECO-Sedalia-Plum.Flow.Inst.1Hour.0.codwr-rev
+Title 		= Plum Cr at Sedalia, CO; FS = 5'
+Filename		= /cwms/g7cwmspd/plotFiles/files/seco
+Stage 		= SIWY-Sinclair-North_Platte.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= SIWY-Sinclair-North_Platte.Flow.Inst.1Hour.0.Combined-rev
+Title 		= N Platte R at Sinclair, WY; FS = none
+Filename		= /cwms/g7cwmspd/plotFiles/files/siwy
+Stage 		= SKSD-Sioux_Falls-Skunk.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= SKSD-Sioux_Falls-Skunk.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Skunk Creek nr Sioux Falls, SD; FS = 11.5'
+Filename		= /cwms/g7cwmspd/plotFiles/files/sksd
+Stage 		= SMCL-Ab_Spinney_Res-South_Platte.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= SMCL-Ab_Spinney_Res-South_Platte.Flow.Inst.1Hour.0.codwr-rev
+Title 		= S Platte R ab Spinney Res, CO; FS = none
+Filename		= /cwms/g7cwmspd/plotFiles/files/smcl
+Stage 		= SRBB-bl_Buffalo_Bill-Shoshone.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= SRBB-bl_Buffalo_Bill-Shoshone.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Shoshone R bl Buffalo Bill Dam, WY; FS = 8'
+Filename		= /cwms/g7cwmspd/plotFiles/files/srbb
+Stage 		= SRCL-Sheridan-Bear.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= SRCL-Sheridan-Bear.Flow.Inst.1Hour.0.codwr-rev
+Title 		= Bear Cr at Sheridan, CO; FS = 8'
+Filename		= /cwms/g7cwmspd/plotFiles/files/srcl
+Stage 		= TBMT-Twin_Bridges-Beaverhead.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= TBMT-Twin_Bridges-Beaverhead.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Beaverhead R nr Twin Bridges, MT; FS = 10'
+Filename		= /cwms/g7cwmspd/plotFiles/files/tbmt
+Stage 		= UL6E-Ulm-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= UL6E-Ulm-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River at Ulm, MT; FS = 13'
+Filename		= /cwms/g7cwmspd/plotFiles/files/ul6e
+Stage 		= VAMT-Vaughn-Sun.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= VAMT-Vaughn-Sun.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Sun River at Vaughn, MT; FS = 10'
+Filename		= /cwms/g7cwmspd/plotFiles/files/vamt
+Stage 		= VUMT-Vaughn-Muddy.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= VUMT-Vaughn-Muddy.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Muddy Cr nr Vaughn, MT; FS = 13.1'
+Filename		= /cwms/g7cwmspd/plotFiles/files/vumt
+Stage 		= WAKP-Wakpala-Oak.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WAKP-Wakpala-Oak.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Oak Creek at Wakpala, SD; FS = 10'
+Filename		= /cwms/g7cwmspd/plotFiles/files/wakp
+Stage 		= WECL-Weldona-South_Platte.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WECL-Weldona-South_Platte.Flow.Inst.1Hour.0.codwr-rev
+Title 		= S Platte R at Weldona, CO = 9'
+Filename		= /cwms/g7cwmspd/plotFiles/files/wecl
+Stage 		= WPSD-Westport-Elm.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WPSD-Westport-Elm.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Elm River near Westport, SD; FS = 14'
+Filename		= /cwms/g7cwmspd/plotFiles/files/wpsd
+Stage 		= WRCH-Crowheart-Wind.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WRCH-Crowheart-Wind.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Wind R at Crowheart, WY; FS = 6'
+Filename		= /cwms/g7cwmspd/plotFiles/files/wrch
+Stage 		= WRKY-Kinnear-Wind.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WRKY-Kinnear-Wind.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Wind R at Kinnear, WY; FS = none
+Filename		= /cwms/g7cwmspd/plotFiles/files/wrky
+Stage 		= WRRY-Riverton-Wind.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WRRY-Riverton-Wind.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Wind R at Riverton, WY; FS = 9'
+Filename		= /cwms/g7cwmspd/plotFiles/files/wrry
+Stage 		= WSSD-Wasta-Cheyenne.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WSSD-Wasta-Cheyenne.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Cheyenne River at Wasta, SD; FS = 16'
+Filename		= /cwms/g7cwmspd/plotFiles/files/wssd
+Stage 		= WTCO-Waterton-South_Platte.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WTCO-Waterton-South_Platte.Flow.Inst.1Hour.0.codwr-rev
+Title 		= S Platte R at Waterton, CO; FS = 6'
+Filename		= /cwms/g7cwmspd/plotFiles/files/wtco
+Stage 		= WTSD-nr_Watertown-Big_Sioux.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= WTSD-nr_Watertown-Big_Sioux.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Big Sioux River at Watertown, SD; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/wtsd
+Stage 		= end
+Flow 		= 
+Title 		= 
+Filename		= 
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsNWOriver2-qgh.py", line 176, in <module>
+    plotData(dbi, iniStage, iniFlow, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsNWOriver2-qgh.py", line 38, in plotData
+    stageData = dbi.get(stage)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2449, in get_1
+ValueError: "end" is not a time-series id or rating id.
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 25920 minutes (432.000000 hours, or 18.000000 days)
+Time window = 04Dec2018 1330 --> 22Dec2018 1330
+Opening DBI foo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:30:12 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:30:12 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:30:12 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataNWOriver1-qgh.ini
+Stage 		= ASSD-Ashton-James.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= ASSD-Ashton-James.Flow.Inst.1Hour.0.Combined-rev
+Title 		= James River at Ashton, SD; FS = 13'
+Filename		= /cwms/g7cwmspd/plotFiles/files/assd
+Dec 20, 2018 7:30:27 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+Stage 		= BACO-Bailey-NF_South_Platte.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= BACO-Bailey-NF_South_Platte.Flow.Inst.1Hour.0.codwr-rev
+Title 		= NF S Platte R nr Bailey, CO; FS = none
+Filename		= /cwms/g7cwmspd/plotFiles/files/baco
+Stage 		= BRMT-Barretts-Beaverhead.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= BRMT-Barretts-Beaverhead.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Beaverhead R nr Barretts, MT; FS = 4'
+Filename		= /cwms/g7cwmspd/plotFiles/files/brmt
+Stage 		= BRSD-Bruce-Big_Sioux.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= BRSD-Bruce-Big_Sioux.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Big Sioux River nr Bruce, SD; FS = 8'
+Filename		= /cwms/g7cwmspd/plotFiles/files/brsd
+Stage 		= BZCO-Balzac-South_Platte.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= BZCO-Balzac-South_Platte.Flow.Inst.1Hour.0.codwr-rev
+Title 		= S Platte R at Balzac, CO; FS = 9'
+Filename		= /cwms/g7cwmspd/plotFiles/files/bzco
+Stage 		= CBKM-Browning-Cut_Bank.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= CBKM-Browning-Cut_Bank.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Cut Bank Cr nr Browning, MT; FS = none
+Filename		= /cwms/g7cwmspd/plotFiles/files/cbkm
+Stage 		= CECL-bl_Cheesman_Dam-South_Platte.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= CECL-bl_Cheesman_Dam-South_Platte.Flow.Inst.1Hour.0.codwr-rev
+Title 		= S Platte R bl Cheesman Dam, CO; FS = 5.8'
+Filename		= /cwms/g7cwmspd/plotFiles/files/cecl
+Stage 		= COSD-Columbia-James.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= COSD-Columbia-James.Flow.Inst.1Hour.0.Combined-rev
+Title 		= James River at Columbia, SD; FS = 13'
+Filename		= /cwms/g7cwmspd/plotFiles/files/cosd
+Stage 		= DECL-Derby-Clear.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= DECL-Derby-Clear.Flow.Inst.1Hour.0.codwr-rev
+Title 		= Clear Cr at Derby, CO; FS = 8'
+Filename		= /cwms/g7cwmspd/plotFiles/files/decl
+Stage 		= DEN-Denver-South_Platte.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= DEN-Denver-South_Platte.Flow.Inst.1Hour.0.codwr-rev
+Title 		= S Platte R at Denver, CO; FS = 9'
+Filename		= /cwms/g7cwmspd/plotFiles/files/den
+Stage 		= ENCO-Union-South_Platte.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= ENCO-Union-South_Platte.Flow.Inst.1Hour.0.codwr-rev
+Title 		= S Platte R at Union, CO; FS = 10.5'
+Filename		= /cwms/g7cwmspd/plotFiles/files/enco
+Stage 		= FLSD-Florence-Big_Sioux.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= FLSD-Florence-Big_Sioux.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Big Sioux River at Florence, SD; FS = 8'
+Filename		= /cwms/g7cwmspd/plotFiles/files/flsd
+Stage 		= FLWY-Fort_Laramie-Laramie.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= FLWY-Fort_Laramie-Laramie.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Laramie R at Ft Laramie, WY; FS = 6.5'
+Filename		= /cwms/g7cwmspd/plotFiles/files/flwy
+Stage 		= FRCL-Franktown-Cherry.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= FRCL-Franktown-Cherry.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Cherry Cr at Franktown, CO; FS = 6.6'
+Filename		= /cwms/g7cwmspd/plotFiles/files/frcl
+Stage 		= FTSD-Forestburg-James.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= FTSD-Forestburg-James.Flow.Inst.1Hour.0.Combined-rev
+Title 		= James River at Forestburg, SD; FS = 12'
+Filename		= /cwms/g7cwmspd/plotFiles/files/ftsd
+Stage 		= GCND-Grace_City-James.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= GCND-Grace_City-James.Flow.Inst.1Hour.0.Combined-rev
+Title 		= James River at Grace City, ND; FS = 12'
+Filename		= /cwms/g7cwmspd/plotFiles/files/gcnd
+Stage 		= GRCL-Grant-NF_South_Platte.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= GRCL-Grant-NF_South_Platte.Flow.Inst.1Hour.0.codwr-rev
+Title 		= NF S Platte River at Grant, CO
+Filename		= /cwms/g7cwmspd/plotFiles/files/grcl
+Stage 		= GLCL-Golden-Clear.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= GLCL-Golden-Clear.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Clear Cr at Golden, CO; FS = 7'
+Filename		= /cwms/g7cwmspd/plotFiles/files/glcl
+Stage 		= GYCL-Greeley-Cache_La_Poudre.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= GYCL-Greeley-Cache_La_Poudre.Flow.Inst.1Hour.0.codwr-rev
+Title 		= Cache La Poudre R nr Greeley, CO; FS = 8'
+Filename		= /cwms/g7cwmspd/plotFiles/files/gycl
+Stage 		= HAMT-Hardin-Little_Bighorn.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= HAMT-Hardin-Little_Bighorn.Flow.Inst.1Hour.0.Combined-rev
+Title 		= L Bighorn R at Hardin, MT; FS = 8'
+Filename		= /cwms/g7cwmspd/plotFiles/files/hamt
+Stage 		= HEWY-State_Line-North_Platte.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= HEWY-State_Line-North_Platte.Flow.Inst.1Hour.0.Combined-rev
+Title 		= North Platte River at State Line; FS = 5'
+Filename		= /cwms/g7cwmspd/plotFiles/files/hewy
+Stage 		= HNCL-Henderson-South_Platte.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= HNCL-Henderson-South_Platte.Flow.Inst.1Hour.0.codwr-rev
+Title 		= S Platte R at Henderson, CO; FS = 11'
+Filename		= /cwms/g7cwmspd/plotFiles/files/hncl
+Stage 		= HOLM-bl_Holter_Dam-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= HOLM-bl_Holter_Dam-Missouri.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Missouri River bl Holter Dam, MT; FS = none
+Filename		= /cwms/g7cwmspd/plotFiles/files/holm
+Stage 		= HSSD-Hot_Springs-Fall.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= HSSD-Hot_Springs-Fall.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Fall River at Hot Springs, SD; FS = 13'
+Filename		= /cwms/g7cwmspd/plotFiles/files/hssd
+Stage 		= JAND-Jamestown-James.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= JAND-Jamestown-James.Flow.Inst.1Hour.0.Combined-rev
+Title 		= James River at Jamestown, ND; FS = 12'
+Filename		= /cwms/g7cwmspd/plotFiles/files/jand
+Stage 		= JMCO-Julesberg-South_Platte-Ch_1.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= JMCO-Julesberg-South_Platte-Ch_1.Flow.Inst.1Hour.0.codwr-rev
+Title 		= S Platte R at Julesberg, Ch 1, CO; FS = 9'
+Filename		= /cwms/g7cwmspd/plotFiles/files/jmco
+Stage 		= JRCO-Julesberg-South_Platte-Ch_2.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= JRCO-Julesberg-South_Platte-Ch_2.Flow.Inst.1Hour.0.codwr-rev
+Title 		= S Platte R at Julesberg, Ch 2, CO; FS = 9'
+Filename		= /cwms/g7cwmspd/plotFiles/files/jrco
+Stage 		= KAWY-Kane-Bighorn.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= KAWY-Kane-Bighorn.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Bighorn River at Kane, WY; FS = 8'
+Filename		= /cwms/g7cwmspd/plotFiles/files/kawy
+Stage 		= KECL-Kersey-South_Platte.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= KECL-Kersey-South_Platte.Flow.Inst.1Hour.0.codwr-rev
+Title 		= S Platte R at Kersey, CO; FS = 10'
+Filename		= /cwms/g7cwmspd/plotFiles/files/kecl
+Stage 		= CDCO-Denver-Cherry.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= CDCO-Denver-Cherry.Flow.Inst.1Hour.0.codwr-rev
+Title 		= Cherry Creek at Denver, CO; FS = none
+Filename		= /cwms/g7cwmspd/plotFiles/files/cdco
+Stage 		= LACO-Lawson-Clear.Flow.Inst.1Hour.0.Combined-rev
+Flow 		= LACO-Lawson-Clear.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Clear Creek at Lawson, CO
+Filename		= /cwms/g7cwmspd/plotFiles/files/laco
+Stage 		= end
+Flow 		= 
+Title 		= 
+Filename		= 
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsNWOriver1-qgh.py", line 176, in <module>
+    plotData(dbi, iniStage, iniFlow, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsNWOriver1-qgh.py", line 38, in plotData
+    stageData = dbi.get(stage)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2449, in get_1
+ValueError: "end" is not a time-series id or rating id.
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 25920 minutes (432.000000 hours, or 18.000000 days)
+Time window = 04Dec2018 1331 --> 22Dec2018 1331
+Opening DBI foo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:31:03 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:31:03 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:31:04 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataNWK1.ini
+Stage 		= ACHK-Achilles-South_Fork_Sappa.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= ACHK-Achilles-South_Fork_Sappa.Flow.Inst.1Hour.0.Combined-rev
+Title 		= S Fork Sappa Creek nr Achilles, KS; FS = 13'
+Filename		= /cwms/g7cwmspd/plotFiles/files/achk
+Dec 20, 2018 7:31:13 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+Stage 		= ADAK-Ada-Salt.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= ADAK-Ada-Salt.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Salt Creek near Ada, KS; FS = 18'
+Filename		= /cwms/g7cwmspd/plotFiles/files/adak
+Stage 		= ARDK-Arnold-Smoky_Hill.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= ARDK-Arnold-Smoky_Hill.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Smoky Hill_River nr Arnold, KS; FS = 7'
+Filename		= /cwms/g7cwmspd/plotFiles/files/ardk
+Stage 		= ARHM-Archie-South_Grand.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= ARHM-Archie-South_Grand.Flow.Inst.1Hour.0.Combined-rev
+Title 		= South Grand River at Archie, MO; FS = 15'
+Filename		= /cwms/g7cwmspd/plotFiles/files/arhm
+Stage 		= BAGM-bl_Bagnell_Dam-Osage.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= BAGM-bl_Bagnell_Dam-Osage.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Osage River below Bagnell Reservoir, MO; FS = 25'
+Filename		= /cwms/g7cwmspd/plotFiles/files/bagm
+Stage 		= BARK-Barnes-Little_Blue.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= BARK-Barnes-Little_Blue.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Little Blue River near Barnes, KS; FS = 16'
+Filename		= /cwms/g7cwmspd/plotFiles/files/bark
+Stage 		= BARN-Barneston-Big_Blue.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= BARN-Barneston-Big_Blue.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Big Blue River at Barneston, NE; FS = 20'
+Filename		= /cwms/g7cwmspd/plotFiles/files/barn
+Stage 		= BEDI-Bedford-East_Fork_102.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= BEDI-Bedford-East_Fork_102.Flow.Inst.1Hour.0.Combined-rev
+Title 		= East Fork 102 River near Bedford, IA; FS = 21'
+Filename		= /cwms/g7cwmspd/plotFiles/files/bedi
+Stage 		= BROK-Burr_Oak-White_Rock.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= BROK-Burr_Oak-White_Rock.Flow.Inst.1Hour.0.Combined-rev
+Title 		= White Rock Cr nr Burr Oak, KS; FS = 10'
+Filename		= /cwms/g7cwmspd/plotFiles/files/brok
+Stage 		= CDBK-Cedar_Bluffs-Beaver.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= CDBK-Cedar_Bluffs-Beaver.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Beaver Creek at Cedar Bluffs, KS; FS = 10'
+Filename		= /cwms/g7cwmspd/plotFiles/files/cdbk
+Stage 		= BUNK-Bunker_Hill-Smoky_Hill.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= BUNK-Bunker_Hill-Smoky_Hill.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Smoky Hill River nr Bunker Hill, KS; FS = 20'
+Filename		= /cwms/g7cwmspd/plotFiles/files/bunk
+Stage 		= CDBK-Cedar_Bluffs-Beaver.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= CDBK-Cedar_Bluffs-Beaver.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Beaver Creek at Cedar Bluff, KS; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/cdbk
+Stage 		= CHPK-Chapman-Chapman.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= CHPK-Chapman-Chapman.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Chapman Creek nr Chapman, KS; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/chpk
+Stage 		= CHTI-Chariton-Chariton.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= CHTI-Chariton-Chariton.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Chariton River near Chariton, IA; FS = 15'
+Filename		= /cwms/g7cwmspd/plotFiles/files/chti
+Stage 		= CLAK-Clay_Center-Republican.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= CLAK-Clay_Center-Republican.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Republican River at Clay Center, KS; FS = 15'
+Filename		= /cwms/g7cwmspd/plotFiles/files/clak
+Stage 		= CLRI-Clarinda-Nodaway.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= CLRI-Clarinda-Nodaway.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Nodaway River at Clarinda, IA; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/clri
+Stage 		= CLRK-Circleville-Soldier.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= CLRK-Circleville-Soldier.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Soldir Cr near Circleville, KS; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/clrk
+Stage 		= CMBN-Cambridge-Republican.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= CMBN-Cambridge-Republican.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Republican River at Cambridge, NE; FS = 9'
+Filename		= /cwms/g7cwmspd/plotFiles/files/cmbn
+Stage 		= CNKK-Concordia-Republican.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= CNKK-Concordia-Republican.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Republican River at Concordia, KS; FS = 15'
+Filename		= /cwms/g7cwmspd/plotFiles/files/cnkk
+Stage 		= CPMO-Caplinger_Mills-Sac.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= CPMO-Caplinger_Mills-Sac.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Sac River near Caplinger Mills, MO; FS = 14'
+Filename		= /cwms/g7cwmspd/plotFiles/files/cpmo
+Stage 		= CRTN-Crete-Big_Blue.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= CRTN-Crete-Big_Blue.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Big Blue River near Crete, NE; FS = 18'
+Filename		= /cwms/g7cwmspd/plotFiles/files/crtn
+Stage 		= CSMK-Manhattan-Big_Blue.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= CSMK-Manhattan-Big_Blue.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Big Blue River nr Manhattan, KS; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/csmk
+Stage 		= DCM1-Tunnel_Dam-Osage.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= DCM1-Tunnel_Dam-Osage.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Tunnel Dam on the Osage R, MO; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/dcm1
+Stage 		= DDVM-Dadeville-Sac.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= DDVM-Dadeville-Sac.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Sac River near Dadeville, MO; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/ddvm
+Stage 		= DELK-Delia-Soldier.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= DELK-Delia-Soldier.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Soldier Cr_near Delia, KS; FS = 17'
+Filename		= /cwms/g7cwmspd/plotFiles/files/delk
+Stage 		= DMRK-Damar-South_Fork_Solomon.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= DMRK-Damar-South_Fork_Solomon.Flow.Inst.1Hour.0.Combined-rev
+Title 		= SF Solomon River at Damar, KS; FS = 7'
+Filename		= /cwms/g7cwmspd/plotFiles/files/dmrk
+Stage 		= EKDK-Elkader-Smoky_Hill.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= EKDK-Elkader-Smoky_Hill.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Smoky Hill_River near Elkader, KS; FS = 8'
+Filename		= /cwms/g7cwmspd/plotFiles/files/ekdk
+Stage 		= EPKS-Enterprise-Smoky_Hill.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= EPKS-Enterprise-Smoky_Hill.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Smoky Hill River at Enterprise, KS; FS = 26'
+Filename		= /cwms/g7cwmspd/plotFiles/files/epks
+Stage 		= EWKS-Ellsworth-Smoky_Hill.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= EWKS-Ellsworth-Smoky_Hill.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Smoky Hill River at Ellsworth, KS; FS = 20'
+Filename		= /cwms/g7cwmspd/plotFiles/files/ewks
+Stage 		= FKFK-Frankfort-Black_Vermillion.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= FKFK-Frankfort-Black_Vermillion.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Black Vermillion R nr Frankfort, KS; FS = 19'
+Filename		= /cwms/g7cwmspd/plotFiles/files/fkfk
+Stage 		= FRBN-Fairbury-Little_Blue.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= FRBN-Fairbury-Little_Blue.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Little Blue River nr Fairbury, NE; FS = 15'
+Filename		= /cwms/g7cwmspd/plotFiles/files/frbn
+Stage 		= FRI-Fort_Riley-Kansas.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= FRI-Fort_Riley-Kansas.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Kansas River at Fort Riley, KS; FS = 21'
+Filename		= /cwms/g7cwmspd/plotFiles/files/fri
+Stage 		= FTNK-Fulton-Little_Osage.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= FTNK-Fulton-Little_Osage.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Little Osage River at Fulton, KS; FS = 22'
+Filename		= /cwms/g7cwmspd/plotFiles/files/ftnk
+Stage 		= GARK-Garnett-Pottowatomie.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= GARK-Garnett-Pottowatomie.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Pottawatomie Cr nr Garnett, KS; FS = 26'
+Filename		= /cwms/g7cwmspd/plotFiles/files/gark
+Stage 		= GDEK-Glade-North_Fork_Solomon.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= GDEK-Glade-North_Fork_Solomon.Flow.Inst.1Hour.0.Combined-rev
+Title 		= NF Solomon River at Glade, KS; FS = 9'
+Filename		= /cwms/g7cwmspd/plotFiles/files/gdek
+Stage 		= GDRN-Guide_Rock-Republican.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= GDRN-Guide_Rock-Republican.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Republican R_at Guide Rock, NE; FS = 16'
+Filename		= /cwms/g7cwmspd/plotFiles/files/gdrn
+Stage 		= GFMO-Greenfield-Turnback.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= GFMO-Greenfield-Turnback.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Turnback Cr above Greenfield, MO; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/gfmo
+Stage 		= GLNK-bl_Glen_Elder-Solomon.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= GLNK-bl_Glen_Elder-Solomon.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Solomon River bl Glen Elder, KS; FS = 21'
+Filename		= /cwms/g7cwmspd/plotFiles/files/glnk
+Stage 		= HACN-bl_Harlan_Co_Lake-Republican.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= HACN-bl_Harlan_Co_Lake-Republican.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Republican R bl Harlan Co Dam, NE; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/hacn
+Stage 		= HARN-Hardy-Republican.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= HARN-Hardy-Republican.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Republican River near Hardy, NE; FS = 11'
+Filename		= /cwms/g7cwmspd/plotFiles/files/harn
+Stage 		= HILK-Hillsdale-bl_Big_Bull.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= HILK-Hillsdale-bl_Big_Bull.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Big Bull Cr bl Hillsdale, KS; FS = 17'
+Filename		= /cwms/g7cwmspd/plotFiles/files/hilk
+Stage 		= HTNM-Horton-Little_Osage.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= HTNM-Horton-Little_Osage.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Little Osage River at Horton, MO; FS = 41'
+Filename		= /cwms/g7cwmspd/plotFiles/files/htnm
+Stage 		= JRMM-Jerome-Gasconade.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= JRMM-Jerome-Gasconade.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Gasconade River at Jerome, MO; FS = 15'
+Filename		= /cwms/g7cwmspd/plotFiles/files/jrmm
+Stage 		= KACM-Bannister-Blue.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= KACM-Bannister-Blue.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Blue River at Bannistor, KS; FS = 21'
+Filename		= /cwms/g7cwmspd/plotFiles/files/kacm
+Stage 		= KCKK-Kansas_City-Kansas-23rd_St.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= KCKK-Kansas_City-Kansas-23rd_St.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Kansas R at 23rd St in KC, KS; FS = 23'
+Filename		= /cwms/g7cwmspd/plotFiles/files/kckk
+Stage 		= LCGK-LaCygne-Marais_Des_Cygnes.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= LCGK-LaCygne-Marais_Des_Cygnes.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Solomon River bl Glen Elder, KS; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/glnk
+Stage 		= LEKS-Lecompton-Kansas.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= LEKS-Lecompton-Kansas.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Kansas River at Lecompton, KS; FS = 17'
+Filename		= /cwms/g7cwmspd/plotFiles/files/leks
+Stage 		= LGLK-Langley-Smoky_Hill.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= LGLK-Langley-Smoky_Hill.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Smoky Hill R nr Langley, KS; FS = NA
+Filename		= /cwms/g7cwmspd/plotFiles/files/lglk
+Stage 		= LNDK-Lyndon-Salt.Stage.Inst.1Hour.0.Combined-rev
+Flow 		= LNDK-Lyndon-Salt.Flow.Inst.1Hour.0.Combined-rev
+Title 		= Salt Cr Trib nr Lyndon, KS; FS = 15'
+Filename		= /cwms/g7cwmspd/plotFiles/files/lndk
+Stage 		= end
+Flow 		= 
+Title 		= 
+Filename		= 
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsNWKriver1-qgh.py", line 176, in <module>
+    plotData(dbi, iniStage, iniFlow, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsNWKriver1-qgh.py", line 38, in plotData
+    stageData = dbi.get(stage)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2449, in get_1
+ValueError: "end" is not a time-series id or rating id.
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+2018
+2019
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:31:59 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:32:00 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:32:00 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+hemo
+Dec 20, 2018 7:32:13 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+i is 0 
+01Nov2018 0000
+01Mar2019 0000
+tmp is 0
+1
+tmp3 2 
+2017-11-01 00:00:00
+2018-03-01 00:00:00
+i is 1 
+01Nov2017 0000
+01Mar2018 0000
+tmp is 1
+2
+tmp3 2 
+/usr1/g7cwmspd/plotFiles/files/hemocomp
+bnmo
+i is 0 
+01Nov2018 0000
+01Mar2019 0000
+tmp is 0
+1
+tmp3 2 
+2017-11-01 00:00:00
+2018-03-01 00:00:00
+i is 1 
+01Nov2017 0000
+01Mar2018 0000
+tmp is 1
+2
+tmp3 2 
+/usr1/g7cwmspd/plotFiles/files/bnmocomp
+wvmo
+i is 0 
+01Nov2018 0000
+01Mar2019 0000
+tmp is 0
+1
+tmp3 2 
+2017-11-01 00:00:00
+2018-03-01 00:00:00
+i is 1 
+01Nov2017 0000
+01Mar2018 0000
+tmp is 1
+2
+tmp3 2 
+/usr1/g7cwmspd/plotFiles/files/wvmocomp
+mkc
+i is 0 
+01Nov2018 0000
+01Mar2019 0000
+tmp is 0
+1
+tmp3 2 
+2017-11-01 00:00:00
+2018-03-01 00:00:00
+i is 1 
+01Nov2017 0000
+01Mar2018 0000
+tmp is 1
+2
+tmp3 2 
+/usr1/g7cwmspd/plotFiles/files/mkccomp
+stj
+i is 0 
+01Nov2018 0000
+01Mar2019 0000
+tmp is 0
+1
+tmp3 2 
+2017-11-01 00:00:00
+2018-03-01 00:00:00
+i is 1 
+01Nov2017 0000
+01Mar2018 0000
+tmp is 1
+2
+tmp3 2 
+/usr1/g7cwmspd/plotFiles/files/stjcomp
+rune
+i is 0 
+01Nov2018 0000
+01Mar2019 0000
+tmp is 0
+1
+tmp3 2 
+2017-11-01 00:00:00
+2018-03-01 00:00:00
+i is 1 
+01Nov2017 0000
+01Mar2018 0000
+tmp is 1
+2
+tmp3 2 
+/usr1/g7cwmspd/plotFiles/files/runecomp
+ncne
+i is 0 
+01Nov2018 0000
+01Mar2019 0000
+tmp is 0
+1
+tmp3 2 
+2017-11-01 00:00:00
+2018-03-01 00:00:00
+i is 1 
+01Nov2017 0000
+01Mar2018 0000
+tmp is 1
+2
+tmp3 2 
+/usr1/g7cwmspd/plotFiles/files/ncnecomp
+oma
+i is 0 
+01Nov2018 0000
+01Mar2019 0000
+tmp is 0
+1
+tmp3 2 
+2017-11-01 00:00:00
+2018-03-01 00:00:00
+i is 1 
+01Nov2017 0000
+01Mar2018 0000
+tmp is 1
+2
+tmp3 2 
+/usr1/g7cwmspd/plotFiles/files/omacomp
+dene
+i is 0 
+01Nov2018 0000
+01Mar2019 0000
+tmp is 0
+1
+tmp3 2 
+2017-11-01 00:00:00
+2018-03-01 00:00:00
+i is 1 
+01Nov2017 0000
+01Mar2018 0000
+tmp is 1
+2
+tmp3 2 
+/usr1/g7cwmspd/plotFiles/files/denecomp
+sux
+i is 0 
+01Nov2018 0000
+01Mar2019 0000
+tmp is 0
+1
+tmp3 2 
+2017-11-01 00:00:00
+2018-03-01 00:00:00
+i is 1 
+01Nov2017 0000
+01Mar2018 0000
+tmp is 1
+2
+tmp3 2 
+/usr1/g7cwmspd/plotFiles/files/suxcomp
+ykn
+i is 0 
+01Nov2018 0000
+01Mar2019 0000
+tmp is 0
+1
+tmp3 2 
+2017-11-01 00:00:00
+2018-03-01 00:00:00
+i is 1 
+01Nov2017 0000
+01Mar2018 0000
+tmp is 1
+2
+tmp3 2 
+/usr1/g7cwmspd/plotFiles/files/ykncomp
+gapt
+i is 0 
+01Nov2018 0000
+01Mar2019 0000
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/CroncompareFlows.py", line 145, in <module>
+    tsm = db.read(tsid+".Flow-Total.Ave.1Day.1Day.mrrppcs-rev")
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2519, in read
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2079, in getTimeSeriesContainer
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 1913, in _getTimeSeries_
+ORA-06512: at "CWMS_20.CWMS_ERR", line 59
+ORA-06512: at "CWMS_20.CWMS_TS", line 2259
+ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "CWMS_20.CWMS_TS", line 3037
+ORA-06512: at "CWMS_20.CWMS_TS", line 3262
+ORA-06512: at line 2
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:494)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:446)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1054)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:623)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:252)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:612)
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:223)
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:56)
+	at oracle.jdbc.driver.T4CCallableStatement.executeForRows(T4CCallableStatement.java:907)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1119)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3780)
+	at oracle.jdbc.driver.T4CCallableStatement.executeInternal(T4CCallableStatement.java:1300)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3887)
+	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:4230)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1079)
+	at sun.reflect.GeneratedMethodAccessor34.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at oracle.ucp.jdbc.proxy.StatementProxyFactory.invoke(StatementProxyFactory.java:367)
+	at com.sun.proxy.$Proxy8.execute(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+
+java.sql.SQLException: java.sql.SQLException: ORA-20001: TS_ID_NOT_FOUND: The timeseries identifier "GAPT-Gavins_Point_Dam-Missouri.Flow-Total.Ave.1Day.1Day.mrrppcs-rev" was not found for office "NWDM"
+ORA-06512: at "CWMS_20.CWMS_ERR", line 59
+ORA-06512: at "CWMS_20.CWMS_TS", line 2259
+ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "CWMS_20.CWMS_TS", line 3037
+ORA-06512: at "CWMS_20.CWMS_TS", line 3262
+ORA-06512: at line 2
+
+Shut Down: Closing all database connections before exiting.
+ ----ZINQIR - Unrecognized Inquire: vers
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 25920 minutes (432.000000 hours, or 18.000000 days)
+Time window = 04Dec2018 1333 --> 22Dec2018 1333
+Opening DBI fooo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:33:15 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:33:15 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:33:15 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataNWOres.ini
+Elev 		= BECR-Bear_Creek_Dam-Bear.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= BECR-Bear_Creek_Dam-Bear.Flow-In.Ave.~1Day.1Day.Combined-rev
+Release		= BECR-Bear_Creek_Dam-Bear.Flow-Total.Ave.~1Day.1Day.Combined-rev
+Storage		= BECR-Bear_Creek_Dam-Bear.Stor.Inst.~1Day.0.Combined-rev
+Precip 		= BECR-Bear_Creek_Dam-Bear.Precip.Total.~1Day.1Day.Combined-rev
+Base FC Pool	= 5558.0
+Title 		= Bear Creek Dam on Bear Creek, Denver Metro
+Filename		= /cwms/g7cwmspd/plotFiles/files/becr2
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsNWOres.py", line 274, in <module>
+    plotData(dbi, iniElev, iniInflow, iniRelease, iniStor, iniPrec, iniBaseFC, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsNWOres.py", line 44, in plotData
+    elevData 	= dbi.get(elev)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2439, in get_1
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2079, in getTimeSeriesContainer
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 1913, in _getTimeSeries_
+ORA-06512: at "CWMS_20.CWMS_ERR", line 59
+ORA-06512: at "CWMS_20.CWMS_TS", line 2259
+ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "CWMS_20.CWMS_TS", line 3037
+ORA-06512: at "CWMS_20.CWMS_TS", line 3262
+ORA-06512: at line 2
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:494)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:446)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1054)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:623)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:252)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:612)
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:223)
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:56)
+	at oracle.jdbc.driver.T4CCallableStatement.executeForRows(T4CCallableStatement.java:907)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1119)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3780)
+	at oracle.jdbc.driver.T4CCallableStatement.executeInternal(T4CCallableStatement.java:1300)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3887)
+	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:4230)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1079)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at oracle.ucp.jdbc.proxy.StatementProxyFactory.invoke(StatementProxyFactory.java:367)
+	at com.sun.proxy.$Proxy8.execute(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+
+java.sql.SQLException: java.sql.SQLException: ORA-20001: TS_ID_NOT_FOUND: The timeseries identifier "BECR-Bear_Creek_Dam-Bear.Elev.Inst.1Hour.0.Combined-rev" was not found for office "NWDM"
+ORA-06512: at "CWMS_20.CWMS_ERR", line 59
+ORA-06512: at "CWMS_20.CWMS_TS", line 2259
+ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "CWMS_20.CWMS_TS", line 3037
+ORA-06512: at "CWMS_20.CWMS_TS", line 3262
+ORA-06512: at line 2
+
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 25920 minutes (432.000000 hours, or 18.000000 days)
+Time window = 04Dec2018 1333 --> 22Dec2018 1333
+Opening DBI fooo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:33:49 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:33:49 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:33:49 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataNWOusbr.ini
+Elev 		= ANGA-Angostura_Dam-Cheyenne.Elev.Inst.1Hour.0.Combined-rev
+Inflow		= ANGA-Angostura_Dam-Cheyenne.Flow-In.Inst.1Day.0.usbr-rev
+Release		= ANGA-Angostura_Dam-Cheyenne.Flow-Total.Inst.1Day.0.usbr-rev
+Title 		= Angustora Dam on the Cheyenne River, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/anga2
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsNWOusbr.py", line 208, in <module>
+    plotData(dbi, iniElev, iniInflow, iniRelease, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsNWOusbr.py", line 41, in plotData
+    elevData 	= dbi.get(elev)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2439, in get_1
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2079, in getTimeSeriesContainer
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 1913, in _getTimeSeries_
+ORA-06512: at "CWMS_20.CWMS_ERR", line 59
+ORA-06512: at "CWMS_20.CWMS_TS", line 2259
+ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "CWMS_20.CWMS_TS", line 3037
+ORA-06512: at "CWMS_20.CWMS_TS", line 3262
+ORA-06512: at line 2
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:494)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:446)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1054)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:623)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:252)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:612)
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:223)
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:56)
+	at oracle.jdbc.driver.T4CCallableStatement.executeForRows(T4CCallableStatement.java:907)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1119)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3780)
+	at oracle.jdbc.driver.T4CCallableStatement.executeInternal(T4CCallableStatement.java:1300)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3887)
+	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:4230)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1079)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at oracle.ucp.jdbc.proxy.StatementProxyFactory.invoke(StatementProxyFactory.java:367)
+	at com.sun.proxy.$Proxy8.execute(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+
+java.sql.SQLException: java.sql.SQLException: ORA-20001: TS_ID_NOT_FOUND: The timeseries identifier "ANGA-Angostura_Dam-Cheyenne.Elev.Inst.1Hour.0.Combined-rev" was not found for office "NWDM"
+ORA-06512: at "CWMS_20.CWMS_ERR", line 59
+ORA-06512: at "CWMS_20.CWMS_TS", line 2259
+ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "CWMS_20.CWMS_TS", line 3037
+ORA-06512: at "CWMS_20.CWMS_TS", line 3262
+ORA-06512: at line 2
+
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 25920 minutes (432.000000 hours, or 18.000000 days)
+Time window = 04Dec2018 1334 --> 22Dec2018 1334
+Opening DBI foo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:34:16 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:34:16 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:34:16 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataNWOstage.ini
+Stage 		= CASD-Castlewood-Big_Sioux.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Big Sioux River at Castlewood, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/casd
+Dec 20, 2018 7:34:28 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+Stage 		= CONE-Columbus-Shell.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Shell Cr at Columbus, NE
+Filename		= /cwms/g7cwmspd/plotFiles/files/cone
+Stage 		= DIMT-Dillon-Beaverhead.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Beaverhead River near Dillon, MT
+Filename		= /cwms/g7cwmspd/plotFiles/files/dimt
+Stage 		= GTMT-Gallatin_Gateway-Gallatin.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Gallatin River at Gallatin Gateway, MT
+Filename		= /cwms/g7cwmspd/plotFiles/files/gtmt
+Stage 		= HACL-ab_11-Mile_Res-South_Platte.Stage.Inst.1Hour.0.Combined-rev
+Title 		= South Platte River at Hartsel, CO
+Filename		= /cwms/g7cwmspd/plotFiles/files/hacl
+Stage 		= KAMP-Watertown-Lake_Kampeska_inlet.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Lake Kampeska Inlet in Watertown, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/kamp
+Stage 		= NPOW-Orin-North_Platte.Stage.Inst.1Hour.0.Combined-rev
+Title 		= North Platte River at Orin, WY
+Filename		= /cwms/g7cwmspd/plotFiles/files/npow
+Stage 		= SSCO-bl_Strontia_Springs-South_Platte.Stage.Inst.1Hour.0.Combined-rev
+Title 		= South Platte River below Strontia Springs, CO
+Filename		= /cwms/g7cwmspd/plotFiles/files/ssco
+Stage 		= FCSD-Lk_Francis_Case-Missouri.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Lake Francis Case at Chamberlain, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/fcsd
+Stage 		= MISD-Mitchell-James.Stage.Inst.1Hour.0.Combined-rev
+Title 		= James River at Mitchell, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/misd
+Stage 		= MOMT-Mosby-Musselshell.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Musselshell River near Mosby, MT
+Filename		= /cwms/g7cwmspd/plotFiles/files/momt
+Stage 		= FSNE-Omaha-Fort_St-Big_Papillion.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Big Papillion Creek Fort St Omaha, NE
+Filename		= /cwms/g7cwmspd/plotFiles/files/fsne
+Stage 		= JRMT-Twin_Bridges-Jefferson.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Jefferson River near Twin Bridges, MT
+Filename		= /cwms/g7cwmspd/plotFiles/files/jrmt
+Stage 		= TQWY-Basin-Bighorn.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Bighorn River at Basin, WY
+Filename		= /cwms/g7cwmspd/plotFiles/files/tqwy
+Stage 		= TXSD-Cash-South_Fork_Grand.Stage.Inst.1Hour.0.Combined-rev
+Title 		= SF Grand River near Cash, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/txsd
+Stage 		= ARSD-Argyle_Road-Fall.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Above Coldbrook Reservoir at Argyle Rd, Hot Springs, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/arsd
+Stage 		= LGCO-nr_Lake_George-South_Platte.Stage.Inst.1Hour.0.Combined-rev
+Title 		= South Platte River near Lake George, CO
+Filename		= /cwms/g7cwmspd/plotFiles/files/lgco
+Stage 		= LYCL-Lyons-St_Vrain.Stage.Inst.1Hour.0.Combined-rev
+Title 		= St Vrain River at Lyons, CO
+Filename		= /cwms/g7cwmspd/plotFiles/files/lycl
+Stage 		= end
+Title 		= 
+Filename		= 
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsNWOstage.py", line 157, in <module>
+    plotData(dbi, iniStage, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsNWOstage.py", line 38, in plotData
+    stageData = dbi.get(stage)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2449, in get_1
+ValueError: "end" is not a time-series id or rating id.
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 25920 minutes (432.000000 hours, or 18.000000 days)
+Time window = 04Dec2018 1334 --> 22Dec2018 1334
+Opening DBI fooo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:35:00 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:35:01 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:35:01 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataNWOprecip.ini
+Precip 		= PGSD-Pringle-Beaver_Creek.Precip.Inst.1Hour.0.Combined-rev
+Title 		= Precipitation at Beaver Creek Near Pringle, SD
+Filename		= /cwms/g7cwmspd/plotFiles/files/pgsd
+Dec 20, 2018 7:35:15 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+Precip 		= PIPP-Pipestem_Dam-Precip.Precip.Inst.1Hour.0.Combined-rev
+Title 		= Precipitation at Pipestem Dam, near Jamestown, ND
+Filename		= /cwms/g7cwmspd/plotFiles/files/pipp
+Precip 		= end
+Title 		= 
+Filename		= 
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsNWOprecip.py", line 168, in <module>
+    plotData(dbi, iniPrec, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsNWOprecip.py", line 39, in plotData
+    precData 	= dbi.get(prec)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2449, in get_1
+ValueError: "end" is not a time-series id or rating id.
+Shut Down: Closing all database connections before exiting.
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 25920 minutes (432.000000 hours, or 18.000000 days)
+Time window = 04Dec2018 1335 --> 22Dec2018 1335
+Opening DBI foo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:35:46 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:35:47 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:35:47 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/plotDataNWKstage.ini
+Stage 		= STAK-Stanley-Blue.Stage.Inst.1Hour.0.Combined-rev
+Title 		= Blue River nr Stanley, KS
+Filename		= /cwms/g7cwmspd/plotFiles/files/stak
+Dec 20, 2018 7:35:59 AM hec.data.ResourceFileParameterLoader validate
+WARNING: Error reading parameter resource file input stream: /netapp/g7cwmspd/config/db/definitions/parameters_units.def (No such file or directory)
+OS Name is SunOS
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+Stage 		= end
+Title 		= 
+Filename		= 
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/createPlotsNWKstage.py", line 157, in <module>
+    plotData(dbi, iniStage, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/createPlotsNWKstage.py", line 38, in plotData
+    stageData = dbi.get(stage)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2449, in get_1
+ValueError: "end" is not a time-series id or rating id.
+Shut Down: Closing all database connections before exiting.
+Moving files to web server staging area and to local zone.
+You are accessing a U.S. Government (USG) Information System (IS) that
+is provided for USG-authorized use only. By using this IS (which
+includes any device attached to this IS), you consent to the following
+conditions:
+-The USG routinely intercepts and monitors communications on this IS
+for purposes including, but not limited to, penetration testing, COMSEC
+monitoring, network operations and defense, personnel misconduct (PM),
+law enforcement (LE), and counterintelligence (CI) investigations.
+-At any time, the USG may inspect and seize data stored on this IS.
+-Communications using, or data stored on, this IS are not private, are
+subject to routine monitoring, interception, and search, and may be
+disclosed or used for any USG-authorized purpose.
+-This IS includes security measures (e.g., authentication and access
+controls) to protect USG interests--not for your personal benefit or
+privacy.
+-Notwithstanding the above, using this IS does not constitute consent
+to PM, LE or CI investigative searching or monitoring of the content of
+privileged communications, or work product, related to personal
+representation or services by attorneys, psychotherapists, or clergy,
+and their assistants. Such communications and work product are private
+and confidential. See User Agreement for details.
+Done
+Loaded debug logging properties file: /netapp/g7cwmspd/config/properties/logger.properties
+Using time span of 17280 minutes (288.000000 hours, or 12.000000 days)
+Time window = 10Dec2018 1336 --> 22Dec2018 1336
+Opening DBI foo
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Dec 20, 2018 7:36:37 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub:/usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:36:38 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /netapp/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jooq
+Dec 20, 2018 7:36:38 AM usace.cwms.db.dao.util.CwmsDbClassLoader getInstance
+INFO: Creating CwmsDbClassLoader instance for path: /usr1/wmsoft/cwms/v3.1.150/jar/cwmsDbAPI/jpub
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Opening ini file /cwms/g7cwmspd/plotFiles/NWO_Res_Inflow_Elev_6Hour.ini
+Elevation	= BECR-Bear_Creek_Dam-Bear.Elev.Inst.1Hour.0.Combined-rev
+Inflow 		= BECR-Bear_Creek_Dam-Bear.Flow-In.Ave.1Hour.6Hours.Combined-rev
+Total Release	= BECR-Bear_Creek_Dam-Bear.Flow-Total.Ave.1Hour.6Hours.Combined-rev
+Title 		= Bear Creek Dam on Bear Creek, Denver Metro
+Filename		= /cwms/g7cwmspd/plotFiles/files/becrin
+Traceback (most recent call last):
+  File "/netapp/g7cwmspd/plotFiles/NWO_Res_Inflow_Elev_6Hour.py", line 190, in <module>
+    plotData(dbi, iniElevation, iniInflow, iniRelease, iniTitle, plotWidth, plotHeight, iniFname, plotQuality)
+  File "/netapp/g7cwmspd/plotFiles/NWO_Res_Inflow_Elev_6Hour.py", line 42, in plotData
+    elevationData = dbi.get(elevation)
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2481, in get
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2439, in get_1
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 2079, in getTimeSeriesContainer
+  File "/usr1/wmsoft/cwms/v3.1.150/jar/sys/jythonUtils.jar/DBAPI.py", line 1913, in _getTimeSeries_
+ORA-06512: at "CWMS_20.CWMS_ERR", line 59
+ORA-06512: at "CWMS_20.CWMS_TS", line 2259
+ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "CWMS_20.CWMS_TS", line 3037
+ORA-06512: at "CWMS_20.CWMS_TS", line 3262
+ORA-06512: at line 2
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:494)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:446)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1054)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:623)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:252)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:612)
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:223)
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:56)
+	at oracle.jdbc.driver.T4CCallableStatement.executeForRows(T4CCallableStatement.java:907)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1119)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3780)
+	at oracle.jdbc.driver.T4CCallableStatement.executeInternal(T4CCallableStatement.java:1300)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3887)
+	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:4230)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1079)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at oracle.ucp.jdbc.proxy.StatementProxyFactory.invoke(StatementProxyFactory.java:367)
+	at com.sun.proxy.$Proxy8.execute(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+
+java.sql.SQLException: java.sql.SQLException: ORA-20001: TS_ID_NOT_FOUND: The timeseries identifier "BECR-Bear_Creek_Dam-Bear.Elev.Inst.1Hour.0.Combined-rev" was not found for office "NWDM"
+ORA-06512: at "CWMS_20.CWMS_ERR", line 59
+ORA-06512: at "CWMS_20.CWMS_TS", line 2259
+ORA-01403: no data found
+ORA-01403: no data found
+ORA-06512: at "CWMS_20.CWMS_TS", line 3037
+ORA-06512: at "CWMS_20.CWMS_TS", line 3262
+ORA-06512: at line 2
+
+Shut Down: Closing all database connections before exiting.
+Moving files to web server staging area and to local zone.
+You are accessing a U.S. Government (USG) Information System (IS) that
+is provided for USG-authorized use only. By using this IS (which
+includes any device attached to this IS), you consent to the following
+conditions:
+-The USG routinely intercepts and monitors communications on this IS
+for purposes including, but not limited to, penetration testing, COMSEC
+monitoring, network operations and defense, personnel misconduct (PM),
+law enforcement (LE), and counterintelligence (CI) investigations.
+-At any time, the USG may inspect and seize data stored on this IS.
+-Communications using, or data stored on, this IS are not private, are
+subject to routine monitoring, interception, and search, and may be
+disclosed or used for any USG-authorized purpose.
+-This IS includes security measures (e.g., authentication and access
+controls) to protect USG interests--not for your personal benefit or
+privacy.
+-Notwithstanding the above, using this IS does not constitute consent
+to PM, LE or CI investigative searching or monitoring of the content of
+privileged communications, or work product, related to personal
+representation or services by attorneys, psychotherapists, or clergy,
+and their assistants. Such communications and work product are private
+and confidential. See User Agreement for details.
+Done
+Done

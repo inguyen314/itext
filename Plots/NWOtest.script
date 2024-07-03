@@ -1,0 +1,29 @@
+#!/bin/bash
+. /wm/nwo/g7cwpa30/.bashrc
+echo ...
+echo 'Starting NWO Plots at:' `date`
+echo ...
+DISPLAY=:1;export DISPLAY
+echo $DISPLAY
+cd /wm/nwo/g7cwpa30/cronjobs/Plots
+
+# Run each script below to generate plots
+#jython3 Reservoir_NwoElevInflowOutflowPrecipStorZones_Plots.py
+#jython3 Reservoir_NwoPrecip_Plots.py
+#jython3 Reservoir_NwoElevInflowOutflow6Hr_Plots.py
+#jython3 Reservoir_NwoElevPrecip_Plots.py
+#jython3 Reservoir_NWOSC12_Geotech.py 
+jython3 Reservoir_NwoCorpsOwnedRaw_Plots.py
+#jython3 Reservoir_NwoRawRevElev_Plots.py
+#jython3 Reservoir_NwoRawRevRadarElev_Plots.py
+
+#
+# Move files to web and to local zone MRADS cwmspixel directory for displaying by viewpix
+#
+echo 'Moving files to web server staging area and to local zone.'
+# Location of images
+cd /wm/nwo/g7cwpa30/cronjobs/Plots/Images
+/bin/scp *.jpg g7cwpa30@`echo $LOCALZONE`:/home/usace/g7cwpa30/WebSite/HOURLY/PLOTS
+echo ...
+echo 'Finished NWO Plots at:' `date`
+echo ...

@@ -1,0 +1,7 @@
+Unit.loadFromFile: loading from /netapp/g7cwmspd/config/db/definitions/unitConversions.def
+readFile: reading /netapp/g7cwmspd/config/properties/dbi.conf
+Connected to Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Closing Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options 155.77.185.103:1521:G6CWMSP2
+Shut Down: Closing all database connections before exiting.

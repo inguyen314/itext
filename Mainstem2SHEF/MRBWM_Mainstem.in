@@ -1,0 +1,121 @@
+# Missouri River Basin Water Management
+# Extract CWMS data into SHEF for NOAA and post to the web
+#
+debug 2
+type .E
+ti t-3d t
+system eng
+tz z
+DB LOCAL
+
+MISSING=-9999
+
+ts Best-MRBWM=RG
+
+PE Temp-Air.Inst=TA
+FORMAT TA(4.1)
+####Air Temp
+FTPK.Temp-Air.Inst.1Hour.0.Best-MRBWM
+GARR.Temp-Air.Inst.1Hour.0.Best-MRBWM
+OAHE.Temp-Air.Inst.1Hour.0.Best-MRBWM
+BEND.Temp-Air.Inst.1Hour.0.Best-MRBWM
+FTRA.Temp-Air.Inst.1Hour.0.Best-MRBWM
+GAPT.Temp-Air.Inst.1Hour.0.Best-MRBWM
+
+PE Temp-Water.Inst=TW
+FORMAT TW(4.1)
+#### Water Temp
+FTPK.Temp-Water.Inst.1Hour.0.Best-MRBWM
+GARR.Temp-Water.Inst.1Hour.0.Best-MRBWM
+OAHE.Temp-Water.Inst.1Hour.0.Best-MRBWM
+BEND.Temp-Water.Inst.1Hour.0.Best-MRBWM
+FTRA.Temp-Water.Inst.1Hour.0.Best-MRBWM
+GAPT.Temp-Water.Inst.1Hour.0.Best-MRBWM
+
+PE Elev.Inst=HT
+FORMAT HT(6.2)
+#### Tail water elevation
+loc FTPK-Tailwater=FTPK
+FTPK-Tailwater.Elev.Inst.1Hour.0.Best-MRBWM
+loc GARR-Tailwater=GARR
+GARR-Tailwater.Elev.Inst.1Hour.0.Best-MRBWM
+loc OAHE-Tailwater=OAHE
+OAHE-Tailwater.Elev.Inst.1Hour.0.Best-MRBWM
+loc BEND-Tailwater=BEND
+BEND-Tailwater.Elev.Inst.1Hour.0.Best-MRBWM
+loc FTRA-Tailwater=FTRA
+FTRA-Tailwater.Elev.Inst.1Hour.0.Best-MRBWM
+loc GAPT-Tailwater=GAPT
+GAPT-Tailwater.Elev.Inst.1Hour.0.Best-MRBWM
+
+PE Flow-Out.Inst=QT
+FORMAT QT(5)
+#### Flow out
+FTPK.Flow-Out.Inst.1Hour.0.Best-MRBWM
+GARR.Flow-Out.Inst.1Hour.0.Best-MRBWM
+OAHE.Flow-Out.Inst.1Hour.0.Best-MRBWM
+BEND.Flow-Out.Inst.1Hour.0.Best-MRBWM
+FTRA.Flow-Out.Inst.1Hour.0.Best-MRBWM
+GAPT.Flow-Out.Inst.1Hour.0.Best-MRBWM
+
+PE Flow.Inst=QG
+FORMAT QG(4)
+#### Flow Powerhouse
+loc FTPK-Powerhouse=FTPK
+FTPK-Powerhouse.Flow.Inst.1Hour.0.Best-MRBWM
+loc GARR-Powerhouse=GARR
+GARR-Powerhouse.Flow.Inst.1Hour.0.Best-MRBWM
+loc OAHE-Powerhouse=OAHE
+OAHE-Powerhouse.Flow.Inst.1Hour.0.Best-MRBWM
+loc BEND-Powerhouse=BEND
+BEND-Powerhouse.Flow.Inst.1Hour.0.Best-MRBWM
+loc FTRA-Powerhouse=FTRA
+FTRA-Powerhouse.Flow.Inst.1Hour.0.Best-MRBWM
+loc GAPT-Powerhouse=GAPT
+GAPT-Powerhouse.Flow.Inst.1Hour.0.Best-MRBWM
+
+PE Flow-Spill.Inst=QS
+FORMAT QS(4)
+#### Flow Spillway
+FTPK.Flow-Spill.Inst.1Hour.0.Best-MRBWM
+GARR.Flow-Spill.Inst.1Hour.0.Best-MRBWM
+OAHE.Flow-Spill.Inst.1Hour.0.Best-MRBWM
+BEND.Flow-Spill.Inst.1Hour.0.Best-MRBWM
+FTRA.Flow-Spill.Inst.1Hour.0.Best-MRBWM
+GAPT.Flow-Spill.Inst.1Hour.0.Best-MRBWM
+
+PE Elev.Inst=HP
+FORMAT HP(6.2)
+####  Elevation
+FTPK.Elev.Inst.1Hour.0.Best-MRBWM
+GARR.Elev.Inst.1Hour.0.Best-MRBWM
+OAHE.Elev.Inst.1Hour.0.Best-MRBWM
+BEND.Elev.Inst.1Hour.0.Best-MRBWM
+FTRA.Elev.Inst.1Hour.0.Best-MRBWM
+GAPT.Elev.Inst.1Hour.0.Best-MRBWM
+
+PE Flow-In.Inst=QI
+FORMAT QI(4)
+#### Flow in
+FTPK.Flow-In.Inst.1Hour.0.Raw-MRBWM-CCP
+GARR.Flow-In.Inst.1Hour.0.Raw-MRBWM-CCP
+OAHE.Flow-In.Inst.1Hour.0.Raw-MRBWM-CCP
+BEND.Flow-In.Inst.1Hour.0.Raw-MRBWM-CCP
+FTRA.Flow-In.Inst.1Hour.0.Raw-MRBWM-CCP
+GAPT.Flow-In.Inst.1Hour.0.Raw-MRBWM-CCP
+
+PE Flow-In.Ave=QI
+FORMAT QI(4)
+#### Flow in
+FTPK.Flow-In.Ave.1Hour.3Hours.Raw-MRBWM-CCP
+GARR.Flow-In.Ave.1Hour.3Hours.Raw-MRBWM-CCP
+OAHE.Flow-In.Ave.1Hour.3Hours.Raw-MRBWM-CCP
+BEND.Flow-In.Ave.1Hour.3Hours.Raw-MRBWM-CCP
+FTRA.Flow-In.Ave.1Hour.3Hours.Raw-MRBWM-CCP
+GAPT.Flow-In.Ave.1Hour.3Hours.Raw-MRBWM-CCP
+FTPK.Flow-In.Ave.1Hour.6Hours.Raw-MRBWM-CCP
+GARR.Flow-In.Ave.1Hour.6Hours.Raw-MRBWM-CCP
+OAHE.Flow-In.Ave.1Hour.6Hours.Raw-MRBWM-CCP
+BEND.Flow-In.Ave.1Hour.6Hours.Raw-MRBWM-CCP
+FTRA.Flow-In.Ave.1Hour.6Hours.Raw-MRBWM-CCP
+GAPT.Flow-In.Ave.1Hour.6Hours.Raw-MRBWM-CCP

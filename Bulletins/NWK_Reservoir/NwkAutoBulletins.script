@@ -1,0 +1,15 @@
+#!/bin/csh
+source /netapp/g7cwmspd/.cshrc
+setenv DISPLAY :1    
+
+cd /netapp/g7cwmspd/cronjobs/Bulletins/NWK_Reservoir
+rm *.pdf
+rm *.csv
+
+echo 'Creating bulletins'
+# Call jython3 from the PD user/bin directory to allow for extra classes to be used that are not from CWMS server JARs
+# Run python scripts with jython3, which contains itext.pdf JAR class.
+# Need to move NWO Reservoir Bulletin after completion to ensure bulletin is available for 0900 briefing
+#
+jython3 NWK_Reservoir_Bulletin.py
+echo Done

@@ -1,0 +1,43 @@
+#
+# define the marker lines ... base of flood control pool as listed in ini data file - sixth line 
+		marker1=AxisMarker()
+		marker1.axis = "Y1"
+		marker1.value = basefc
+		marker1.labelText = "Base of Annual Flood Control Zone"
+		marker1.labelColor = "black"
+		marker1.labelPosition = "above"
+		marker1.lineColor = "black"
+		marker1.lineStyle = "Dash Dot"
+#		marker1.fillStyle = "below" 
+#		marker1.fillColor = "lightgray" 
+#		marker1.fillPattern = "diagonal cross" 
+		viewport0.addAxisMarker(marker1)
+#
+# define the marker lines ... base of normal operating pool as listed in ini data file - seventh line 
+		marker1=AxisMarker()
+		marker1.axis = "Y1"
+		marker1.value = basenorm
+		marker1.labelText = "Base of Exclusive Flood Control Zone"
+		marker1.labelColor = "red"
+		marker1.labelPosition = "above"
+		marker1.lineColor = "red"
+		marker1.lineStyle = "Dash Dot"
+#		marker1.fillStyle = "below" 
+#		marker1.fillColor = "lightgray" 
+#		marker1.fillPattern = "diagonal cross" 
+		viewport0.addAxisMarker(marker1)
+#
+# define the marker lines ... base of maximum operating pool as listed in ini data file - eighth line 
+		marker1=AxisMarker()
+		marker1.axis = "Y1"
+		marker1.value = basemax
+		marker1.labelText = "Top of Exclusive Flood Control Zone"
+		marker1.labelColor = "darkcyan"
+		marker1.labelPosition = "above"
+		marker1.lineColor = "darkcyan"
+		marker1.lineStyle = "Dash Dot"
+#		marker1.fillStyle = "below" 
+#		marker1.fillColor = "lightgray" 
+#		marker1.fillPattern = "diagonal cross" 
+		viewport0.addAxisMarker(marker1)
+ 

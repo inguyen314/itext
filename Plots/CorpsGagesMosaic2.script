@@ -1,0 +1,33 @@
+cd /wm/nwo/g7cwpa30/cronjobs/Plots/Images/NWO
+/bin/convert -page +0+0 poneRaw.jpg -page +1000+0 poneVolt.jpg \
+        -page +0+800 blneRaw.jpg -page +1000+800 blneVolt.jpg \
+        -page +0+1600 ptneRaw.jpg -page +1000+1600 ptneVolt.jpg \
+        -page +0+2400 bvneRaw.jpg -page +1000+2400 bvneVolt.jpg \
+        -page +0+3200 lpsdRaw.jpg -page +1000+3200 lpsdVolt.jpg \
+        -page +0+4000 pa11Raw.jpg -page +1000+4000 pa11Volt.jpg \
+        -page +0+4800 pa16Raw.jpg -page +1000+4800 pa16Volt.jpg \
+        -page +0+5600 pa18Raw.jpg -page +1000+5600 pa18Volt.jpg \
+        -page +0+6400 pa20Raw.jpg -page +1000+6400 pa20Volt.jpg \
+        -page +0+7200 pa2aRaw.jpg -page +1000+7200 pa2aVolt.jpg \
+        -page +0+8000 sc02Raw.jpg -page +1000+8000 sc02Volt.jpg \
+        -page +0+8800 sc04Raw.jpg -page +1000+8800 sc04Volt.jpg \
+        -page +0+9600 sc08Raw.jpg -page +1000+9600 sc08Volt.jpg \
+        -page +0+10400 sc09Raw.jpg -page +1000+10400 sc09Volt.jpg \
+        -page +0+11200 sc10Raw.jpg -page +1000+11200 sc10Volt.jpg \
+        -page +0+12000 sc12Raw.jpg -page +1000+12000 sc12Volt.jpg \
+        -page +0+12800 sc13Raw.jpg -page +1000+12800 sc13Volt.jpg \
+        -page +0+13600 sc14Raw.jpg -page +1000+13600 sc14Volt.jpg \
+        -page +0+14400 sc17Raw.jpg -page +1000+14400 sc17Volt.jpg \
+        -page +0+15200 sc18Raw.jpg -page +1000+15200 sc18Volt.jpg \
+        -page +0+16000 pgsdRaw.jpg -page +1000+16000 pgsdVolt.jpg \
+        -page +0+16800 arsdRaw.jpg -page +1000+16800 arsdVolt.jpg \
+        -page +0+17600 coldRaw.jpg -page +1000+17600 coldVolt.jpg \
+        -page +0+18400 cottRaw.jpg -page +1000+18400 cottVolt.jpg \
+        -page +0+19200 bohaRaw.jpg -page +1000+19200 bohaVolt.jpg \
+        -page +0+20000 awndRaw.jpg -page +1000+20000 awndVolt.jpg \
+        -page +0+20800 pistRaw.jpg -page +1000+20800 pistVolt.jpg \
+        -page +0+21600 becrRaw.jpg -page +1000+21600 becrVolt.jpg \
+        -page +0+22400 chcrRaw.jpg -page +1000+22400 chcrVoltOrifice.jpg \
+	-page +0+23200 chcrRadarRaw.jpg -page +1000+23200 chcrVoltRadar.jpg \
+        -page +0+24000 chfiRaw.jpg -page +1000+24000 chfiVolt.jpg \
+        -mosaic -resize 1200x28500 corpsgages2.jpg

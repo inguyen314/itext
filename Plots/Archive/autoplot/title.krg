@@ -1,0 +1,15 @@
+# customize the title of the plot (fourth line in the ini data file)
+		title=plot.getPlotTitle()
+                title.setForeground("darkblue")
+                title.setFontFamily("Arial")
+                title.setFontStyle("Normal")
+                title.setFontSize(20)
+                title.setText ( titlename )
+                title.setDrawTitleOn()
+
+# resizing plots - per Mike Perryman email 3/3/17 so plot title is correct
+
+		size = plot.getSize()
+		plot.setSize(size.width-1,size.height-1)
+		plot.setSize(size.width, size.height)
+#

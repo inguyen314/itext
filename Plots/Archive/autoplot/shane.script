@@ -1,0 +1,21 @@
+#!/bin/csh
+source /netapp/g7cwmspd/.cshrc
+setenv DISPLAY :1    
+#        jython /netapp/g7cwmspd/plotFiles/createPlotsNWOres.py
+#        jython /netapp/g7cwmspd/plotFiles/createPlotsNWOotherres.py
+#        jython /netapp/g7cwmspd/plotFiles/createPlotsNWOprecip.py
+#        jython /netapp/g7cwmspd/plotFiles/createPlotsMRRelev2.py
+        jython /netapp/g7cwmspd/plotFiles/createPlotsNWOriver2-qgh.py
+#        jython /netapp/g7cwmspd/plotFiles/createPlotsMRRnonfui-qgh.py
+#        jython /netapp/g7cwmspd/plotFiles/createNWK3.py
+  Prepare to make Xwindow dump files
+ 
+# cd /netapp/g7cwmspd/plotFiles/files
+# /usr/sfw/bin/mogrify -format xwd *.jpg
+ 
+#  Move files to web and to local zone MRADS cwmspixel directory for displaying by viewpix
+ 
+echo 'Moving files to web server staging area and to local zone.'
+cd /netapp/g7cwmspd/plotFiles/files
+/bin/scp *.jpg g7cwmspd@nwo-wmlocal2.nwo.usace.army.mil:/mrads/cwmspixel
+echo Done

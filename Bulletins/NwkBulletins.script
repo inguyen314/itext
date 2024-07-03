@@ -1,0 +1,23 @@
+#!/bin/csh
+source /netapp/g7cwmspd/.cshrc
+setenv DISPLAY :1
+
+cd /netapp/g7cwmspd/cronjobs/Bulletins
+rm NWK*.pdf
+rm 7daylak3.pdf
+rm NWK*.csv
+
+echo 'Creating bulletins'
+# Call jython3 from the PD user/bin directory to allow for extra classes to be used that are not from CWMS server JARs
+# Run python scripts with jython3, which contains itext.pdf JAR class.
+#
+jython3 NWK_Reservoir/NWK_Reservoir_Bulletin.py
+/bin/scp NWK_Reservoir_Bulletin.* g7cwmspd@nwo-wmlocal2.nwo.usace.army.mil:/mrads/transfer/www/reports
+
+jython3 NWK_Lake_Weekly/NWK_Lake.py
+/bin/scp 7daylak3*.* g7cwmspd@nwo-wmlocal2.nwo.usace.army.mil:/mrads/transfer/www/reports
+
+jython3 NWK_Radio/NWK_Radio.py
+/bin/scp NWK_Radio.pdf g7cwmspd@nwo-wmlocal2.nwo.usace.army.mil:/mrads/transfer/www/reports
+
+echo Done

@@ -1,0 +1,17 @@
+cd /wm/nwo/g7cwpa30/cronjobs/Plots/Images/NWO
+/bin/convert -page +0+0 ../NWD/lpsd.jpg -page +1000+0 ../NWD/pone.jpg \
+        -page +0+800 blnep.jpg -page +1000+800 ptnep.jpg \
+        -page +0+1600 ../NWD/bvne.jpg -page +1000+1600 pa11p.jpg \
+        -page +0+2400 pa16p.jpg -page +1000+2400 pa18p.jpg \
+        -page +0+3200 pa20p.jpg -page +1000+3200 ../NWD/pa2a.jpg \
+        -page +0+4000 sc02p.jpg -page +1000+4000 sc04p.jpg \
+        -page +0+4800 sc08p.jpg -page +1000+4800 sc09p.jpg \
+        -page +0+5600 sc10p.jpg -page +1000+5600 sc12p.jpg \
+        -page +0+6400 sc13p.jpg -page +1000+6400 sc14p.jpg \
+	-page +0+7200 sc17p.jpg -page +1000+7200 sc18p.jpg \
+	-page +0+8000 ../NWD/awnd.jpg -page +1000+8000 pistp.jpg \
+	-page +0+8800 bohap.jpg -page +1000+8800 pgsd.jpg \
+	-page +0+9600 ../NWD/arsd.jpg -page +1000+9600 coldp.jpg \
+	-page +0+10400 cottp.jpg -page +1000+10400 chcrp.jpg \
+        -page +0+11200 becrp.jpg -page +1000+11200 chfip.jpg \
+        -mosaic -resize 1200x14400 corpsgages.jpg

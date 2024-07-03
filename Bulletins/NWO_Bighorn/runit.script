@@ -1,0 +1,5 @@
+#!/bin/csh
+source /netapp/g7cwmspd/.cshrc
+setenv DISPLAY :1
+
+jython3 NWO_Bighorn_Bulletin.py 
